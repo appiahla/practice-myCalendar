@@ -19,7 +19,7 @@ function insertLoginData($link) {
             $sql = "INSERT INTO Student (`v_num`, `email`, `password`) 
                     VALUES ('$v_num', '$email', '$password')";
             
-            $result = $conn->query($sql);   
+            $result = $link->query($sql);   
         }
     }
 ?>
