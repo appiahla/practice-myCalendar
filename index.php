@@ -58,7 +58,7 @@
 
                 <label for="signUpLName">
                     Last Name:
-                    <input id="signUpFName" type="text" name="SignUpFName"><br><br>
+                    <input id="signUpLName" type="text" name="SignUpLName"><br><br>
                 </label>
 
                 <label for="signUpDOB">
