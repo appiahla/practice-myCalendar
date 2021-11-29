@@ -12,9 +12,9 @@
     $db_user = 'admin';
     $db_pass = 'databasegroup';
     $db_name = 'groupMyCalendar';
+    $db_port = '3306';
 
-    $link = mysqli_connect("$db_host","$db_user","$db_pass", TRUE) or die(mysql_error());
-    mysql_select_db("$db_name") or die("no database by that name");
+    $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
     
     // Check connection
     if (!$link) {
@@ -31,6 +31,11 @@
         
         $password = $_POST['password'];
 
+        //  $v_num = 'V09863356';
+        
+        // $email = 'kennieyuh@gmail.com';
+        
+        // $password = 'confused';
         
         //now insert them into the database
         $sql = "INSERT INTO Student (`v_num`, `username`, `password`) 
