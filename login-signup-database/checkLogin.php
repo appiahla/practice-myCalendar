@@ -47,13 +47,24 @@
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
                   echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
+                
+                    //check if the email is correct
+                    if ($row["username"] == $email){ 
+                        echo "The emails match!";
+                    }
+
+                    //check if the password is correct
+                    if ($row["password"] == $password) {
+                        echo "The passwords match!";
+                    }
+                
                 }
               } else {
                 echo "0 results";
               }
 
-            //check if the email is correct
-            //check if the password is correct
+            
+            
 
         // Free result set
         mysqli_free_result($result);
