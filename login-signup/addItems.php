@@ -89,17 +89,17 @@
 
                 <label for="testName">
                   Test Title:
-                  <input id="testName" type="text" name="TestName"><br><br>
+                  <input type="text" id="testName" name="TestName"><br><br>
                 </label>
                 
                 <label for="testDate">
-                  Date Of Test:
-                  <input id="testDate" type="date" name="TestDate"><br><br>
+                  Date:
+                  <input type="date" id="testDate" name="TestDate"><br><br>
                 </label>
                 
                 <label for="testCourseName">
                   Course Name:
-                  <input id="testCourseName" type="text"  name="TestCourseName"><br><br>
+                  <input type="text" id="testCourseName" name="TestCourseName"><br><br>
                 </label>
                 
                 <label for="testMaterial">
@@ -124,17 +124,17 @@
                
                 <label for="quizName">
                   Quiz Title:
-                  <input id="quizName" type="text" name="QuizName"><br><br>
+                  <input type="text" id="quizName" name="QuizName"><br><br>
                 </label>
                 
                 <label for="quizDate">
-                  Date Of Quiz:
-                  <input id="quizDate" type="date" name="QuizDate"><br><br>
+                  Date:
+                  <input type="date" id="quizDate" name="QuizDate"><br><br>
                 </label>
                 
                 <label for="quizCourseName">
                   Course Name:
-                  <input id="quizCourseName" type="text" name="QuizCourseName"><br><br>
+                  <input type="text" id="quizCourseName" name="QuizCourseName"><br><br>
                 </label>
                 
                 <label for="quizMaterial">
