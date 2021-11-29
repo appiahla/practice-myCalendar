@@ -20,17 +20,18 @@ $link = mysqli_connect(
         //Once the button is pressed -> insert into database
     
             //Get the variables that will be inserted into the database
-            $v_num = $_POST['vnum'];
+            $v_num = $_POST[vnum];
     
-            $email = $_POST['email'];
+            $email = $_POST[email];
     
-            $password = $_POST['password'];
-    
+            $password = $_POST[password];
+
     
             //now insert them into the database
-            $sql = "INSERT INTO Student (`v_num`, `email`, `password`) 
+            $sql = "INSERT INTO Student (`v_num`, `username`, `password`) 
                     VALUES ('$v_num', '$email', '$password')";
             
             $result = $link->query($sql);   
-    }
+            echo($result);
+   }
 ?>
