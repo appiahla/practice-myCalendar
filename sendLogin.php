@@ -1,4 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Insert Page page</title>
+</head>
+  
+<body>
+    <center>
+        <?php
 
     $link = mysqli_connect(
         'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com',
@@ -34,6 +43,11 @@
                 
         if (mysqli_query($link, $sql)) {    
             echo "New record created successfully";
+            echo "<h3>data stored in a database successfully." 
+                . " Please browse your localhost php my admin" 
+                . " to view the updated data</h3>"; 
+  
+            echo nl2br("\n$v_num\n $email\n $password\n ");
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($link);
         }
@@ -42,3 +56,7 @@
    // }
 
 ?>
+</center>
+</body>
+  
+</html>
