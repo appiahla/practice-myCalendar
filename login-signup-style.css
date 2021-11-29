@@ -1,0 +1,80 @@
+.title {
+    text-align: center;
+  }
+  
+  textarea {
+    resize: none;
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: 1px 1px 1px #cecece;
+  }
+  
+  #day-view-container {
+    /* outline: 2px solid black; */
+    height: 110vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  #input-field {
+    outline: 2px solid rgb(211, 206, 206);
+    width: 600px;
+    height: auto;
+    box-shadow: 5px 5px 5px 1px #cccccc;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+  }
+  /*This hides the radio button!*/
+  .mytabs input[type="radio"] {
+    display: none;
+  }
+  /*This adds the grey box*/
+  .mytabs label {
+    padding: 25px;
+    background: #e2e2e2;
+    font-weight: bold;
+  }
+  
+  .mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    order: 1;
+    display: none;
+  }
+  .mytabs .tab h2 {
+    font-size: 3em;
+  }
+  
+  .mytabs input[type='radio']:checked + label + .tab {
+    outline: 2px solid rgb(211, 206, 206);
+    display: block;
+  }
+  
+  .mytabs input[type="radio"]:checked + label {
+    outline: 2px solid rgb(211, 206, 206);
+    background: #fff;
+  }
+  
+  .login label {
+    padding: 4px;
+    background: white;
+  }
+  
+  .signUp label {
+    padding: 4px;
+    background: white;
+  }

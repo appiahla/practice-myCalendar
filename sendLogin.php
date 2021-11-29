@@ -1,6 +1,4 @@
 <?php
-    //include the php file that contains the database conncetion code
-    include 'databaseconnection.php';
 
 function insertLoginData($link) {
 
