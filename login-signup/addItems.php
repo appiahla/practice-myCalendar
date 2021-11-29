@@ -67,7 +67,7 @@
                 <textarea id="assignmentNotes" name="AssignmentNotes"></textarea><br><br>
             </label>
              
-              <input type="submit" value="Submit">
+              <input class="btn" type="submit" value="Submit">
             </form>
           </div>
         </div>
@@ -112,7 +112,7 @@
                   <textarea id="testNotes" name="TestNotes"></textarea><br><br>
                 </label>
                 
-                <input type="submit" value="Submit">
+                <input class="btn" type="submit" value="Submit">
               </form>
             </div>
 
@@ -147,7 +147,7 @@
                   <textarea id="quizNotes" name="QuizNotes"></textarea><br><br>
                 </label>
                 
-                <input type="submit" value="Submit">
+                <input class="btn" type="submit" value="Submit">
               </form>
             </div>
           </div>
