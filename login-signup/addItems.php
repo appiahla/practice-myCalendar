@@ -93,7 +93,7 @@
                 </label>
                 
                 <label for="testDate">
-                  Date:
+                 Test Date:
                   <input type="date" id="testDate" name="TestDate"><br><br>
                 </label>
                 
@@ -128,7 +128,7 @@
                 </label>
                 
                 <label for="quizDate">
-                  Date:
+                  Quiz Date:
                   <input type="date" id="quizDate" name="QuizDate"><br><br>
                 </label>
                 
