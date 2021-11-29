@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
     <title>Homepage</title>
     <link rel = "stylesheet" href = "/navigation.css">
@@ -13,7 +12,7 @@
               <a href="">Home</a>
             </li>
             <li class="list-item">
-              <a a href="../addItems.php">
+              <a href="">
                 <button class="btn">+ Add</button>
               </a>
             </li>
