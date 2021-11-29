@@ -32,9 +32,12 @@
         $password = $_POST['password'];
 
         //now insert them into the database
-        $sql = "INSERT INTO Student (`v_num`, `username`, `password`) 
-                VALUES ('$v_num', '$email', '$password')";
-                
+        //see if the v_num exists
+        $sql = "SELECT v_num FROM Student WHERE civ_numty = '$v_num'";
+               
+        $result = mysqli_query($link, $sql);
+        $row_count = $result->num_rows;
+        echo("There is " + $row_count + " row(s)");
                 
         if (mysqli_query($link, $sql)) {    
             echo "New record created successfully";
