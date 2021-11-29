@@ -15,7 +15,7 @@
       <div class="tab">
         <div class="login">
 
-        <?php echo "<form method='POST' action='sendLogin.php'>
+       <form method='POST' action='sendLogin.php'>
             
             <label for='loginVNum'>
                 V Num:
@@ -34,7 +34,7 @@
 
             <input type='submit' name='loginFormPost' value='Log In'/>
 
-            </form>"; ?>
+            </form>
 
         </div>
       </div>
