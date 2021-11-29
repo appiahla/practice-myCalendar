@@ -28,12 +28,12 @@
         
             //Once the button is pressed -> insert into database
         
-                //Get the variables that will be inserted into the database
-                $v_num = $_POST[vnum];
+            //Get the variables that will be inserted into the database
+                $v_num = $_POST['vnum'];
         
-                $email = $_POST[email];
+                $email = $_POST['email'];
         
-                $password = $_POST[password];
+                $password = $_POST['password'];
 
         
                 //now insert them into the database
