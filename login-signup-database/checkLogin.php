@@ -35,8 +35,8 @@
         //see if the v_num exists
         $sql = "SELECT v_num FROM Student WHERE v_num = '$v_num'";
                
-        if ($result=mysqli_query($link,$sql))
-        {
+        if ($result = mysqli_query($link,$sql)) {
+
         // Return the number of rows in result set
         $rowcount = mysqli_num_rows($result);
         
@@ -44,7 +44,7 @@
         if($rowcount == 1) { 
             echo "<h3>You are in the database!.</h3>"; 
 
-            echo nl2br("Result is: \n$result\n");
+            print($result);
             //check if the email is correct
             //check if the password is correct
            
