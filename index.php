@@ -3,8 +3,31 @@
 <head>
     <title> 508 Group Project </title>
     <link rel = "stylesheet" type = "text/css" href = "login-signup-style.css">
-    <link rel = "stylesheet" type = "text/css" href = "navigation.css">
-</head>
+    <link rel = "stylesheet" href = "navigation.css">
+
+    <nav class="nav-bar" >
+      <div style="display: flex; justify-content: space-between;">
+        <a id="home-pic" href="">myCalendar</a>
+          <ul class="list">
+            <li class="list-item">
+              <a href="">Home</a>
+            </li>
+            <li class="list-item">
+              <a a href="">
+                <button class="btn">+ Add</button>
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="">
+                <button class="btn">Profile</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </head>
 <body>
 <div id="day-view-container">
   <div id="input-field">
@@ -59,7 +82,7 @@
 
                 <label for="signUpLName">
                     Last Name:
-                    <input id="signUpLName" type="text" name="SignUpLName"><br><br>
+                    <input id="signUpFName" type="text" name="SignUpFName"><br><br>
                 </label>
 
                 <label for="signUpDOB">
@@ -79,7 +102,7 @@
 
                 <label for="signUpGPA"> 
                   Current GPA:
-                  <input id="signUpGPA" type="number" step="0.01" name="SignUpGPA"><br><br>
+                  <input id="signUpGPA" type="number" name="SignUpGPA"><br><br>
                 </label>
 
                 <label for="signUpEmail">
