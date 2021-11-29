@@ -1,0 +1,39 @@
+
+.nav-bar {
+    background-color: rgb(211, 210, 210);
+    border-radius: 2px;
+  }
+  
+  .list { list-style-type: none; }
+  
+  .list-item {
+    display: inline;
+    margin: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    color: purple;
+    cursor: pointer;
+  }
+  
+  #home-pic {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .btn {
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
