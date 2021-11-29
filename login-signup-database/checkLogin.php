@@ -33,21 +33,15 @@
 
         //now insert them into the database
         //see if the v_num exists
-        $sql = "SELECT v_num FROM Student WHERE civ_numty = '$v_num'";
+        $sql = "SELECT v_num FROM Student WHERE v_num = '$v_num'";
                
-        $result = mysqli_query($link, $sql);
-        $row_count = $result->num_rows;
-        echo("There is " + $row_count + " row(s)");
-                
-        if (mysqli_query($link, $sql)) {    
-            echo "New record created successfully";
-            echo "<h3>data stored in a database successfully." 
-                . " Please browse your localhost php my admin" 
-                . " to view the updated data</h3>"; 
-  
-            echo nl2br("\n$v_num\n $email\n $password\n ");
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($link);
+        if ($result=mysqli_query($link,$sql))
+        {
+        // Return the number of rows in result set
+        $rowcount=mysqli_num_rows($result);
+        printf("Result set has %d rows.\n", $rowcount);
+        // Free result set
+        mysqli_free_result($result);
         }
   
     mysqli_close($link);
