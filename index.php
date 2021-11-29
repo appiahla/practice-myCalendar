@@ -7,7 +7,8 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Please Log In or Sign Up: </h2>
+    <h2 class="title">Welcome to the myCalendar Web App!</h2>
+    <h3 class="subtitle"> Please Log In or Sign Up to Continue: </h3> 
 
     <div class="mytabs">
 
