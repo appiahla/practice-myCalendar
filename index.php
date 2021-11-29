@@ -78,7 +78,7 @@
 
                 <label for="signUpGPA"> 
                   Current GPA:
-                  <input id="signUpGPA" type="number" name="SignUpGPA"><br><br>
+                  <input id="signUpGPA" type="number" step="0.01" name="SignUpGPA"><br><br>
                 </label>
 
                 <label for="signUpEmail">
