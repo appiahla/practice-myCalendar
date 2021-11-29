@@ -22,4 +22,4 @@ function insertLoginData($link) {
             $result = $conn->query($sql);   
         }
     }
-}
+?>
