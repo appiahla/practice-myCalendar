@@ -8,19 +8,10 @@ $link = mysqli_connect(
   '3306');
  
 // Check connection
-if (mysqli_connect_errno())
-{
-   echo "Failed to connect to MySQL: " . mysqli_connect_error();
+if (!$link) {
+        
+   //kill the connection
+   die("Connection failed:" .mysqli_connect_error());
 }
- 
-// Check if server is alive
-if (mysqli_ping($link))
-{
-   echo "Connection is ok!";
-}
-else
-{
-   echo "Error: ". mysqli_error($link);
-}
- 
+
 ?>
