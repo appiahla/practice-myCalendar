@@ -78,7 +78,7 @@ mysqli_close($link);
               <a href="">Home</a>
             </li>
             <li class="list-item">
-              <a a href="../addItems/addItems.php">
+              <a a href="../add-Items/addItems.php">
                 <button class="btn">+ Add</button>
               </a>
             </li>
