@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title> 508 Group Project </title>
     <link rel = "stylesheet" type = "text/css" href = "login-signup-style.css">
 </head>
 <body>
