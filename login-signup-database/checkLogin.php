@@ -42,7 +42,7 @@
         
         //if there is a row
         if($rowcount == 1) { 
-            echo "<h3>You are in the database!.</h3>"; 
+            echo "<h3>You are in the database!.</h3>\n"; 
 
             print($result);
             //check if the email is correct
