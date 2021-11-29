@@ -33,7 +33,7 @@
 
         //now insert them into the database
         //see if the v_num exists
-        $sql = "SELECT v_num FROM Student WHERE v_num = '$v_num'";
+        $sql = "SELECT * FROM Student WHERE v_num = '$v_num'";
                
         if ($result = mysqli_query($link,$sql)) {
 
