@@ -41,17 +41,33 @@
         <div class="tab">
           <div class="assignment">
             <!--Here add the input fields-->
-            <form action="/action_page.php">
-              <label for="assignmentName">Assignment Title:</label>
-              <input type="text" id="assignmentName" name="AssignmentName"><br><br>
-              <label for="dueDate">Due Date:</label>
-              <input type="date" id="dueDate" name="DueDate"><br><br>
-              <label for="courseName">Course Name:</label>
-              <input type="text" id="courseName" name="CourseName"><br><br>
-              <label for="assignmentDesc">Description:</label>
-              <textarea id="assignmentDesc" name="AssignmentDesc"></textarea><br><br>
-              <label for="assignmentNotes">Notes:</label>
-              <textarea id="assignmentNotes" name="AssignmentNotes"></textarea><br><br>
+            <form method="POST" action="insertNewAssignment.php">
+             
+            <label for="assignmentName">
+                Assignment Title:
+                <input id="assignmentName" type="text" name="AssignmentName"><br><br>
+            </label>
+              
+            <label for="dueDate">
+                Due Date:
+                <input  id="dueDate" type="date" name="DueDate"><br><br>
+            </label>
+              
+            <label for="courseName">
+                Course Name:
+                <input  id="courseName" type="text" name="CourseName"><br><br>
+            </label>
+              
+            <label for="assignmentDesc">
+                Description:
+                <textarea id="assignmentDesc" name="AssignmentDesc"></textarea><br><br>
+            </label>
+              
+            <label for="assignmentNotes">
+                Notes:
+                <textarea id="assignmentNotes" name="AssignmentNotes"></textarea><br><br>
+            </label>
+             
               <input type="submit" value="Submit">
             </form>
           </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> 508 Group Project </title>
-    <link rel = "stylesheet" type = "text/css" href = "login-signup-style.css">
+    <link rel = "stylesheet" type = "text/css" href = "/login-signup/login-signup-style.css">
     <link rel = "stylesheet" href = "navigation.css">
 
     <nav class="nav-bar" >
@@ -43,7 +43,7 @@
         <div class="login">
 
         <!-- Login Form -->
-       <form method='POST' action='/login-signup-database/checkLogin.php'>
+       <form method='POST' action='/login-signup/checkLogin.php'>
             
             <label for='loginVNum'>
                 V Num:
@@ -73,7 +73,7 @@
         <div class="tab">
             <div class="signUp">
                 <!-- Sign Up Form -->
-                <form method="POST" action="/login-signup-database/sendSignUp.php" >
+                <form method="POST" action="/login-signup/sendSignUp.php" >
 
                 <label for="signUpFName">
                     First Name:
