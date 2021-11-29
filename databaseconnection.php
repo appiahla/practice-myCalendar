@@ -5,7 +5,7 @@ $link = mysqli_connect(
    'admin',
    'databasegroup',
    'groupMyCalendar',
-  '3306');
+   '3306');
  
 // Check connection
 if (!$link) {
