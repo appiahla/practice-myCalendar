@@ -6,47 +6,51 @@
 </head>
   
 <body>
-
     <?php
 
-        $link = mysqli(
-            'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com',
-            'admin',
-            'databasegroup',
-            'groupMyCalendar',
-            '3306');
+    $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
+    $db_user = 'admin';
+    $db_pass = 'databasegroup';
+    $db_name = 'groupMyCalendar';
+
+    $link = mysqli_connect("$db_host","$db_user","$db_pass", TRUE) or die(mysql_error());
+    mysql_select_db("$db_name") or die("no database by that name");
+    
+    // Check connection
+    if (!$link) {
+            
+        //kill the connection
+        die("Connection failed:" .mysqli_connect_error());
+    }
+
         
-        // Check connection
-        if ($link->connect_error) {
-            die("Connection failed: " . $link->connect_error);
-        } 
+         //Get the variables that will be inserted into the database
+        $v_num = $_POST['vnum'];
+        
+        $email = $_POST['email'];
+        
+        $password = $_POST['password'];
 
-            
-            //Get the variables that will be inserted into the database
-            $v_num = $_POST['vnum'];
-            
-            $email = $_POST['email'];
-            
-            $password = $_POST['password'];
-
-            
-            //now insert them into the database
-            $sql = "INSERT INTO Student (`v_num`, `username`, `password`) 
-                    VALUES ('$v_num', '$email', '$password')";
-                    
-
-        if ($link->query($sql) === TRUE) {
-            echo "New record created successfully"; 
+        
+        //now insert them into the database
+        $sql = "INSERT INTO Student (`v_num`, `username`, `password`) 
+                VALUES ('$v_num', '$email', '$password')";
+                
+                
+        if (mysqli_query($link, $sql)) {    
             echo "New record created successfully";
             echo "<h3>data stored in a database successfully." 
-                            . " Please browse your localhost php my admin" 
-                            . " to view the updated data</h3>"; 
+                . " Please browse your localhost php my admin" 
+                . " to view the updated data</h3>"; 
+  
+            echo nl2br("\n$v_num\n $email\n $password\n ");
         } else {
-        echo "Error: " . $sql . "<br>" . $link->error;
+            echo "Error: " . $sql . "<br>" . mysqli_error($link);
         }
+  
+    mysqli_close($link);
 
-        $link->close();
-    ?>
+?>
 </body>
   
 </html>
