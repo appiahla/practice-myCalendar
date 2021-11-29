@@ -29,7 +29,7 @@ if (!$link) {
 
     //now insert them into the database
     //see if the v_num exists
-    $sql =  "INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name `,`description_section`, `notes`) 
+    $sql =  "INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name_assignment`,`description_section`, `notes`) 
     VALUES ('$title', '$date', '$course_name', '$description', '$notes')";
            
              
