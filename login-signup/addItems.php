@@ -112,7 +112,7 @@
                   <textarea id="testNotes" name="TestNotes"></textarea><br><br>
                 </label>
                 
-                <input class="btn" type="submit" value="Submit">
+                <input class="btn" type="submit" value="Submit" style="position: relative;top: 40px;left: -250px;">
               </form>
             </div>
 
@@ -147,7 +147,7 @@
                   <textarea id="quizNotes" name="QuizNotes"></textarea><br><br>
                 </label>
                 
-                <input class="btn" type="submit" value="Submit">
+                <input class="btn" type="submit" value="Submit" style="position: relative;top: 27px;left: -255px;">
               </form>
             </div>
           </div>

@@ -115,12 +115,12 @@
   /*so the quiz doesn't move below test*/
   #quizTab {
     position: relative;
-    top: -344px;
+    top: -353px;
     right: -73px;
   }
   .assessment label[for='quizTab'] {
     position: relative;
-    top: -344px;
+    top: -353px;
     right: -71.5px;
   }
   
