@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Homepage</title>
-    <link rel = "stylesheet" href = "/navigation.css">
-    <link rel = "stylesheet" type = "text/css" href = "/add-items/add-items.css">
+    <link rel = "stylesheet" href = "../navigation.css">
+    <link rel = "stylesheet" type = "text/css" href = "add-items.css">
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
