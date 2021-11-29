@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
-    <title> 508 Group Project </title>
-    <link rel = "stylesheet" type = "text/css" href = "login-signup-style.css">
+    <title>Homepage</title>
     <link rel = "stylesheet" href = "navigation.css">
-
+    <link rel = "stylesheet" type = "text/css" href = "home-style.css">
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
@@ -26,101 +26,58 @@
         </div>
       </div>
     </nav>
-
-  </head>
+</head>
+  
 <body>
-<div id="day-view-container">
-  <div id="input-field">
-    <h2 class="title">Welcome to the myCalendar Web App!</h2>
-    <h3 class="subtitle"> Please Log In or Sign Up to Continue: </h3> 
+    <h1 style="text-align: center;">Welcome to myCalendar!</h1>
 
-    <div class="mytabs">
+    <div id="home-group-flex">
+    <div class="home-group">
+        <h3 class="home-title">Classes for this Semester</h3>
+        <app-class-view>
+          <div id="class-view-flex">
+            <div class="class">
+              <h4 class="class-name">Database</h4>
+              <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
+                <p style="font-size: meduim; margin-left: 10px;">Dr. Duke</p>
 
-      <!-- Login Section -->
-      <input type="radio" id="loginTab" name="mytabs" checked="checked">
-      <label for="loginTab">Log In</label>
-      <div class="tab">
-        <div class="login">
-
-        <!-- Login Form -->
-       <form method='POST' action='/login-signup-database/checkLogin.php'>
-            
-            <label for='loginVNum'>
-                V Num:
-                <input id='loginVNum' type='text' name='vnum'/><br><br>
-            </label>
-
-            <label for='loginEmail'>
-                Email:
-                <input id='loginEmail' type='email' name='email' /><br><br>
-            </label>
-
-            <label for='loginPassword'>
-                Password:
-                <input id='loginPassword' type='password' name='password' /><br><br>
-            </label>
-
-            <input type='submit' name='loginFormPost' value='Log In'/>
-
-            </form>
-
-        </div>
-      </div>
-
-    <!-- Sign Up Section -->
-        <input type="radio" id="signUpTab" name="mytabs">
-        <label for="signUpTab">Sign Up</label>
-        <div class="tab">
-            <div class="signUp">
-                <!-- Sign Up Form -->
-                <form method="POST" action="/login-signup-database/sendSignUp.php" >
-
-                <label for="signUpFName">
-                    First Name:
-                    <input id="signUpFName" type="text" name="SignUpFName"><br><br>
-                </label>
-
-                <label for="signUpLName">
-                    Last Name:
-                    <input id="signUpFName" type="text" name="SignUpFName"><br><br>
-                </label>
-
-                <label for="signUpDOB">
-                    Date of Birth:</label>
-                    <input id="signUpDOB" type="date" name="SignUpDOB"><br><br>
-                </label>
-
-                <label for="signUpNum">
-                  VNumber:</label>
-                  <input id="signUpNum" type="text" name="SignUpNum"><br><br>
-                </label>
-
-                <label for="signUpYear">
-                  School Year (please enter number):
-                  <input id="signUpYear" type="number" name="SignUpYear"><br><br>
-                </label>
-
-                <label for="signUpGPA"> 
-                  Current GPA:
-                  <input id="signUpGPA" type="number" name="SignUpGPA"><br><br>
-                </label>
-
-                <label for="signUpEmail">
-                  Email: 
-                  <input id="signUpEmail" type="email"  name="SignUpEmail"><br><br>
-                </label>
-
-                <label for="signUpPassword">
-                  Password: 
-                  <input id="signUpPassword" type="password" name="SignUpPassword"><br><br>
-                </label>
+              <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
+                <p style="font-size: meduim; margin-left: 10px;">601 W Main St Richmond, VA 23220 </p>
               
-                <input type="submit" value="Sign Up">
-          </form>
-        </div>
+              <p style="font-size: large; font-weight: 600;" class="schudule-name">Meeting Times: </p>
+                <p style="font-size: meduim; margin-left: 10px;">Tuesday/Thursday 3:30-4:45pm</p>
+            </div>
+          </div>
+        </app-class-view>
+    </div>
+
+
+    <div class="home-group">
+        <h3 class="home-title">Assignments Due Soon</h3>
+        <app-assignment-item>
+          <div id="assignment-details">
+              <div id="assignment-title">508 Group Project</div>
+          
+              <div id="due-date">
+              <span class="section-header">Due:</span>
+                11/31/2021
+              </div>
+          
+              <div id="notes-section">
+                <span class="section-header">Notes:</span>
+                <ul id="notes">
+                  <li>Get this done today!</li>
+                </ul>
+            </div>
+          </div>
+        </app-assignment-item>
+    </div>
+
+
+    <div class="home-group">
+        <h3 class="home-title">Today's View</h3>
+        <!-- this would be a calendar view of that day -->
     </div>
     </div>
-  </div>
-</div>
 </body>
 </html>
