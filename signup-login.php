@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>;
-    <script src="../src/js/database.js"></script>;
-</head>
+    <script src="../src/js/database.js"></script>; -->
+<!-- </head>
 <body>
 <div id="day-view-container">
   <div id="input-field">
@@ -38,8 +38,8 @@
           </form>
 
         </div>
-      </div>
-      
+      </div> -->
+
 <!---->
 <!--&lt;!&ndash;      &lt;!&ndash;SignUp Section&ndash;&gt;&ndash;&gt;-->
 <!--&lt;!&ndash;      <input type="radio" id="signUpTab" name="mytabs">&ndash;&gt;-->
@@ -68,9 +68,9 @@
 <!--&lt;!&ndash;          </form>&ndash;&gt;-->
 <!--&lt;!&ndash;        </div>&ndash;&gt;-->
 <!--&lt;!&ndash;      </div>&ndash;&gt;-->
-    </div>
+    <!-- </div>
 
   </div>
 </div>
 </body>
-</html>
+</html> --> 
