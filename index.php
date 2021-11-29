@@ -62,21 +62,35 @@
 
                 <label for="signUpDOB">
                     Date of Birth:</label>
-                    <input id="signUpLName" type="text" name="SignUpLName"><br><br>
+                    <input id="signUpDOB" type="date" name="SignUpDOB"><br><br>
                 </label>
 
+                <label for="signUpNum">
+                  VNumber:</label>
+                  <input id="signUpNum" type="text" name="SignUpNum"><br><br>
+                </label>
 
-<!--&lt;!&ndash;            <label for="signUpNum">VNumber:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="text" id="signUpNum" name="SignUpNum"><br><br>&ndash;&gt;-->
-<!--&lt;!&ndash;            <label for="signUpYear">School Year (please enter number):</label>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="number" id="signUpYear" name="SignUpYear"><br><br>&ndash;&gt;-->
-<!--&lt;!&ndash;            <label for="signUpGPA"> Current GPA:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="number" id="signUpGPA" name="SignUpGPA"><br><br>&ndash;&gt;-->
-<!--&lt;!&ndash;            <label for="signUpEmail">Email:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="email" id="signUpEmail" name="SignUpEmail"><br><br>&ndash;&gt;-->
-<!--&lt;!&ndash;            <label for="signUpPassword">Password:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="password" id="signUpPassword" name="SignUpPassword"><br><br>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="submit" value="Sign Up">&ndash;&gt;-->
+                <label for="signUpYear">
+                  School Year (please enter number):
+                  <input id="signUpYear" type="number" name="SignUpYear"><br><br>
+                </label>
+
+                <label for="signUpGPA"> 
+                  Current GPA:
+                  <input id="signUpGPA" type="number" name="SignUpGPA"><br><br>
+                </label>
+
+                <label for="signUpEmail">
+                  Email: 
+                  <input id="signUpEmail" type="email"  name="SignUpEmail"><br><br>
+                </label>
+
+                <label for="signUpPassword">
+                  Password: 
+                  <input id="signUpPassword" type="password" name="SignUpPassword"><br><br>
+                </label>
+              
+                <input type="submit" value="Sign Up">
           </form>
         </div>
     </div>
