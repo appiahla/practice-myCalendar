@@ -62,13 +62,14 @@ if (!$link) {
 mysqli_close($link);
 
 ?>
+
 <!DOCTYPE html>
 <html>
   
 <head>
     <title>Homepage</title>
-    <link rel = "stylesheet" href = "navigation.css">
-    <link rel = "stylesheet" type = "text/css" href = "home-style.css">
+    <link rel = "stylesheet" href = "../navigation.css">
+    <link rel = "stylesheet" type = "text/css" href = "../home-style.css">
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
