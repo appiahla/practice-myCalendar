@@ -78,7 +78,7 @@ mysqli_close($link);
               <a href="">Home</a>
             </li>
 
-            <form action="addItems.php">
+            <form action="./addItems.php">
             <li class="list-item">
               <a>
                 <button type="submit" class="btn">+ Add</button>
