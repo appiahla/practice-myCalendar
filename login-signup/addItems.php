@@ -72,6 +72,7 @@
           </div>
         </div>
 
+        
         <!--Assessment Section-->
         <input type="radio" id="assessmentTab" name="mytabs">
         <label for="assessmentTab">Assessment</label>
@@ -79,37 +80,73 @@
 
           <!--Here add the circle radio buttons-->
           <div class="assessment">
+
+            <!--Test-->
             <input type="radio" id="testTab" name="assessment" checked>
             <label for="testTab">Test</label>
             <div class="tab">
-              <form action="/action_page.php">
-                <label for="testName">Test Title:</label>
-                <input type="text" id="testName" name="TestName"><br><br>
-                <label for="testDate">Date:</label>
-                <input type="date" id="testDate" name="TestDate"><br><br>
-                <label for="testCourseName">Course Name:</label>
-                <input type="text" id="testCourseName" name="TestCourseName"><br><br>
-                <label for="testMaterial">Material:</label>
-                <textarea id="testMaterial" name="TestMaterial"></textarea><br><br>
-                <label for="testNotes">Notes:</label>
-                <textarea id="testNotes" name="TestNotes"></textarea><br><br>
+              <form method="POST" action="insertNewTest.php">
+
+                <label for="testName">
+                  Test Title:
+                  <input id="testName" type="text" name="TestName"><br><br>
+                </label>
+                
+                <label for="testDate">
+                  Date Of Test:
+                  <input id="testDate" type="date" name="TestDate"><br><br>
+                </label>
+                
+                <label for="testCourseName">
+                  Course Name:
+                  <input id="testCourseName" type="text"  name="TestCourseName"><br><br>
+                </label>
+                
+                <label for="testMaterial">
+                  Material:
+                  <textarea id="testMaterial" name="TestMaterial"></textarea><br><br>
+                </label>
+                
+                <label for="testNotes">
+                  Notes:
+                  <textarea id="testNotes" name="TestNotes"></textarea><br><br>
+                </label>
+                
                 <input type="submit" value="Submit">
               </form>
             </div>
+
+             <!--Quiz-->
             <input type="radio" id="quizTab" name="assessment">
             <label for="quizTab">Quiz</label>
             <div class="tab">
-              <form action="/action_page.php">
-                <label for="quizName">Quiz Title:</label>
-                <input type="text" id="quizName" name="QuizName"><br><br>
-                <label for="quizDate">Date:</label>
-                <input type="date" id="quizDate" name="QuizDate"><br><br>
-                <label for="quizCourseName">Course Name:</label>
-                <input type="text" id="quizCourseName" name="QuizCourseName"><br><br>
-                <label for="quizMaterial">Material:</label>
-                <textarea id="quizMaterial" name="QuizMaterial"></textarea><br><br>
-                <label for="quizNotes">Notes:</label>
-                <textarea id="quizNotes" name="QuizNotes"></textarea><br><br>
+              <form method="POST" action="insertNewQuiz.php">
+               
+                <label for="quizName">
+                  Quiz Title:
+                  <input id="quizName" type="text" name="QuizName"><br><br>
+                </label>
+                
+                <label for="quizDate">
+                  Date Of Quiz:
+                  <input id="quizDate" type="date" name="QuizDate"><br><br>
+                </label>
+                
+                <label for="quizCourseName">
+                  Course Name:
+                  <input id="quizCourseName" type="text" name="QuizCourseName"><br><br>
+                </label>
+                
+                <label for="quizMaterial">
+                  Material:
+                  <textarea id="quizMaterial" name="QuizMaterial"></textarea><br><br>
+                </label>
+                
+                <label for="quizNotes">
+                  Notes:
+                  <textarea id="quizNotes" name="QuizNotes"></textarea><br><br>
+                </label>
+                
                 <input type="submit" value="Submit">
               </form>
             </div>
