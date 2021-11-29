@@ -44,11 +44,16 @@
         if($rowcount == 1) { 
             echo "<h3>You are in the database!.</h3>\n"; 
 
-            print($result);
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                  echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
+                }
+              } else {
+                echo "0 results";
+              }
+
             //check if the email is correct
             //check if the password is correct
-           
-        }
 
         // Free result set
         mysqli_free_result($result);
