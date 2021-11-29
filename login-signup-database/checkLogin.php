@@ -38,8 +38,18 @@
         if ($result=mysqli_query($link,$sql))
         {
         // Return the number of rows in result set
-        $rowcount=mysqli_num_rows($result);
-        printf("Result set has %d rows.\n", $rowcount);
+        $rowcount = mysqli_num_rows($result);
+        
+        //if there is a row
+        if($rowcount == 1) { 
+            echo "<h3>You are in the database!.</h3>"; 
+
+            echo nl2br("Result is: \n$result\n");
+            //check if the email is correct
+            //check if the password is correct
+           
+        }
+
         // Free result set
         mysqli_free_result($result);
         }
