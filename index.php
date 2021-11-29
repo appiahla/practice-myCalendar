@@ -2,10 +2,15 @@
     //include the php file that contains the database conncetion code
     include 'databaseconnection.php';
     
-    //include the php file that will contain the nessacarry functions to post and retrieve comments to the database
+    // //include the php file that will contain the nessacarry functions to post and retrieve comments to the database
     include 'sendLogin.php';
+?>
 
-   echo "<form method='POST' action='".insertLoginData($link)."'>
+<!DOCTYPE html> 
+<html>
+    <body>
+
+   <?php echo "<form method='POST' action='".insertLoginData($link)."'>
 
         <label for='loginVNum'>
             V Num:
@@ -24,5 +29,7 @@
     
         <input type='submit' name='loginFormPost' value='Log In'/>
     
-    </form>";
-?>
+    </form>"; ?>
+    
+</body>
+</html>
