@@ -7,7 +7,8 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Please Log In or Sign Up: </h2>
+    <h2 class="title">Welcome to the myCalendar Web App!</h2>
+    <h3 class="subtitle"> Please Log In or Sign Up to Continue: </h3> 
 
     <div class="mytabs">
 
@@ -18,7 +19,7 @@
         <div class="login">
 
         <!-- Login Form -->
-       <form method='POST' action='sendLogin.php'>
+       <form method='POST' action='/login-signup-database/checkLogin.php'>
             
             <label for='loginVNum'>
                 V Num:
@@ -48,7 +49,7 @@
         <div class="tab">
             <div class="signUp">
                 <!-- Sign Up Form -->
-                <form method="POST" action="sendSignUp.php" >
+                <form method="POST" action="/login-signup-database/sendSignUp.php" >
 
                 <label for="signUpFName">
                     First Name:
@@ -57,7 +58,7 @@
 
                 <label for="signUpLName">
                     Last Name:
-                    <input id="signUpLName" type="text" name="SignUpLName"><br><br>
+                    <input id="signUpFName" type="text" name="SignUpFName"><br><br>
                 </label>
 
                 <label for="signUpDOB">

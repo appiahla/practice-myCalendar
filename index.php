@@ -19,7 +19,7 @@
         <div class="login">
 
         <!-- Login Form -->
-       <form method='POST' action='sendLogin.php'>
+       <form method='POST' action='/login-signup-database/checkLogin.php'>
             
             <label for='loginVNum'>
                 V Num:
@@ -49,7 +49,7 @@
         <div class="tab">
             <div class="signUp">
                 <!-- Sign Up Form -->
-                <form method="POST" action="sendSignUp.php" >
+                <form method="POST" action="/login-signup-database/sendSignUp.php" >
 
                 <label for="signUpFName">
                     First Name:
