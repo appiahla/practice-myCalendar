@@ -36,7 +36,9 @@
   <div id="input-field">
     <div class="mytabs">
         <?php
-            echo $edit_assignment_title = $_GET['assignment_title'];
+            $edit_assignment_title = $_GET['assignment_title'];
+
+            echo ($edit_assignment_title);
 
             // $assignment_date = $_SESSION['assignment_date'];
             // echo ($assignment_date);

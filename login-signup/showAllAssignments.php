@@ -82,7 +82,7 @@
                     echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
                     echo "Assignment Description: ".$row_current_assignments['description_section']."<br>";
                     echo "Assignment Notes: ".$row_current_assignments['notes']."<br>";
-                    echo "<a href='./editAssignment.php?data=<?='$assignment_title'?>'>
+                    echo "<a href='./editAssignment.php?varname=<?php echo $assignment_title?>'>
                             <button class='btn' id='viewAll'>Edit</button>
                         </a>";
 
