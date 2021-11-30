@@ -35,16 +35,16 @@ if (!$link) {
             // output data of each row
             while($row_current_assignments = $assignments->fetch_assoc()) {
 
-            echo "Assignment Title: ".$row_current_assignments['course_num']."<br>";
-            echo "Assignment Due Date: ".$row_current_assignments['course_name']."<br>";
-            echo "Assignment Course: ".$row_current_assignments['professor_name']."<br>";
-            echo "Assignment Description: ".$row_current_assignments['location']."<br>";
-            echo "Assignment Notes: ".$row_current_assignments['location']."<br>";
+            echo "Assignment Title: ".$row_current_assignments['assignment_title']."<br>";
+            echo "Assignment Due Date: ".$row_current_assignments['due_date']."<br>";
+            echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
+            echo "Assignment Description: ".$row_current_assignments['description_section']."<br>";
+            echo "Assignment Notes: ".$row_current_assignments['notes']."<br>";
 
             echo "<br>";
             }
         } else {
-        echo "No classes yet!";
+        echo "No Assignments yet!";
     }
     // Free result set
     mysqli_free_result($result_current_tasks);
