@@ -123,17 +123,17 @@ if (!$link) {
                     // output data of each row
                     while($row_course = $result_course->fetch_assoc()) {
                     
-                      echo "Course Number: ".$row_course['course_num']."<br>";
-                      echo "Course Name: ".$row_course['course_name']."<br>";
-                      echo "Professor: ".$row_course['professor_name']."<br>";
-                      echo "Location: ".$row_course['location']."<br>";
-
-                      echo "<p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>";
-                      echo "<p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email ?></p>";
-
-                      echo "<p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>";
-                        echo "<p style="font-size: meduim; margin-left: 10px;"><? echo "Location: ".$location ?> </p>";
+                      // echo "Course Number: ".$row_course['course_num']."<br>";
+                      // echo "Course Name: ".$row_course['course_name']."<br>";
+                      // echo "Professor: ".$row_course['professor_name']."<br>";
+                      // echo "Location: ".$row_course['location']."<br>";
                     
+                      $course_number_array = array_push($row_course['course_num'])
+                      $course_name_array = array_push($row_course['course_name'])
+                      $professor_array = array_push($row_course['professor_name'])
+                      $location_array = array_push($row_course['location'])
+
+                      
                     }
                 } else {
                   echo "0 results";
@@ -143,6 +143,7 @@ if (!$link) {
                 mysqli_free_result($result_course);
                 }
               ?>
+              <? print_r($course_number_array);
               <!-- <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
                 <p style="font-size: meduim; margin-left: 10px;"></p>
 
