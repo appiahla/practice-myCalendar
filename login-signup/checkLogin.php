@@ -163,8 +163,10 @@ if (!$link) {
           $course = $_POST['Course'];
           $description = $_POST['Description'];
           $notes = $_POST['Notes'];
+          
+          $temp_assignment = $_SESSION['v_num'];
 
-          $sql_current_assignments = "SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes FROM Assignment ORDER BY due_date ASC LIMIT 5;";
+          $sql_current_assignments = "CALL assignments_due_soon('$temp_assignment');";
 
           if ($result_current_assignments = mysqli_query($link,$sql_current_assignments)) {
               // Return the number of rows in result set
@@ -204,9 +206,9 @@ if (!$link) {
           $description = $_POST['Description'];
           $end = $_POST['End'];
 
-          $temp = $_SESSION['v_num'];
+          $temp_tasks = $_SESSION['v_num'];
 
-          $sql_current_tasks = "CALL create_todays_tasks('$temp');";
+          $sql_current_tasks = "CALL create_todays_tasks('$temp_tasks');";
 
           if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
               // Return the number of rows in result set
