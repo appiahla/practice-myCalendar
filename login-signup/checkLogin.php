@@ -127,15 +127,8 @@ if (!$link) {
                         echo "Course Name: ".$row_course['course_name']."<br>";
                         echo "Professor: ".$row_course['professor_name']."<br>";
                         echo "Location: ".$row_course['location']."<br>";
-                        
-                        // $course = $row_course['course_num'];
 
-                        // $course_number_array = array_push($course);
-                        // $course_name_array = array_push($row_course['course_name']);
-                        // $professor_array = array_push($row_course['professor_name']);
-                        // $location_array = array_push($row_course['location']);
-                        
-                        // print_r($course_number_array);
+                        echo "<br>";
 
                         
                       }
