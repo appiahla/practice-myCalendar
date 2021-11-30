@@ -68,7 +68,7 @@ if (!$link) {
     $sql_courses = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_num = '$v_num'";
     if ($result_course = mysqli_query($link,$sql_courses)) {
         // Return the number of rows in result set
-    $rowcount_course = mysqli_num_rows($result_user);
+    $rowcount_course = mysqli_num_rows($result_course);
     
     //if there is a row
     if($rowcount_course > 0) { 
