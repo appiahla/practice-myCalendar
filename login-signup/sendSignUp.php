@@ -2,7 +2,7 @@
 <html>
   
 <head>
-    <title>Insert Page page</title>
+    <title>myCalendar</title>
 </head>
   
 <body>
@@ -53,6 +53,7 @@
                 . " to view the updated data</h3>"; 
   
             echo nl2br("\n$v_num\n $email\n $password\n $first_name\n $last_name\n $date_of_birth\n $school_year\n $gpa\n");
+            header("Location: https://team2-508database.herokuapp.com/");
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($link);
         }
