@@ -50,6 +50,38 @@
 
             $edit_assignment_notes = $_POST['assignment_notes'];
                 echo ($edit_assignment_notes);
+
+
+            echo "
+            <form method='POST' action='updateEditAssignment.php'>
+             
+            <label for='assignmentName'>
+                Assignment Title:
+                <input id='assignmentName' type='text' name='AssignmentName' value='$edit_assignment_title'><br><br>
+            </label>
+              
+            <label for='dueDate'>
+                Due Date:
+                <input  id='dueDate' type='date' name='DueDate' value='$edit_assignment_date'><br><br>
+            </label>
+              
+            <label for='courseName'>
+                Course Name:
+                <input  id='courseName' type='text' name='CourseName' value='$edit_assignment_course'><br><br>
+            </label>
+              
+            <label for='assignmentDesc'>
+                Description:
+                <textarea id='assignmentDesc' name='AssignmentDesc' value='$edit_assignment_description'></textarea><br><br>
+            </label>
+              
+            <label for='assignmentNotes'>
+                Notes:
+                <textarea id='assignmentNotes' name='AssignmentNotes' value='$edit_assignment_notes'></textarea><br><br>
+            </label>
+             
+              <input class='btn' type='submit' value='Submit'>
+            </form>"
         ?>
         </div>
         </div>
