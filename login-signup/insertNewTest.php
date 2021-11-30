@@ -112,7 +112,7 @@
 
     </div>
     <a href="">
-      <button class="btn">View All Tests</button>
+      <button class="btn" id="viewAll">View All Tests</button>
     </a>
   </div>
 </div>
