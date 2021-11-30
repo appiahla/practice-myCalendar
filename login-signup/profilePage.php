@@ -83,10 +83,10 @@
                 echo "VNumber: ".$row_current_profile['V_Number']."<br>";
                 echo "Username: ".$row_current_profile['Username']."<br>";
                 // echo "Password: ".$row_current_profile['Password']."<br>";
-                echo "First Name: ".$row_current_profile['First_Name']."<br>";
-                echo "Last Name: ".$row_current_profile['Last_Name']."<br>";
+                echo "First Name: ".$row_current_profile['First_name']."<br>";
+                echo "Last Name: ".$row_current_profile['Last_name']."<br>";
 				echo "Date of Birth: ".$row_current_profile['DOB']."<br>";
-				echo "Age: ".$row_current_profile['AGE']."<br>";
+				echo "Age: ".$row_current_profile['Age']."<br>";
 				echo "School Year: ".$row_current_profile['School_Year']."<br>";
 				echo "GPA: ".$row_current_profile['GPA']."<br>";
 
