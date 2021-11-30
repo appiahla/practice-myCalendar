@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> 508 Group Project </title>
-    <link rel = "stylesheet" type = "text/css" href = "successAssignment.css">
+    <link rel = "stylesheet" type = "text/css" href = "successSubmit.css">
     <link rel = "stylesheet" href = "../navigation.css">
 
     <nav class="nav-bar" >
@@ -71,11 +71,13 @@
                 
                   
                 if (mysqli_query($link, $sql)) {    
+
                     echo nl2br("<h3> Assignment Title:</h3>  $title\n\n 
                     <h3> Assignment Date:</h3>  $date\n\n  
                     <h3> Assignment Course:</h3>  $course_name\n\n 
                     <h3> Assignment Description:</h3>  $description\n\n
                     <h3> Assignment Notes:</h3>  $notes\n\n");
+                    
               } else {
                   echo "Error: " . $sql . "<br>" . mysqli_error($link);
               }

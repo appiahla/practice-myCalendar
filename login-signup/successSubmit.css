@@ -33,7 +33,7 @@
     font-size: large;
   }
 
-  h3 {
+  h3, h4 {
     float: left;
     display:contents;
 }
