@@ -36,21 +36,20 @@
   <div id="input-field">
     <div class="mytabs">
         <?php
-            $edit_assignment_title = $_GET['assignment_title'];
+            $edit_assignment_title = $_POST['assignment_title'];
+                echo ($edit_assignment_title);
 
-            echo ($edit_assignment_title);
+            $edit_assignment_date = $_POST['assignment_date'];
+                echo ($edit_assignment_date);
 
-            // $assignment_date = $_SESSION['assignment_date'];
-            // echo ($assignment_date);
+            $edit_assignment_course = $_POST['assignment_course'];
+                echo ($edit_assignment_course);
 
-            // $assignment_course = $_SESSION['assignment_course'];
-            // echo ($assignment_course);
+            $edit_assignment_description = $_POST['assignment_description'];
+                echo ($edit_assignment_description);
 
-            // $assignment_description = $_SESSION['assignment_description'];
-            // echo ($assignment_description);
-            
-            // $assignment_notes = $_SESSION['assignment_notes'];
-            // echo ($assignment_notes);
+            $edit_assignment_notes = $_POST['assignment_notes'];
+                echo ($edit_assignment_notes);
         ?>
         </div>
         </div>
