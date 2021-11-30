@@ -31,11 +31,10 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <div class="mytabs">
+    <h2 class="title">Profile</h2> 
+	<div style="border: 1px solid black">
 
-	
-
-    </div>
+	</div>
     <!-- <a href="">
       <button class="btn">View All Academic Tasks</button>
     </a> -->
