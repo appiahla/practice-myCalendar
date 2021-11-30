@@ -75,7 +75,7 @@ if (!$link) {
         echo "<h3>You are in the database!.</h3>\n"; 
 
             // output data of each row
-            while($row = $result_course->fetch_assoc()) {
+            while($row_course = $result_course->fetch_assoc()) {
               // echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
             
               //   //check if the email is correct
@@ -88,7 +88,7 @@ if (!$link) {
               //       echo "The passwords match!";
               //   }
             
-            echo "Course Name: ".$row['course_name'];
+              echo "Course Name: ".$row_course['course_name']."<br>;
 
             
             }
