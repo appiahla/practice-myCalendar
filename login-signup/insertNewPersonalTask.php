@@ -31,8 +31,6 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Personal Task was Submitted Successfully!</h2>
-
     <div class="mytabs">
 
     <?php
@@ -95,6 +93,8 @@
                 
                     
                 if (mysqli_query($link, $sql)) {    
+                    //Success Message
+                    echo nl2br("<h2 class='title'>Your Personal Task was Submitted Successfully!</h2>\n\n");
                      // show the title
                     echo nl2br("<h3> Task Title:</h3>  $title\n\n");
 

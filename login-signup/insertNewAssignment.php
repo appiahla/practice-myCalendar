@@ -31,8 +31,6 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Assignment was Submitted Successfully!</h2>
-
     <div class="mytabs">
 
     <?php
@@ -72,6 +70,8 @@
                   
                 if (mysqli_query($link, $sql)) {    
 
+                    //Success Message
+                    echo nl2br("<h2 class='title'>Your Assignment was Submitted Successfully!</h2>\n\n");
                     echo nl2br("<h3> Assignment Title:</h3>  $title\n\n 
                     <h3> Assignment Date:</h3>  $date\n\n  
                     <h3> Assignment Course:</h3>  $course_name\n\n 

@@ -31,8 +31,6 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Academic Task was Submitted Successfully!</h2>
-
     <div class="mytabs">
 
     <?php
@@ -92,7 +90,9 @@
             VALUES ('$title', '$course', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$v_num')";
                 
                     
-                if (mysqli_query($link, $sql)) {    
+                if (mysqli_query($link, $sql)) {   
+                  //Success Message
+                  echo nl2br("<h2 class='title'>Your Academic Task was Submitted Successfully!</h2>\n\n");
                         // show the title
                         echo nl2br("<h3> Task Title:</h3>  $title\n\n");
 
