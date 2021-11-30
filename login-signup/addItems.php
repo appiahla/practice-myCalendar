@@ -240,7 +240,7 @@
             <input type="radio" id="personalTab" name="task">
             <label for="personalTab">Personal</label>
             <div class="tab">
-              <form method="POST" action="insertNewPersonalTask">
+              <form method="POST" action="insertNewPersonalTask.php">
                 
                 <label for="personalTaskName">
                   Task Label:
