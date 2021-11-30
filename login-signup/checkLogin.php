@@ -25,7 +25,7 @@ if (!$link) {
     
     $password = $_POST['password'];
 
-    if(!isset($_SESSION['v_num']) && empty($_SESSION['v_num']) {
+    if(!isset($_SESSION['v_num']) && empty($_SESSION['v_num'])) {
       $_SESSION['v_num'] = $v_num;
       $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
     } else {
