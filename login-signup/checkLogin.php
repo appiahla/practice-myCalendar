@@ -19,18 +19,27 @@ if (!$link) {
 
     
      //Get the variables that will be inserted into the database
-    $v_num = $_POST['vnum'];
-    
-    $email = $_POST['email'];
-    
-    $password = $_POST['password'];
+
 
     if(!isset($_SESSION['v_num']) && empty($_SESSION['v_num'])) {
+      $v_num = $_POST['vnum'];
+    
+      $email = $_POST['email'];
+      
+      $password = $_POST['password'];
+
+      $_SESSION['email'] = $email;
       $_SESSION['v_num'] = $v_num;
-      $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
+      $_SESSION['password'] = $password;
+      // $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
     } else {
-      $temp = $_SESSION['v_num'];
-      $sql_user = "SELECT * FROM Student WHERE v_num = '$temp'";
+      $v_num = $_SESSION['v_num'];
+    
+      $email = $_SESSION['email'];
+      
+      $password = $_SESSION['password'];
+      // $temp = $_SESSION['v_num'];
+      // $sql_user = "SELECT * FROM Student WHERE v_num = '$'";
     }
 
     //now insert them into the database
