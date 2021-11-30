@@ -1,0 +1,41 @@
+.title, .subtitle {
+    text-align: center;
+  }
+
+  /* This is the surrounding grey box */
+  #input-field {
+    outline: 2px solid rgb(211, 206, 206);
+    width: 600px;
+    height: auto;
+    box-shadow: 5px 5px 5px 1px #cccccc;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    justify-content: center;
+    text-align: center;
+  }
+  /*This hides the radio button!*/
+  .mytabs input[type="radio"] {
+    display: none;
+  }
+
+  #aftertitle {
+    margin-left: 10px;
+    margin-top: 1px;
+    font-size: large;
+  }
+
+  h3 {
+    float: left;
+    display:contents;
+}
+
+  
