@@ -104,46 +104,46 @@ if (!$link) {
           <div id="class-view-flex">
             <div class="class">
               <h4 class="class-name">Database</h4>
-              <? 
-                // course variables
-                $course_num = $_POST['course_num'];
-                $course_name = $_POST['course_name'];
-                $professor_name = $_POST['professor_name'];
-                $location = $_POST['location'];
+                <? 
+                  // course variables
+                  $course_num = $_POST['course_num'];
+                  $course_name = $_POST['course_name'];
+                  $professor_name = $_POST['professor_name'];
+                  $location = $_POST['location'];
 
-                $sql_courses = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
-                if ($result_course = mysqli_query($link,$sql_courses)) {
-                    // Return the number of rows in result set
-                $rowcount_course = mysqli_num_rows($result_course);
-                
-                //if there is a row
-                if($rowcount_course > 0) { 
-                  // echo "<h3>You are in the database!.</h3>\n"; 
+                  $sql_courses = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
+                  if ($result_course = mysqli_query($link,$sql_courses)) {
+                      // Return the number of rows in result set
+                  $rowcount_course = mysqli_num_rows($result_course);
+                  
+                  //if there is a row
+                  if($rowcount_course > 0) { 
+                    // echo "<h3>You are in the database!.</h3>\n"; 
 
-                    // output data of each row
-                    while($row_course = $result_course->fetch_assoc()) {
-                    
-                      // echo "Course Number: ".$row_course['course_num']."<br>";
-                      // echo "Course Name: ".$row_course['course_name']."<br>";
-                      // echo "Professor: ".$row_course['professor_name']."<br>";
-                      // echo "Location: ".$row_course['location']."<br>";
-                    
-                      $course_number_array = array_push($row_course['course_num']);
-                      $course_name_array = array_push($row_course['course_name']);
-                      $professor_array = array_push($row_course['professor_name']);
-                      $location_array = array_push($row_course['location']);
-                      print_r($course_name_array);
-
+                      // output data of each row
+                      while($row_course = $result_course->fetch_assoc()) {
                       
-                    }
-                } else {
-                  echo "0 results";
-                }
+                        echo "Course Number: ".$row_course['course_num']."<br>";
+                        // echo "Course Name: ".$row_course['course_name']."<br>";
+                        // echo "Professor: ".$row_course['professor_name']."<br>";
+                        // echo "Location: ".$row_course['location']."<br>";
+                        
+                        $course_number_array = array_push($row_course['course_num']);
+                        $course_name_array = array_push($row_course['course_name']);
+                        $professor_array = array_push($row_course['professor_name']);
+                        $location_array = array_push($row_course['location']);
+                        
 
-                // Free result set
-                mysqli_free_result($result_course);
-                }
-              ?>
+                        
+                      }
+                  } else {
+                    echo "0 results";
+                  }
+
+                  // Free result set
+                  mysqli_free_result($result_course);
+                  }
+                ?>
               <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
                 <p style="font-size: meduim; margin-left: 10px;"></p>
 
