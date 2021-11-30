@@ -72,12 +72,12 @@
               
             <label for='assignmentDesc'>
                 Description:
-                <textarea id='assignmentDesc' name='AssignmentDesc' value='$edit_assignment_description'></textarea><br><br>
+                <textarea id='assignmentDesc' name='AssignmentDesc'>$edit_assignment_description</textarea><br><br>
             </label>
               
             <label for='assignmentNotes'>
                 Notes:
-                <textarea id='assignmentNotes' name='AssignmentNotes' value='$edit_assignment_notes'></textarea><br><br>
+                <textarea id='assignmentNotes' name='AssignmentNotes'>$edit_assignment_notes</textarea><br><br>
             </label>
              
               <input class='btn' type='submit' value='Submit'>
