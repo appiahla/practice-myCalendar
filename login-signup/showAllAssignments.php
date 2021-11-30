@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
 $db_user = 'admin';
 $db_pass = 'databasegroup';
