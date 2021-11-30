@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> 508 Group Project </title>
-    <link rel = "stylesheet" type = "text/css" href = "successSubmit.css">
+    <!-- <link rel = "stylesheet" type = "text/css" href = "successSubmit.css"> -->
     <link rel = "stylesheet" href = "../navigation.css">
 
     <nav class="nav-bar" >
@@ -26,18 +26,18 @@
         </div>
       </div>
     </nav>
+</head>
 
-  </head>
 <body>
 <div id="day-view-container">
   <div id="input-field">
-    <div class="mytabs">
+    <!-- <div class="mytabs">
 
     
-    </div>
-    <a href="">
+    </div> -->
+    <!-- <a href="">
       <button class="btn">View All Academic Tasks</button>
-    </a>
+    </a> -->
   </div>
 </div>
 </body>
