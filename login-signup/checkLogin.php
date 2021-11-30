@@ -23,21 +23,27 @@ if (!$link) {
     
     $password = $_POST['password'];
 
+    // course variables
+    $course_num = $_POST['course_num'];
+    $course_name = $_POST['course_name'];
+    $professor_name = $_POST['professor_name'];
+    $location = $_POST['location'];
+
     //now insert them into the database
     //see if the v_num exists
-    $sql = "SELECT * FROM Student WHERE v_num = '$v_num'";
+    $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
            
-    if ($result = mysqli_query($link,$sql)) {
+    if ($result_user = mysqli_query($link,$sql_user)) {
 
     // Return the number of rows in result set
-    $rowcount = mysqli_num_rows($result);
+    $rowcount = mysqli_num_rows($result_user);
     
     //if there is a row
     if($rowcount == 1) { 
         echo "<h3>You are in the database!.</h3>\n"; 
 
             // output data of each row
-            while($row = $result->fetch_assoc()) {
+            while($row = $result_user->fetch_assoc()) {
               echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
             
                 //check if the email is correct
@@ -56,7 +62,42 @@ if (!$link) {
           }
 
     // Free result set
-    mysqli_free_result($result);
+    mysqli_free_result($result_user);
+    }
+
+    $sql_courses = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_num = '$v_num'";
+    if ($result_course = mysqli_query($link,$sql_course)) {
+        // Return the number of rows in result set
+    $rowcount_course = mysqli_num_rows($result_user);
+    
+    //if there is a row
+    if($rowcount_course > 0) { 
+        echo "<h3>You are in the database!.</h3>\n"; 
+
+            // output data of each row
+            while($row = $result_course->fetch_assoc()) {
+              // echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
+            
+              //   //check if the email is correct
+              //   if ($row["username"] == $email){ 
+              //       echo "The emails match!";
+              //   }
+
+              //   //check if the password is correct
+              //   if ($row["password"] == $password) {
+              //       echo "The passwords match!";
+              //   }
+            
+            echo "Course Name: ".$row['course_name'];
+
+            
+            }
+          } else {
+            echo "0 results";
+          }
+
+    // Free result set
+    mysqli_free_result($result_course);
     }
 
 mysqli_close($link);
