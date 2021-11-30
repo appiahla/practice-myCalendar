@@ -72,29 +72,30 @@ if (!$link) {
     
     //if there is a row
     if($rowcount_course > 0) { 
-        echo "<h3>You are in the database!.</h3>\n"; 
+      echo "<h3>You are in the database!.</h3>\n"; 
 
-            // output data of each row
-            while($row_course = $result_course->fetch_assoc()) {
-              // echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
-            
-              //   //check if the email is correct
-              //   if ($row["username"] == $email){ 
-              //       echo "The emails match!";
-              //   }
+        // output data of each row
+        while($row_course = $result_course->fetch_assoc()) {
+          // echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
+        
+          //   //check if the email is correct
+          //   if ($row["username"] == $email){ 
+          //       echo "The emails match!";
+          //   }
 
-              //   //check if the password is correct
-              //   if ($row["password"] == $password) {
-              //       echo "The passwords match!";
-              //   }
-            
-              echo "Course Name: ".$row_course['course_name']."<br>";
+          //   //check if the password is correct
+          //   if ($row["password"] == $password) {
+          //       echo "The passwords match!";
+          //   }
+        
+          echo "Course Name: ".$row_course['course_name']."<br>";
+          echo "Row";
 
-            
-            }
-          } else {
-            echo "0 results";
-          }
+        
+        }
+    } else {
+      echo "0 results";
+    }
 
     // Free result set
     mysqli_free_result($result_course);
