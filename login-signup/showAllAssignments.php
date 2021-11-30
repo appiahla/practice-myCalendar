@@ -82,7 +82,7 @@
                     echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
                     echo "Assignment Description: ".$row_current_assignments['description_section']."<br>";
                     echo "Assignment Notes: ".$row_current_assignments['notes']."<br>";
-                    echo " <form action='./editAssignment.php' method='POST'>
+                    echo "<form action='./editAssignment.php' method='POST'>
                             
                             <input type='hidden' name='assignment_title' value='$assignment_title'>
                             <input type='hidden' name='assignment_date' value='$assignment_date'>
