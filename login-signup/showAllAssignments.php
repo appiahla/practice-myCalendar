@@ -22,23 +22,37 @@ if (!$link) {
     $get_v = $_SESSION['v_num'];
 
     //see if the v_num exists
-    $sql =  "INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name_assignment`,`description_section`, `notes`) 
-    VALUES ('$title', '$date', '$course_name', '$description', '$notes')";
-          
-            
-          if (mysqli_query($link, $sql)) {    
+    $sql =  "SELECT * FROM Assignments WHERE assignment_v_number=$get_v";
 
-              //Success Message
-            //   echo nl2br("<h2 class='title'>Your Assignment was Submitted Successfully!</h2>\n\n");
-            //   echo nl2br("<h3> Assignment Title:</h3>  $title\n\n 
-            //   <h3> Assignment Date:</h3>  $date\n\n  
-            //   <h3> Assignment Course:</h3>  $course_name\n\n 
-            //   <h3> Assignment Description:</h3>  $description\n\n
-            //   <h3> Assignment Notes:</h3>  $notes\n\n");
-              
+    if ($assignments = mysqli_query($link,$sql)) {
+        
+        // Return the number of rows in result set
+        $rowcount_assignments = mysqli_num_rows($assignments);
+        
+        //if there is a row
+        if($rowcount_assignments > 0) { 
+
+            // output data of each row
+            while($row_current_assignments = $assignments->fetch_assoc()) {
+
+            echo "Assignment Title: ".$row_current_assignments['course_num']."<br>";
+            echo "Assignment Due Date: ".$row_current_assignments['course_name']."<br>";
+            echo "Assignment Course: ".$row_current_assignments['professor_name']."<br>";
+            echo "Assignment Description: ".$row_current_assignments['location']."<br>";
+            echo "Assignment Notes: ".$row_current_assignments['location']."<br>";
+
+            echo "<br>";
+            }
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($link);
-        }
+        echo "No classes yet!";
+    }
+    // Free result set
+    mysqli_free_result($result_current_tasks);
+    }
+            
+    else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($link);
+    }
 
 mysqli_close($link);
 
