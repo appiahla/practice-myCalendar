@@ -87,7 +87,7 @@
       ?>
 
     </div>
-    <a href="">
+    <a href="./showAllAssignments.php">
       <button class="btn">View All Assignments</button>
     </a>
   </div>
