@@ -4,6 +4,8 @@
     <title> 508 Group Project </title>
     <!-- <link rel = "stylesheet" type = "text/css" href = "successSubmit.css"> -->
     <link rel = "stylesheet" href = "../navigation.css">
+	<link rel = "stylesheet" type = "text/css" href = "viewAll.css">
+
 
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
