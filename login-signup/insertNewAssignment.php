@@ -35,6 +35,8 @@
 
     <?php
 
+      session_start();
+
       $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
       $db_user = 'admin';
       $db_pass = 'databasegroup';
@@ -62,10 +64,12 @@
         
           $notes =  $_POST['AssignmentNotes'];
 
+          $get_v = $_SESSION['v_num'];
+
           //now insert them into the database
           //see if the v_num exists
-          $sql =  "INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name_assignment`,`description_section`, `notes`) 
-          VALUES ('$title', '$date', '$course_name', '$description', '$notes')";
+          $sql =  "INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name_assignment`,`description_section`, `notes`, `assignment_v_number`) 
+          VALUES ('$title', '$date', '$course_name', '$description', '$notes', '$get_v')";
                 
                   
                 if (mysqli_query($link, $sql)) {    

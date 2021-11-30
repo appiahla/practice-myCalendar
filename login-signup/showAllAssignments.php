@@ -19,8 +19,31 @@ if (!$link) {
 }
 
 
-    $edit_v = $_SESSION['v_num'];
-    echo($edit_v);
+    $get_v = $_SESSION['v_num'];
+
+    //see if the v_num exists
+    $sql =  "INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name_assignment`,`description_section`, `notes`) 
+    VALUES ('$title', '$date', '$course_name', '$description', '$notes')";
+          
+            
+          if (mysqli_query($link, $sql)) {    
+
+              //Success Message
+            //   echo nl2br("<h2 class='title'>Your Assignment was Submitted Successfully!</h2>\n\n");
+            //   echo nl2br("<h3> Assignment Title:</h3>  $title\n\n 
+            //   <h3> Assignment Date:</h3>  $date\n\n  
+            //   <h3> Assignment Course:</h3>  $course_name\n\n 
+            //   <h3> Assignment Description:</h3>  $description\n\n
+            //   <h3> Assignment Notes:</h3>  $notes\n\n");
+              
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($link);
+        }
+
+mysqli_close($link);
+
+
+    
 
 mysqli_close($link);
 
