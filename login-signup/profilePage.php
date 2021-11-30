@@ -37,7 +37,7 @@
 <div id="day-view-container">
   <div id="input-field">
     <h2 class="title">Profile</h2> 
-	<div style="border: 1px solid black">
+	<div>
 	<? 
 		$db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
         $db_user = 'admin';
@@ -80,9 +80,8 @@
               // output data of each row
               while($row_current_profile = $result_current_profile->fetch_assoc()) {
               
-                echo "VNumber: ".$row_current_profile['V_Number']."<br>";
+                echo "V-number: ".$row_current_profile['V_Number']."<br>";
                 echo "Username: ".$row_current_profile['Username']."<br>";
-                // echo "Password: ".$row_current_profile['Password']."<br>";
                 echo "First Name: ".$row_current_profile['First_name']."<br>";
                 echo "Last Name: ".$row_current_profile['Last_name']."<br>";
 				echo "Date of Birth: ".$row_current_profile['DOB']."<br>";
