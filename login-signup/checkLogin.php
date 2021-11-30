@@ -96,7 +96,7 @@ if (!$link) {
             </li>
            </form>
             <li class="list-item">
-              <a href="">
+              <a href="https://team2-508database.herokuapp.com/login-signup/profilePage.php">
                 <button class="btn">Profile</button>
               </a>
             </li>
