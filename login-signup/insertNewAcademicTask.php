@@ -35,6 +35,8 @@
 
     <?php
 
+        session_start();
+
         $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
         $db_user = 'admin';
         $db_pass = 'databasegroup';
@@ -82,12 +84,12 @@
             
             $end = $_POST['AcaTaskRecurrEnd'];
 
-            $v_num = 'V00875392';
+            $get_v = $_SESSION['v_num'];
 
             //now insert them into the database
             //see if the v_num exists
             $sql =  "INSERT INTO AcademicTask (`task_title`, `task_course`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
-            VALUES ('$title', '$course', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$v_num')";
+            VALUES ('$title', '$course', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v')";
                 
                     
                 if (mysqli_query($link, $sql)) {   
