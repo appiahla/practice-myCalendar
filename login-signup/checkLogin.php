@@ -105,7 +105,7 @@ mysqli_close($link);
             <div class="class">
               <h4 class="class-name">Database</h4>
               <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
-                <p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email.?></p>
+                <p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email ?></p>
 
               <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
                 <p style="font-size: meduim; margin-left: 10px;">601 W Main St Richmond, VA 23220 </p>
