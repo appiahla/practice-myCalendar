@@ -140,14 +140,14 @@ if (!$link) {
                   mysqli_free_result($result_course);
                   }
                 ?>
-              <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
+              <!-- <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
                 <p style="font-size: meduim; margin-left: 10px;"></p>
 
               <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
                 <p style="font-size: meduim; margin-left: 10px;">601 W Main St Richmond, VA 23220 </p>
               
               <p style="font-size: large; font-weight: 600;" class="schudule-name">Meeting Times: </p>
-                <p style="font-size: meduim; margin-left: 10px;">Tuesday/Thursday 3:30-4:45pm</p>
+                <p style="font-size: meduim; margin-left: 10px;">Tuesday/Thursday 3:30-4:45pm</p> -->
             </div>
           </div>
         </app-class-view>
