@@ -35,7 +35,51 @@
   <div id="input-field">
     <h2 class="title">Profile</h2> 
 	<div style="border: 1px solid black">
+	<? 
+          // student view variables
+          $vnum = $_POST['V_Number'];
+          $username = $_POST['Username'];
+          $password = $_POST['Password'];
+          $first_name = $_POST['First_Name'];
+          $last_name = $_POST['Last_Name'];
+		  $dob = $_POST['DOB'];
+		  $age = $_POST['AGE'];
+		  $school_year = $_POST['School_Year'];
+		  $gpa = $_POST['GPA'];
 
+          $temp_profile = $_SESSION['v_num'];
+
+          $sql_current_profile = "SELECT * FROM student_view WHERE V_Number = '$temp_profile';";
+
+          if ($result_current_profile = mysqli_query($link,$sql_current_profile)) {
+              // Return the number of rows in result set
+          $rowcount_current_profile = mysqli_num_rows($result_current_profile);
+          
+          //if there is a row
+          if($rowcount_current_profile > 0) { 
+
+              // output data of each row
+              while($row_current_profile = $result_current_profile->fetch_assoc()) {
+              
+                echo "VNumber: ".$row_current_profile['V_Number']."<br>";
+                echo "Username: ".$row_current_profile['Username']."<br>";
+                echo "Password: ".$row_current_profile['Password']."<br>";
+                echo "First Name: ".$row_current_profile['First_Name']."<br>";
+                echo "Last Name: ".$row_current_profile['Last_Name']."<br>";
+				echo "Date of Birth: ".$row_current_profile['DOB']."<br>";
+				echo "Age: ".$row_current_profile['AGE']."<br>";
+				echo "School Year: ".$row_current_profile['School_Year']."<br>";
+				echo "GPA: ".$row_current_profile['GPA']."<br>";
+
+                echo "<br>";
+              }
+          } else {
+            echo "Nothing here!";
+          }
+          // Free result set
+          mysqli_free_result($result_current_profile);
+          }
+        ?>
 	</div>
     <!-- <a href="">
       <button class="btn">View All Academic Tasks</button>
