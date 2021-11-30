@@ -22,7 +22,7 @@ if (!$link) {
     $get_v = $_SESSION['v_num'];
 
     //see if the v_num exists
-    $sql =  "SELECT * FROM Assignment WHERE assignment_v_number=$get_v";
+    $sql =  "SELECT * FROM Assignment WHERE assignment_v_number='$get_v'";
 
     if ($assignments = mysqli_query($link,$sql)) {
         
