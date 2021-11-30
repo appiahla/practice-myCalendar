@@ -195,7 +195,7 @@ if (!$link) {
 
 
     <div class="home-group">
-        <h3 class="home-title">Today's View</h3>
+        <h3 class="home-title">Today's Tasks</h3>
         <? 
           // course variables
           $title = $_POST['Title'];
