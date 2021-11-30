@@ -200,25 +200,25 @@
   
                 <label for="acaTaskRecurrDay">Weekdays: </label>
                     
-                    <input type="checkbox" id="acaTaskRecurrDay" name="monday">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="monday" value="Monday">
                     <label for="monday" style="font-weight:400;"> Monday</label><br>
 
-                    <input type="checkbox" id="acaTaskRecurrDay" name="tuesday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="tuesday" value="Tuesday" style="position: relative;right: -102px;">
                     <label for="tuesday" style="font-weight:400; position: relative;right: -103px;"> Tuesday</label><br>
 
-                    <input type="checkbox" id="acaTaskRecurrDay" name="wendsday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="wendsday" value="Wendsday" style="position: relative;right: -102px;">
                     <label for="wendsday" style="font-weight:400; position: relative;right: -103px;"> Wendsday</label><br>
 
-                    <input type="checkbox" id="acaTaskRecurrDay" name="thursday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="thursday" value="Thursday" style="position: relative;right: -102px;">
                     <label for="thursday" style="font-weight:400; position: relative;right: -103px;"> Thursday</label><br>
 
-                    <input type="checkbox" id="acaTaskRecurrDay" name="firday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="firday" value="Friday" style="position: relative;right: -102px;">
                     <label for="firday" style="font-weight:400; position: relative;right: -103px;"> Friday</label><br>
 
-                    <input type="checkbox" id="acaTaskRecurrDay" name="staurday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="staurday" value="Saturday" style="position: relative;right: -102px;">
                     <label for="staurday" style="font-weight:400; position: relative;right: -103px;"> Saturday</label><br>
 
-                    <input type="checkbox" id="acaTaskRecurrDay" name="sunday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="acaTaskRecurrDay" name="sunday" value="Sunday" style="position: relative;right: -102px;">
                     <label for="sunday" style="font-weight:400; position: relative;right: -103px;"> Sunday</label><br><br>
 
                 
@@ -276,30 +276,30 @@
                   <br><br><br>
                 </label>
 
-                <input type="checkbox" id="recurringTask" name="recurring">
+                <input type="checkbox" id="recurringTask" name="recurring" value="Recurring">
                     <label for="recurring" style="font-weight:400;"> Recurring Task:</label><br><br>
 
                 <label for="personalTaskRecurrDay">Weekdays: </label>
                     
-                    <input type="checkbox" id="personalTaskRecurrDay" name="monday">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="monday" value="Monday">
                     <label for="monday" style="font-weight:400;"> Monday</label><br>
 
-                    <input type="checkbox" id="personalTaskRecurrDay" name="tuesday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="tuesday" value="Tuesday" style="position: relative;right: -102px;">
                     <label for="tuesday" style="font-weight:400; position: relative;right: -103px;"> Tuesday</label><br>
 
-                    <input type="checkbox" id="personalTaskRecurrDay" name="wendsday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="wendsday" value="Wendsday" style="position: relative;right: -102px;">
                     <label for="wendsday" style="font-weight:400; position: relative;right: -103px;"> Wendsday</label><br>
 
-                    <input type="checkbox" id="personalTaskRecurrDay" name="thursday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="thursday" value="Thursday" style="position: relative;right: -102px;">
                     <label for="thursday" style="font-weight:400; position: relative;right: -103px;"> Thursday</label><br>
 
-                    <input type="checkbox" id="personalTaskRecurrDay" name="firday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="firday" value="Friday" style="position: relative;right: -102px;">
                     <label for="firday" style="font-weight:400; position: relative;right: -103px;"> Friday</label><br>
 
-                    <input type="checkbox" id="personalTaskRecurrDay" name="staurday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="staurday" value="Saturday" style="position: relative;right: -102px;">
                     <label for="staurday" style="font-weight:400; position: relative;right: -103px;"> Saturday</label><br>
 
-                    <input type="checkbox" id="personalTaskRecurrDay" name="sunday" style="position: relative;right: -102px;">
+                    <input type="checkbox" id="personalTaskRecurrDay" name="sunday" value="Sunday" style="position: relative;right: -102px;">
                     <label for="sunday" style="font-weight:400; position: relative;right: -103px;"> Sunday</label><br><br>
 
                 
