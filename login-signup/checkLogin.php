@@ -123,22 +123,21 @@ if (!$link) {
                   $professor_name = $_POST['professor_name'];
                   $location = $_POST['location'];
 
-                  $sql_current_assignments = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
-                  if ($result_current_assignments = mysqli_query($link,$sql_current_assignments)) {
+                  $sql_current_tasks = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
+                  if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
                       // Return the number of rows in result set
-                  $rowcount_course = mysqli_num_rows($result_current_assignments);
+                  $rowcount_course = mysqli_num_rows($result_current_tasks);
                   
                   //if there is a row
                   if($rowcount_course > 0) { 
-                    // echo "<h3>You are in the database!.</h3>\n"; 
 
                       // output data of each row
-                      while($row_current_assignments = $result_current_assignments->fetch_assoc()) {
+                      while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
                       
-                        echo "Course Number: ".$row_current_assignments['course_num']."<br>";
-                        echo "Course Name: ".$row_current_assignments['course_name']."<br>";
-                        echo "Professor: ".$row_current_assignments['professor_name']."<br>";
-                        echo "Location: ".$row_current_assignments['location']."<br>";
+                        echo "Course Number: ".$row_current_tasks['course_num']."<br>";
+                        echo "Course Name: ".$row_current_tasks['course_name']."<br>";
+                        echo "Professor: ".$row_current_tasks['professor_name']."<br>";
+                        echo "Location: ".$row_current_tasks['location']."<br>";
 
                         echo "<br>";
                       }
@@ -146,7 +145,7 @@ if (!$link) {
                     echo "No classes yet!";
                   }
                   // Free result set
-                  mysqli_free_result($result_current_assignments);
+                  mysqli_free_result($result_current_tasks);
                   }
                 ?>
             </div>
@@ -157,66 +156,81 @@ if (!$link) {
 
     <div class="home-group">
         <h3 class="home-title">Assignments Due Soon</h3>
-        <!-- <app-assignment-item>
-          <div id="assignment-details">
-              <div id="assignment-title">508 Group Project</div>
-          
-              <div id="due-date">
-              <span class="section-header">Due:</span>
-                11/31/2021
-              </div>
-          
-              <div id="notes-section">
-                <span class="section-header">Notes:</span>
-                <ul id="notes">
-                  <li>Get this done today!</li>
-                </ul>
-            </div>
-          </div>
-        </app-assignment-item> -->
-
         <? 
-                  // course variables
-                  $title = $_POST['Title'];
-                  $due_date = $_POST['Due_Date'];
-                  $course = $_POST['Course'];
-                  $description = $_POST['Description'];
-                  $notes = $_POST['Notes'];
+          // course variables
+          $title = $_POST['Title'];
+          $due_date = $_POST['Due_Date'];
+          $course = $_POST['Course'];
+          $description = $_POST['Description'];
+          $notes = $_POST['Notes'];
 
-                  $sql_current_assignments = "SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes FROM Assignment ORDER BY due_date ASC LIMIT 5;";
+          $sql_current_tasks = "SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes FROM Assignment ORDER BY due_date ASC LIMIT 5;";
 
-                  if ($result_current_assignments = mysqli_query($link,$sql_current_assignments)) {
-                      // Return the number of rows in result set
-                  $rowcount_current_assignments = mysqli_num_rows($result_current_assignments);
-                  
-                  //if there is a row
-                  if($rowcount_current_assignments > 0) { 
-                    // echo "<h3>You are in the database!.</h3>\n"; 
+          if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
+              // Return the number of rows in result set
+          $rowcount_current_tasks = mysqli_num_rows($result_current_tasks);
+          
+          //if there is a row
+          if($rowcount_current_tasks > 0) { 
 
-                      // output data of each row
-                      while($row_current_assignments = $result_current_assignments->fetch_assoc()) {
-                      
-                        echo "Title: ".$row_current_assignments['Title']."<br>";
-                        echo "Due Date: ".$row_current_assignments['Due_Date']."<br>";
-                        echo "Course: ".$row_current_assignments['Course']."<br>";
-                        echo "Description: ".$row_current_assignments['Description']."<br>";
-                        echo "Notes: ".$row_current_assignments['Notes']."<br>";
+              // output data of each row
+              while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
+              
+                echo "Title: ".$row_current_tasks['Title']."<br>";
+                echo "Due Date: ".$row_current_tasks['Due_Date']."<br>";
+                echo "Course: ".$row_current_tasks['Course']."<br>";
+                echo "Description: ".$row_current_tasks['Description']."<br>";
+                echo "Notes: ".$row_current_tasks['Notes']."<br>";
 
-                        echo "<br>";
-                      }
-                  } else {
-                    echo "No assignments yet!";
-                  }
-                  // Free result set
-                  mysqli_free_result($result_current_assignments);
-                  }
-                ?>
+                echo "<br>";
+              }
+          } else {
+            echo "No assignments yet!";
+          }
+          // Free result set
+          mysqli_free_result($result_current_tasks);
+          }
+        ?>
     </div>
 
 
     <div class="home-group">
         <h3 class="home-title">Today's View</h3>
-        <!-- this would be a calendar view of that day -->
+        <? 
+          // course variables
+          $title = $_POST['Title'];
+          $status = $_POST['Status'];
+          $start = $_POST['Start'];
+          $description = $_POST['Description'];
+          $end = $_POST['End'];
+
+          $sql_current_tasks = "SELECT * FROM todays_tasks;";
+
+          if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
+              // Return the number of rows in result set
+          $rowcount_current_tasks = mysqli_num_rows($result_current_tasks);
+          
+          //if there is a row
+          if($rowcount_current_tasks > 0) { 
+
+              // output data of each row
+              while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
+              
+                echo "Title: ".$row_current_tasks['Title']."<br>";
+                echo "Due Date: ".$row_current_tasks['Status']."<br>";
+                echo "Description: ".$row_current_tasks['Description']."<br>";
+                echo "Start: ".$row_current_tasks['Start']."<br>";
+                echo "End: ".$row_current_tasks['End']."<br>";
+
+                echo "<br>";
+              }
+          } else {
+            echo "No tasks yet!";
+          }
+          // Free result set
+          mysqli_free_result($result_current_tasks);
+          }
+        ?>
     </div>
     </div>
 </body>
