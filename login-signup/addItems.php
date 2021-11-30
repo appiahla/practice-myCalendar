@@ -188,14 +188,14 @@
 
                 <label for="status">Task Status: </label>
                   <select name="AcaTaskStatus" id="status">
-                      <option value="notStarted">Not Started</option>
-                      <option value="onGoing">On Going</option>
-                      <option value="completed">Completed</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="On Going">On Going</option>
+                      <option value="Completed">Completed</option>
                     </select>
                     <br><br><br>
                   </label>
   
-                  <input type="checkbox" id="recurringTask" name="recurring">
+                  <input type="checkbox" id="recurringTask" name="recurring" value="Recurring">
                       <label for="recurring" style="font-weight:400;"> Recurring Task:</label><br><br>
   
                 <label for="acaTaskRecurrDay">Weekdays: </label>
