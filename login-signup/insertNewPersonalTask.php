@@ -112,25 +112,27 @@
                         }
                     
                     if ($description != ''){
-                    echo nl2br("<h3> Task Date:</h3>  $description\n\n");
+                        
+                        echo nl2br("<h3> Task Description:</h3>  $description\n\n");
+                    
                     }
 
                     if ($date != '') {
 
-                    echo nl2br("<h3> Task Date:</h3>  $date\n\n");
+                        echo nl2br("<h3> Task Date:</h3>  $date\n\n");
 
                     }
                     
                     if ($status != ''){
 
-                    echo nl2br("<h3> Task Status:</h3>  $status\n\n");
+                        echo nl2br("<h3> Task Status:</h3>  $status\n\n");
 
                     }
 
                     //check if the task is recurring
                     if ($recurring != ''){
 
-                    echo nl2br("<h3>Task is Recurring on: </h3>\n\n");
+                        echo nl2br("<h3>Task is Recurring on: </h3>\n\n");
 
 
                         if ($monday != ''){
