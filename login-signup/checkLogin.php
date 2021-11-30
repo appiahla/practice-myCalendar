@@ -128,11 +128,11 @@ if (!$link) {
                       echo "Professor: ".$row_course['professor_name']."<br>";
                       echo "Location: ".$row_course['location']."<br>";
 
-                      Echo "<p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
-                        <p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email ?></p>
+                      echo "<p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>";
+                      echo "<p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email ?></p>";
 
-                      <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
-                        <p style="font-size: meduim; margin-left: 10px;"><? echo "Location: ".$location ?> </p>"
+                      echo "<p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>";
+                        echo "<p style="font-size: meduim; margin-left: 10px;"><? echo "Location: ".$location ?> </p>";
                     
                     }
                 } else {
