@@ -10,7 +10,7 @@
         <a id="home-pic" href="">myCalendar</a>
           <ul class="list">
             <li class="list-item">
-              <a href="">Home</a>
+              <a href="https://team2-508database.herokuapp.com/login-signup/checkLogin.php">Home</a>
             </li>
             <li class="list-item">
               <a a href="">
