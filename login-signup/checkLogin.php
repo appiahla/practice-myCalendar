@@ -105,7 +105,42 @@ mysqli_close($link);
             <div class="class">
               <h4 class="class-name">Database</h4>
               <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
-                <p style="font-size: meduim; margin-left: 10px;">Dr. Duke</p>
+                <p style="font-size: meduim; margin-left: 10px;">
+                  <?php 
+                    $sql = "SELECT * FROM Student WHERE v_num = '$v_num'";
+           
+                    if ($result = mysqli_query($link,$sql)) {
+
+                    // Return the number of rows in result set
+                    $rowcount = mysqli_num_rows($result);
+                    
+                    //if there is a row
+                    if($rowcount == 1) { 
+                        echo "<h3>You are in the database!.</h3>\n"; 
+
+                            // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                              echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
+                            
+                                //check if the email is correct
+                                if ($row["username"] == $email){ 
+                                    echo "The emails match!";
+                                }
+
+                                //check if the password is correct
+                                if ($row["password"] == $password) {
+                                    echo "The passwords match!";
+                                }
+                            
+                            }
+                          } else {
+                            echo "0 results";
+                          }
+
+                    // Free result set
+                    mysqli_free_result($result);
+                    }
+                  ?></p>
 
               <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
                 <p style="font-size: meduim; margin-left: 10px;">601 W Main St Richmond, VA 23220 </p>
