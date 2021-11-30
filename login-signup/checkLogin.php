@@ -183,7 +183,7 @@ if (!$link) {
                   $description = $_POST['Description'];
                   $notes = $_POST['Notes'];
 
-                  $sql_current_assignments = "SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes FROM Assignment ORDER BY due_date ASC LIMIT 10;";
+                  $sql_current_assignments = "SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes FROM Assignment ORDER BY due_date ASC LIMIT 5;";
 
                   if ($result_current_assignments = mysqli_query($link,$sql_current_assignments)) {
                       // Return the number of rows in result set
