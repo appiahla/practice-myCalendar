@@ -58,11 +58,11 @@
           // student view variables
           $vnum = $_POST['V_Number'];
           $username = $_POST['Username'];
-          $password = $_POST['Password'];
-          $first_name = $_POST['First_Name'];
-          $last_name = $_POST['Last_Name'];
+        //   $password = $_POST['Password'];
+          $first_name = $_POST['First_name'];
+          $last_name = $_POST['Last_name'];
 		  $dob = $_POST['DOB'];
-		  $age = $_POST['AGE'];
+		  $age = $_POST['Age'];
 		  $school_year = $_POST['School_Year'];
 		  $gpa = $_POST['GPA'];
 
@@ -82,7 +82,7 @@
               
                 echo "VNumber: ".$row_current_profile['V_Number']."<br>";
                 echo "Username: ".$row_current_profile['Username']."<br>";
-                echo "Password: ".$row_current_profile['Password']."<br>";
+                // echo "Password: ".$row_current_profile['Password']."<br>";
                 echo "First Name: ".$row_current_profile['First_Name']."<br>";
                 echo "Last Name: ".$row_current_profile['Last_Name']."<br>";
 				echo "Date of Birth: ".$row_current_profile['DOB']."<br>";
