@@ -3,7 +3,7 @@
 <head>
     <title> 508 Group Project </title>
     <link rel = "stylesheet" type = "text/css" href = "/login-signup/login-signup-style.css">
-    <link rel = "stylesheet" href = "navigation.css">
+    <link rel = "stylesheet" href = "../navigation.css">
 
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
