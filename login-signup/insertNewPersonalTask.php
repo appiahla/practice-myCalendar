@@ -96,93 +96,96 @@
                     
                 if (mysqli_query($link, $sql)) {    
                      // show the title
-           echo nl2br("<h3> Task Title:</h3>  $title\n\n");
+                    echo nl2br("<h3> Task Title:</h3>  $title\n\n");
 
-           // check for null
-           if ($with != '') {
+                    // check for null
+                    if ($with != '') {
 
-           echo nl2br("<h3> With:</h3>  $with\n\n");
+                    echo nl2br("<h3> With:</h3>  $with\n\n");
 
-           }
+                    }
 
-           if ($location != '') {
+                    if ($location != '') {
 
-            echo nl2br("<h3> Task Location:</h3>  $location\n\n");
- 
-            }
-           
-           if ($description != ''){
-           echo nl2br("<h3> Task Date:</h3>  $description\n\n");
-           }
+                        echo nl2br("<h3> Task Location:</h3>  $location\n\n");
+            
+                        }
+                    
+                    if ($description != ''){
+                    echo nl2br("<h3> Task Date:</h3>  $description\n\n");
+                    }
 
-           if ($date != '') {
+                    if ($date != '') {
 
-           echo nl2br("<h3> Task Date:</h3>  $date\n\n");
+                    echo nl2br("<h3> Task Date:</h3>  $date\n\n");
 
-           }
-           
-           if ($status != ''){
+                    }
+                    
+                    if ($status != ''){
 
-           echo nl2br("<h3> Task Status:</h3>  $status\n\n");
+                    echo nl2br("<h3> Task Status:</h3>  $status\n\n");
 
-           }
+                    }
 
-           //check if the task is recurring
-           if ($recurring != ''){
+                    //check if the task is recurring
+                    if ($recurring != ''){
 
-           echo nl2br("<h3>Task is Recurring on: </h3>\n\n");
+                    echo nl2br("<h3>Task is Recurring on: </h3>\n\n");
 
 
-           if ($monday != ''){
-               
-               echo nl2br("$monday\n\n");
-           
-           }
+                        if ($monday != ''){
+                            
+                            echo nl2br("$monday\n\n");
+                        
+                        }
 
-           if ($tuesday != ''){
-               
-               echo nl2br("$tuesday\n\n");
+                        if ($tuesday != ''){
+                            
+                            echo nl2br("$tuesday\n\n");
 
-           }
-           
-           if ($wednesday != ''){
+                        }
+                        
+                        if ($wednesday != ''){
 
-               echo nl2br("$wednesday\n\n");
+                            echo nl2br("$wednesday\n\n");
 
-           }
+                        }
 
-           if ($thursday != ''){
+                        if ($thursday != ''){
 
-               echo nl2br("$thursday\n\n");
+                            echo nl2br("$thursday\n\n");
 
-           }
-           
-           if ($friday != ''){
+                        }
+                        
+                        if ($friday != ''){
 
-               echo nl2br("$friday\n\n");
-           }
+                            echo nl2br("$friday\n\n");
+                        }
 
-           if ($saturday != ''){
+                        if ($saturday != ''){
 
-               echo nl2br("$saturday\n\n");
-           }
+                            echo nl2br("$saturday\n\n");
+                        }
 
-           if ($sunday != ''){
-               
-               echo nl2br("$sunday\n\n");
+                        if ($sunday != ''){
+                            
+                            echo nl2br("$sunday\n\n");
 
-           }
-           
-           echo nl2br("<h4>Staring on: </h4>\n\n $start\n\n");
-           echo nl2br("<h4>Ending on: </h4>\n\n $end\n\n");
-       }
-                } else {
+                        }
+                        
+                        echo nl2br("<h4>Staring on: </h4>\n\n $start\n\n");
+                        echo nl2br("<h4>Ending on: </h4>\n\n $end\n\n");
+                    }
+                } 
+            
+                else {
+
                     echo "Error: " . $sql . "<br>" . mysqli_error($link);
                 }
 
         mysqli_close($link);
 
-?>
+    ?>
     </div>
   </div>
 </div>
