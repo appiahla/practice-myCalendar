@@ -3,7 +3,7 @@
 <head>
     <title>Homepage</title>
     <link rel = "stylesheet" href = "../navigation.css">
-    <link rel = "stylesheet" type = "text/css" href = "add-items.css">
+    <link rel = "stylesheet" type = "text/css" href = "/login-signup/add-items.css">
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
@@ -159,50 +159,158 @@
         <div class="tab">
           <!--Here add the circle radio buttons-->
           <div class="task">
+
+            <!--Academic-->
             <input type="radio" id="academicTab" name="task" checked>
             <label for="academicTab">Academic</label>
             <div class="tab">
-              <form action="/action_page.php">
-                <label for="acaTaskName">Task Label:</label>
-                <input type="text" id="acaTaskName" name="AcaTaskName"><br><br>
-                <label for="acaTaskCourse">Course:</label>
-                <input type="text" id="acaTaskCourse" name="AcaTaskCourse"><br><br>
-                <label for="acaTaskDesc">Description:</label>
-                <textarea id="acaTaskDesc" name="AcaTaskDesc"></textarea><br><br>
-                <label for="acaTaskDate">Date:</label>
-                <input type="date" id="acaTaskDate" name="AcaTaskDate"><br><br>
+              <form method="POST" action="insertNewAcademicTask.php">
+
+                <label for="acaTaskName">
+                  Task Label:
+                  <input type="text" id="acaTaskName" name="AcaTaskName"><br><br>
+                </label>
+                
+                <label for="acaTaskCourse">
+                  Course:
+                  <input type="text" id="acaTaskCourse" name="AcaTaskCourse"><br><br>
+                </label>
+                
+                <label for="acaTaskDesc">
+                  Description:
+                  <textarea id="acaTaskDesc" name="AcaTaskDesc"></textarea><br><br>
+                </label>
+                
+                <label for="acaTaskDate">
+                  Date:
+                  <input type="date" id="acaTaskDate" name="AcaTaskDate"><br><br>
+                </label>
+
+                <label for="status">Task Status: </label>
+                  <select name="taskStatus" id="status">
+                      <option value="notStarted">Not Started</option>
+                      <option value="onGoing">On Going</option>
+                      <option value="completed">Completed</option>
+                    </select>
+                  <br><br>
+                </label>
+
                 <p>Recurring Task:</p>
                 <label for="acaTaskRecurrDay">Weekdays: </label>
-                <input type="text" id="acaTaskRecurrDay" name="AcaTaskRecurrDay"><br><br>
-                <label for="acaTaskRecurrStart">Start Date:</label>
-                <input type="date" id="acaTaskRecurrStart" name="AcaTaskRecurrStart"><br><br>
-                <label for="acaTaskRecurrEnd">End Date:</label>
-                <input type="date" id="acaTaskRecurrEnd" name="AcaTaskRecurrEnd"><br><br>
-                <input type="submit" value="Submit">
+                    
+                    <input type="checkbox" id="acaTaskRecurrDay" name="monday">
+                    <label for="monday" style="font-weight:400;"> Monday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="tuesday" style="position: relative;right: -102px;">
+                    <label for="tuesday" style="font-weight:400; position: relative;right: -103px;"> Tuesday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="wendsday" style="position: relative;right: -102px;">
+                    <label for="wendsday" style="font-weight:400; position: relative;right: -103px;"> Wendsday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="thursday" style="position: relative;right: -102px;">
+                    <label for="thursday" style="font-weight:400; position: relative;right: -103px;"> Thursday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="firday" style="position: relative;right: -102px;">
+                    <label for="firday" style="font-weight:400; position: relative;right: -103px;"> Friday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="staurday" style="position: relative;right: -102px;">
+                    <label for="staurday" style="font-weight:400; position: relative;right: -103px;"> Saturday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="sunday" style="position: relative;right: -102px;">
+                    <label for="sunday" style="font-weight:400; position: relative;right: -103px;"> Sunday</label><br><br>
+
+                
+                <label for="personalTaskRecurrStart">
+                  Start Date:
+                  <input type="date" id="personalTaskRecurrStart" name="PersonalTaskRecurrStart"><br><br>
+                </label>
+                
+                <label for="personalTaskRecurrEnd">
+                  End Date:
+                  <input type="date" id="personalTaskRecurrEnd" name="PersonalTaskRecurrEnd"><br><br>
+                </label>
+                
+                
+                <input class="btn" type="submit" value="Submit" style="position: relative;top: 30px;right: 370px;">
               </form>
             </div>
+
+            <!--Personal-->
             <input type="radio" id="personalTab" name="task">
             <label for="personalTab">Personal</label>
             <div class="tab">
-              <form action="/action_page.php">
-                <label for="personalTaskName">Task Label:</label>
-                <input type="text" id="personalTaskName" name="PersonalTaskName"><br><br>
-                <label for="personalTaskWith">With:</label>
-                <input type="text" id="personalTaskWith" name="PersonalTaskWith"><br><br>
-                <label for="personalTaskLocation">Location:</label>
-                <input type="text" id="personalTaskLocation" name="PersonalTaskLocation"><br><br>
-                <label for="personalTaskDesc">Description:</label>
-                <textarea id="personalTaskDesc" name="PersonalTaskDesc"></textarea><br><br>
-                <label for="personalTaskDate">Date:</label>
-                <input type="date" id="personalTaskDate" name="PersonalTaskDate"><br><br>
+              <form method="POST" action="insertNewPersonalTask">
+                
+                <label for="personalTaskName">
+                  Task Label:
+                  <input type="text" id="personalTaskName" name="PersonalTaskName"><br><br>
+                </label>
+                
+                <label for="personalTaskWith">
+                  With:
+                  <input type="text" id="personalTaskWith" name="PersonalTaskWith"><br><br>
+                </label>
+                
+                <label for="personalTaskLocation">
+                  Location:
+                  <input type="text" id="personalTaskLocation" name="PersonalTaskLocation"><br><br>
+                </label>
+                
+                <label for="personalTaskDesc">
+                  Description:
+                  <textarea id="personalTaskDesc" name="PersonalTaskDesc"></textarea><br><br>
+                </label>
+                
+                <label for="personalTaskDate">
+                  Date:
+                  <input type="date" id="personalTaskDate" name="PersonalTaskDate"><br><br>
+                </label>
+                
+                <label for="status">Task Status: </label>
+                  <select name="taskStatus" id="status">
+                      <option value="notStarted">Not Started</option>
+                      <option value="onGoing">On Going</option>
+                      <option value="completed">Completed</option>
+                    </select>
+                  <br><br>
+                </label>
+
                 <p>Recurring Task:</p>
-                <label for="personalTaskRecurrDay">Weekdays: </label>
-                <input type="text" id="personalTaskRecurrDay" name="PersonalTaskRecurrDay"><br><br>
-                <label for="personalTaskRecurrStart">Start Date:</label>
-                <input type="date" id="personalTaskRecurrStart" name="PersonalTaskRecurrStart"><br><br>
-                <label for="personalTaskRecurrEnd">End Date:</label>
-                <input type="date" id="personalTaskRecurrEnd" name="PersonalTaskRecurrEnd"><br><br>
-                <input type="submit" value="Submit">
+                <label for="acaTaskRecurrDay">Weekdays: </label>
+                    
+                    <input type="checkbox" id="acaTaskRecurrDay" name="monday">
+                    <label for="monday" style="font-weight:400;"> Monday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="tuesday" style="position: relative;right: -102px;">
+                    <label for="tuesday" style="font-weight:400; position: relative;right: -103px;"> Tuesday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="wendsday" style="position: relative;right: -102px;">
+                    <label for="wendsday" style="font-weight:400; position: relative;right: -103px;"> Wendsday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="thursday" style="position: relative;right: -102px;">
+                    <label for="thursday" style="font-weight:400; position: relative;right: -103px;"> Thursday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="firday" style="position: relative;right: -102px;">
+                    <label for="firday" style="font-weight:400; position: relative;right: -103px;"> Friday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="staurday" style="position: relative;right: -102px;">
+                    <label for="staurday" style="font-weight:400; position: relative;right: -103px;"> Saturday</label><br>
+
+                    <input type="checkbox" id="acaTaskRecurrDay" name="sunday" style="position: relative;right: -102px;">
+                    <label for="sunday" style="font-weight:400; position: relative;right: -103px;"> Sunday</label><br><br>
+
+                
+                <label for="personalTaskRecurrStart">
+                  Start Date:
+                  <input type="date" id="personalTaskRecurrStart" name="PersonalTaskRecurrStart"><br><br>
+                </label>
+                
+                <label for="personalTaskRecurrEnd">
+                  End Date:
+                  <input type="date" id="personalTaskRecurrEnd" name="PersonalTaskRecurrEnd"><br><br>
+                </label>
+                
+                <input class="btn" type="submit" value="Submit" style="position: relative;top: 25px;right: 370px;">
               </form>
             </div>
           </div>
