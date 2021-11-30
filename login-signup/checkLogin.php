@@ -23,12 +23,6 @@ if (!$link) {
     
     $password = $_POST['password'];
 
-    // course variables
-    $course_num = $_POST['course_num'];
-    $course_name = $_POST['course_name'];
-    $professor_name = $_POST['professor_name'];
-    $location = $_POST['location'];
-
     //now insert them into the database
     //see if the v_num exists
     $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
@@ -65,44 +59,7 @@ if (!$link) {
     mysqli_free_result($result_user);
     }
 
-    $sql_courses = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
-    if ($result_course = mysqli_query($link,$sql_courses)) {
-        // Return the number of rows in result set
-    $rowcount_course = mysqli_num_rows($result_course);
     
-    //if there is a row
-    if($rowcount_course > 0) { 
-      echo "<h3>You are in the database!.</h3>\n"; 
-
-        // output data of each row
-        while($row_course = $result_course->fetch_assoc()) {
-          // echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
-        
-          //   //check if the email is correct
-          //   if ($row["username"] == $email){ 
-          //       echo "The emails match!";
-          //   }
-
-          //   //check if the password is correct
-          //   if ($row["password"] == $password) {
-          //       echo "The passwords match!";
-          //   }
-        
-          echo "Course Number: ".$row_course['course_num']."<br>";
-          echo "Course Name: ".$row_course['course_name']."<br>";
-          echo "Professor: ".$row_course['professor_name']."<br>";
-          echo "Location: ".$row_course['location']."<br>";
-        
-        }
-    } else {
-      echo "0 results";
-    }
-
-    // Free result set
-    mysqli_free_result($result_course);
-    }
-
-mysqli_close($link);
 
 ?>
 
@@ -147,14 +104,53 @@ mysqli_close($link);
           <div id="class-view-flex">
             <div class="class">
               <h4 class="class-name">Database</h4>
-              <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
-                <p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email ?></p>
+              <? 
+                // course variables
+                $course_num = $_POST['course_num'];
+                $course_name = $_POST['course_name'];
+                $professor_name = $_POST['professor_name'];
+                $location = $_POST['location'];
+
+                $sql_courses = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
+                if ($result_course = mysqli_query($link,$sql_courses)) {
+                    // Return the number of rows in result set
+                $rowcount_course = mysqli_num_rows($result_course);
+                
+                //if there is a row
+                if($rowcount_course > 0) { 
+                  echo "<h3>You are in the database!.</h3>\n"; 
+
+                    // output data of each row
+                    while($row_course = $result_course->fetch_assoc()) {
+                    
+                      echo "Course Number: ".$row_course['course_num']."<br>";
+                      echo "Course Name: ".$row_course['course_name']."<br>";
+                      echo "Professor: ".$row_course['professor_name']."<br>";
+                      echo "Location: ".$row_course['location']."<br>";
+
+                      Echo "<p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
+                        <p style="font-size: meduim; margin-left: 10px;"><? echo "Email: ".$email ?></p>
+
+                      <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
+                        <p style="font-size: meduim; margin-left: 10px;"><? echo "Location: ".$location ?> </p>"
+                    
+                    }
+                } else {
+                  echo "0 results";
+                }
+
+                // Free result set
+                mysqli_free_result($result_course);
+                }
+              ?>
+              <!-- <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
+                <p style="font-size: meduim; margin-left: 10px;"></p>
 
               <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
                 <p style="font-size: meduim; margin-left: 10px;">601 W Main St Richmond, VA 23220 </p>
               
               <p style="font-size: large; font-weight: 600;" class="schudule-name">Meeting Times: </p>
-                <p style="font-size: meduim; margin-left: 10px;">Tuesday/Thursday 3:30-4:45pm</p>
+                <p style="font-size: meduim; margin-left: 10px;">Tuesday/Thursday 3:30-4:45pm</p> -->
             </div>
           </div>
         </app-class-view>
@@ -190,3 +186,7 @@ mysqli_close($link);
     </div>
 </body>
 </html>
+
+<?php
+  mysqli_close($link);
+?>
