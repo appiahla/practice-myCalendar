@@ -27,6 +27,8 @@ if (!$link) {
 
     $status = $_POST['AcaTaskStatus'];
 
+    $recurring = $_POST['recurring'];
+
     $monday = $_POST['monday'];
     
     $tuesday = $_POST['tuesday'];
@@ -49,7 +51,7 @@ if (!$link) {
 
     //now insert them into the database
     //see if the v_num exists
-    $sql =  "INSERT INTO AcademicTask (`task_title`, `task_course `, `task_description`, `date_of`, `task_status`, `recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
+    $sql =  "INSERT INTO AcademicTask (`task_title`, `task_course`, `task_description`, `date_of`, `task_status`, `recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
     VALUES ('$title', '$course', '$description', '$date', '$status', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$v_num')";
            
              
