@@ -106,6 +106,9 @@
 
         ?>
     </div>
+    <a href="">
+      <button class="btn">View All Quizzes</button>
+    </a>
   </div>
 </div>
 </body>

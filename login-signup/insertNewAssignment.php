@@ -87,6 +87,9 @@
       ?>
 
     </div>
+    <a href="">
+      <button class="btn">View All Assignments</button>
+    </a>
   </div>
 </div>
 </body>

@@ -13,7 +13,7 @@
               <a href="https://team2-508database.herokuapp.com/login-signup/checkLogin.php">Home</a>
             </li>
             <li class="list-item">
-              <a a href="">
+              <a href="">
                 <button class="btn">+ Add</button>
               </a>
             </li>
@@ -75,6 +75,10 @@
              }
         ?>
     </div>
+
+    <a href="">
+      <button class="btn">View All Tests</button>
+    </a>
   </div>
 </div>
 </body>

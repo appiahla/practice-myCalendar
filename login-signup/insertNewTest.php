@@ -107,6 +107,9 @@
     ?>
 
     </div>
+    <a href="">
+      <button class="btn">View All Tests</button>
+    </a>
   </div>
 </div>
 </body>

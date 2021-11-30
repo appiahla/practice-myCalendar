@@ -176,6 +176,9 @@
 
     ?>
     </div>
+    <a href="">
+      <button class="btn">View All Academic Tasks</button>
+    </a>
   </div>
 </div>
 </body>
