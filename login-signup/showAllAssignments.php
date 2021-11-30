@@ -82,9 +82,16 @@
                     echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
                     echo "Assignment Description: ".$row_current_assignments['description_section']."<br>";
                     echo "Assignment Notes: ".$row_current_assignments['notes']."<br>";
-                    echo "<a href='./editAssignment.php?varname=<?php echo $assignment_title?>'>
-                            <button class='btn' id='viewAll'>Edit</button>
-                        </a>";
+                    echo " <form action='./editAssignment.php' method='POST'>
+                            
+                            <input type='hidden' name='assignment_title' value='$assignment_title'>
+                            <input type='hidden' name='assignment_date' value='$assignment_date'>
+                            <input type='hidden' name='assignment_course' value='$assignment_course'>
+                            <input type='hidden' name='assignment_description' value='$assignment_description'>
+                            <input type='hidden' name='assignment_notes' value='$assignment_notes'>
+                
+                            <button type='submit' class='btn' id='viewAll'>Edit</button>
+                        </form>";
 
                     echo "<br>";
                     }
