@@ -133,7 +133,7 @@ if (!$link) {
                         
                       }
                   } else {
-                    echo "0 results";
+                    echo "No classes yet!";
                   }
 
                   // Free result set
