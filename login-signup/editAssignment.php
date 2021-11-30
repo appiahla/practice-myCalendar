@@ -38,6 +38,8 @@
         <h2 class='title'>Edit Assignment</h2>
         <?php
             // get the values 
+            $edit_assignment_id = $_POST['assignment_id'];
+
             $edit_assignment_title = $_POST['assignment_title'];
 
             $edit_assignment_date = $_POST['assignment_date'];
@@ -51,6 +53,8 @@
             //edit form
             echo "
                 <form method='POST' action='updateEditAssignment.php'>
+
+                <input type='hidden' name='AssignmentId' value='$assignment_id'>
                 
                 <label for='assignmentName'>
                     Assignment Title:

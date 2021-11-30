@@ -71,19 +71,22 @@
                     while($row_current_assignments = $assignments->fetch_assoc()) {
 
                         //save variables in the case of wanting to edit
+                        $assignment_id = $row_current_assignments['assignment_id'];
                         $assignment_title = $row_current_assignments['assignment_title'];
                         $assignment_date = $row_current_assignments['due_date'];
                         $assignment_course = $row_current_assignments['course_name_assignment'];
                         $assignment_description = $row_current_assignments['description_section'];
                         $assignment_notes= $row_current_assignments['notes'];
 
+                    echo "Assignment ID: ".$row_current_assignments['assignment_id']."<br>";
                     echo "Assignment Title: ".$row_current_assignments['assignment_title']."<br>";
                     echo "Assignment Due Date: ".$row_current_assignments['due_date']."<br>";
                     echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
                     echo "Assignment Description: ".$row_current_assignments['description_section']."<br>";
                     echo "Assignment Notes: ".$row_current_assignments['notes']."<br>";
-                    echo "<form action='./editAssignment.php' method='POST'>
-                            
+                    
+                    echo "<form action='./editAssignment.php' method='POST'>\
+                            <input type='hidden' name='assignment_id' value='$assignment_id'>
                             <input type='hidden' name='assignment_title' value='$assignment_title'>
                             <input type='hidden' name='assignment_date' value='$assignment_date'>
                             <input type='hidden' name='assignment_course' value='$assignment_course'>
