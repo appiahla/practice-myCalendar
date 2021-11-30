@@ -17,10 +17,8 @@ if (!$link) {
     die("Connection failed:" .mysqli_connect_error());
 }
 
-    
      //Get the variables that will be inserted into the database
-
-
+    // if the session is new (new browser/tab), create the session variables
     if(!isset($_SESSION['v_num']) && empty($_SESSION['v_num'])) {
       $v_num = $_POST['vnum'];
     
@@ -31,15 +29,13 @@ if (!$link) {
       $_SESSION['email'] = $email;
       $_SESSION['v_num'] = $v_num;
       $_SESSION['password'] = $password;
-      // $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
+    // otherwise it is the same session, grab the variables
     } else {
       $v_num = $_SESSION['v_num'];
     
       $email = $_SESSION['email'];
       
       $password = $_SESSION['password'];
-      // $temp = $_SESSION['v_num'];
-      // $sql_user = "SELECT * FROM Student WHERE v_num = '$'";
     }
 
     //now insert them into the database
@@ -68,7 +64,7 @@ if (!$link) {
                 if ($row["password"] == $password) {
                     echo "The passwords match!";
                 }
-            
+
             }
           } else {
             echo "0 results";
@@ -77,9 +73,6 @@ if (!$link) {
     // Free result set
     mysqli_free_result($result_user);
     }
-
-    
-
 ?>
 
 <!DOCTYPE html>
@@ -148,25 +141,14 @@ if (!$link) {
                         echo "Location: ".$row_course['location']."<br>";
 
                         echo "<br>";
-
-                        
                       }
                   } else {
                     echo "No classes yet!";
                   }
-
                   // Free result set
                   mysqli_free_result($result_course);
                   }
                 ?>
-              <!-- <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
-                <p style="font-size: meduim; margin-left: 10px;"></p>
-
-              <p style="font-size: large; font-weight: 600;" class="location-name">Location:</p>
-                <p style="font-size: meduim; margin-left: 10px;">601 W Main St Richmond, VA 23220 </p>
-              
-              <p style="font-size: large; font-weight: 600;" class="schudule-name">Meeting Times: </p>
-                <p style="font-size: meduim; margin-left: 10px;">Tuesday/Thursday 3:30-4:45pm</p> -->
             </div>
           </div>
         </app-class-view>
