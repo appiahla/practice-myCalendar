@@ -17,22 +17,44 @@ if (!$link) {
 
     
     //Get the variables that will be inserted into the database
-    $type = 'Quiz';
-    
-    $title = $_POST['QuizName'];
-    
-    $date_of = $_POST['QuizDate'];
-    
-    $course_name = $_POST['QuizCourseName'];
+    $title = $_POST['PersonalTaskName'];
 
-    $material = $_POST['QuizMaterial'];
-  
-    $notes =  $_POST['QuizNotes'];
+    $with =  $_POST['PersonalTaskWith'];
+
+    $location =  $_POST['PersonalTaskLocation'];
+
+    $description = $_POST['PersonalTaskDesc'];
+
+    $date = $_POST['PersonalTaskDate'];
+
+    $status = $_POST['PersonalTaskStatus'];
+
+    $recurring = $_POST['recurring'];
+
+    $monday = $_POST['monday'];
+    
+    $tuesday = $_POST['tuesday'];
+    
+    $wednesday = $_POST['wednesday'];
+    
+    $thursday = $_POST['thursday'];
+    
+    $friday = $_POST['friday'];
+    
+    $saturday = $_POST['saturday'];
+    
+    $sunday = $_POST['sunday'];
+    
+    $start = $_POST['PersonalTaskRecurrStart'];
+    
+    $end = $_POST['PersonalTaskRecurrEnd'];
+
+    $v_num = 'V00875392';
 
     //now insert them into the database
     //see if the v_num exists
-    $sql =  "INSERT INTO Assessment (`assessment_type`, `assessment_title`, `course_name_assessment`, `date_of`, `material`, `notes`) 
-    VALUES ('$type', '$title', '$course_name', '$date_of', '$material', '$notes')";
+    $sql =  "INSERT INTO PersonalTask (`task_title`, `task_with`, `task_location`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
+    VALUES ('$title', '$with', '$location', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$v_num')";
            
              
            if (mysqli_query($link, $sql)) {    
@@ -41,7 +63,7 @@ if (!$link) {
                 . " Please browse your localhost php my admin" 
                 . " to view the updated data</h3>"; 
   
-            echo nl2br("\n$type\n $title\n $course_name\n $date_of\n $material\n $notes\n");
+            echo nl2br("\n$title\n $with\n $location\n $description\n $date\n $status\n $recurring\n $monday\n $tuesday\n $wednesday\n $thursday\n $friday\n $saturday\n $sunday\n $start\n $end\n $v_num\n");
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($link);
         }
