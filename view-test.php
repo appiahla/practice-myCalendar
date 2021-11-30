@@ -28,148 +28,51 @@
     </nav>
 
   </head>
-<body>
+  <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Personal Task was Submitted Successfully!</h2>
+    <h2 class="title">Your Quiz was Submitted Successfully!</h2>
 
     <div class="mytabs">
 
     <?php
-
-        $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
-        $db_user = 'admin';
-        $db_pass = 'databasegroup';
-        $db_name = 'groupMyCalendar';
-        $db_port = '3306';
-
-        $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
-
-        // Check connection
-        if (!$link) {
-                
-            //kill the connection
-            die("Connection failed:" .mysqli_connect_error());
-        }
-
             
             //Get the variables that will be inserted into the database
-            $title = "Coffee Date";
-
-            $with =  "Adam";
-
-            $location =  "Starbucks";
-
-            $description = "I hate it here";
-
-            $date = "11/30/2021";
-
-            $status = "Not Started";
-
-            $recurring = "Recurrint";
-
-            $monday = "";
+            $type = 'Quiz';
             
-            $tuesday = "";
+            $title = "Database Quiz 8";
             
-            $wednesday = "Wednesday";
+            $date_of = "12/10/2021";
             
-            $thursday = "";
+            $course_name = "Data Base Theory";
+
+            $material = "Everything that was covered since the last test";
+        
+            $notes =  "Help";
+
+             // show the title
+             echo nl2br("<h3> Quiz Title:</h3>  $title\n\n");
+
+             echo nl2br("<h3> Quiz Course:</h3>  $course_name\n\n");
+             
+            if ($date_of != ''){
+              
+              echo nl2br("<h3> Quiz Date:</h3>  $date_of\n\n");
             
-            $friday = "";
-            
-            $saturday = "Staurday";
-            
-            $sunday = "";
-            
-            $start = "12/10/2021";
-            
-            $end = "01/01/2022";
-
-            $v_num = 'V00875392';
-
-           // show the title
-           echo nl2br("<h3> Task Title:</h3>  $title\n\n");
-
-           // check for null
-           if ($with != '') {
-
-           echo nl2br("<h3> With:</h3>  $with\n\n");
-
-           }
-
-           if ($location != '') {
-
-            echo nl2br("<h3> Task Location:</h3>  $location\n\n");
- 
             }
-           
-           if ($description != ''){
-           echo nl2br("<h3> Task Date:</h3>  $description\n\n");
-           }
 
-           if ($date != '') {
+             if ($material != '') {
 
-           echo nl2br("<h3> Task Date:</h3>  $date\n\n");
+             echo nl2br("<h3> Quiz Material:</h3>  $material\n\n");
 
-           }
-           
-           if ($status != ''){
+             }
+             
+             if ($notes != ''){
 
-           echo nl2br("<h3> Task Status:</h3>  $status\n\n");
+             echo nl2br("<h3> Quiz Notes:</h3>  $notes\n\n");
 
-           }
-
-           //check if the task is recurring
-           if ($recurring != ''){
-
-           echo nl2br("<h3>Task is Recurring on: </h3>\n\n");
-
-
-           if ($monday != ''){
-               
-               echo nl2br("$monday\n\n");
-           
-           }
-
-           if ($tuesday != ''){
-               
-               echo nl2br("$tuesday\n\n");
-
-           }
-           
-           if ($wednesday != ''){
-
-               echo nl2br("$wednesday\n\n");
-
-           }
-
-           if ($thursday != ''){
-
-               echo nl2br("$thursday\n\n");
-
-           }
-           
-           if ($friday != ''){
-
-               echo nl2br("$friday\n\n");
-           }
-
-           if ($saturday != ''){
-
-               echo nl2br("$saturday\n\n");
-           }
-
-           if ($sunday != ''){
-               
-               echo nl2br("$sunday\n\n");
-
-           }
-           
-           echo nl2br("<h4>Staring on: </h4>\n\n $start\n\n");
-           echo nl2br("<h4>Ending on: </h4>\n\n $end\n\n");
-       }
-?>
+             }
+        ?>
     </div>
   </div>
 </div>

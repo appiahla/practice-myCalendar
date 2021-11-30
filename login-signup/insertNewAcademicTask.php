@@ -104,7 +104,7 @@
                         }
                         
                         if ($description != ''){
-                        echo nl2br("<h3> Task Date:</h3>  $description\n\n");
+                        echo nl2br("<h3> Task Description:</h3>  $description\n\n");
                         }
 
                         if ($date != '') {
