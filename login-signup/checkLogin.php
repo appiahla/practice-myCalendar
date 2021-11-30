@@ -204,9 +204,9 @@ if (!$link) {
           $description = $_POST['Description'];
           $end = $_POST['End'];
 
-          // $temp = $_SESSION['v_num']']
+          $temp = $_SESSION['v_num'];
 
-          $sql_current_tasks = "CALL create_todays_tasks($_SESSION['v_num']);";
+          $sql_current_tasks = "CALL create_todays_tasks('$temp');";
 
           if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
               // Return the number of rows in result set
