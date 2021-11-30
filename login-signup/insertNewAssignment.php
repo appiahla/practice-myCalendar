@@ -76,11 +76,31 @@
 
                     //Success Message
                     echo nl2br("<h2 class='title'>Your Assignment was Submitted Successfully!</h2>\n\n");
-                    echo nl2br("<h3> Assignment Title:</h3>  $title\n\n 
-                    <h3> Assignment Date:</h3>  $date\n\n  
-                    <h3> Assignment Course:</h3>  $course_name\n\n 
-                    <h3> Assignment Description:</h3>  $description\n\n
-                    <h3> Assignment Notes:</h3>  $notes\n\n");
+
+                    //show the title
+                    echo nl2br("<h3> Assignment Title:</h3>  $title\n\n");
+
+                    //show the course
+                    echo nl2br("<h3> Assignment Course:</h3>  $course_name\n\n");
+
+
+                    if ($date != ''){
+                    
+                      echo nl2br("<h3> Assignment Date:</h3>  $date\n\n");
+                      
+                    }
+  
+                    if ($description != '') {
+  
+                      echo nl2br("<h3> Assignment Description:</h3>  $description\n\n");
+  
+                    }
+                      
+                    if ($notes != ''){
+  
+                      echo nl2br("<h3> Assignment Notes:</h3>  $notes\n\n");
+  
+                    }
                     
               } else {
                   echo "Error: " . $sql . "<br>" . mysqli_error($link);
