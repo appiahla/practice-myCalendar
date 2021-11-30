@@ -51,6 +51,7 @@
             //kill the connection
             die("Connection failed:" .mysqli_connect_error());
         }
+		
           // student view variables
           $vnum = $_POST['V_Number'];
           $username = $_POST['Username'];
