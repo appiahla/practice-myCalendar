@@ -157,7 +157,7 @@ if (!$link) {
     <div class="home-group">
         <h3 class="home-title">Assignments Due Soon</h3>
         <? 
-          // course variables
+          // assignment variables
           $title = $_POST['Title'];
           $due_date = $_POST['Due_Date'];
           $course = $_POST['Course'];
@@ -199,7 +199,7 @@ if (!$link) {
     <div class="home-group">
         <h3 class="home-title">Today's Tasks</h3>
         <? 
-          // course variables
+          // task variables
           $title = $_POST['Title'];
           $status = $_POST['Status'];
           $start = $_POST['Start'];
