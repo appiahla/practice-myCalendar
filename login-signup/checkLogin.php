@@ -143,7 +143,7 @@ if (!$link) {
                 mysqli_free_result($result_course);
                 }
               ?>
-              <? print_r($course_number_array);
+              <? print_r($course_number_array);?>
               <!-- <p style="font-size: large; font-weight: 600;" class="professor-name">Professor:</p>
                 <p style="font-size: meduim; margin-left: 10px;"></p>
 
