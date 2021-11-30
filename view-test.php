@@ -36,43 +36,10 @@
 
     <?php
             
-            //Get the variables that will be inserted into the database
-            $type = 'Quiz';
-            
-            $title = "Database Quiz 8";
-            
-            $date_of = "12/10/2021";
-            
-            $course_name = "Data Base Theory";
-
-            $material = "Everything that was covered since the last test";
-        
-            $notes =  "Help";
-
-
-            echo nl2br("<h2 class='title'>Your Test was Submitted Successfully!</h2>\n\n");
-             // show the title
-             echo nl2br("<h3> Quiz Title:</h3>  $title\n\n");
-
-             echo nl2br("<h3> Quiz Course:</h3>  $course_name\n\n");
-             
-            if ($date_of != ''){
-              
-              echo nl2br("<h3> Quiz Date:</h3>  $date_of\n\n");
-            
-            }
-
-             if ($material != '') {
-
-             echo nl2br("<h3> Quiz Material:</h3>  $material\n\n");
-
-             }
-             
-             if ($notes != ''){
-
-             echo nl2br("<h3> Quiz Notes:</h3>  $notes\n\n");
-
-             }
+            echo "Assignment Title: 
+            <a href=''>
+              <button class='btn' id='edit'>Edit</button>
+            </a>";
         ?>
     </div>
 

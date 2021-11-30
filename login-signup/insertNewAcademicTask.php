@@ -179,7 +179,7 @@
     ?>
     </div>
     <a href="">
-      <button class="btn">View All Academic Tasks</button>
+      <button class="btn" id="viewAll">View All Academic Tasks</button>
     </a>
   </div>
 </div>

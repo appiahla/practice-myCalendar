@@ -111,7 +111,7 @@
         ?>
     </div>
     <a href="">
-      <button class="btn">View All Quizzes</button>
+      <button class="btn" id="viewAll">View All Quizzes</button>
     </a>
   </div>
 </div>

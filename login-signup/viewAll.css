@@ -15,13 +15,12 @@
   }
   
   .mytabs {
-    display: flex;
     flex-wrap: wrap;
     max-width: 600px;
     margin: auto;
     padding: 25px;
-    justify-content: center;
-    text-align: center;
+    /* justify-content: center;
+    text-align: center; */
   }
   /*This hides the radio button!*/
   .mytabs input[type="radio"] {
