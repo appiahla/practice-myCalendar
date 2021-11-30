@@ -101,9 +101,25 @@
 		  mysqli_close($link);
         ?>
 	</div>
-    <!-- <a href="">
+    <a href="">
+      <button class="btn">View All Courses</button>
+    </a>
+	<a href="">
+      <button class="btn">View All Assignments</button>
+    </a>
+	<a href="">
+      <button class="btn">View All Assessments</button>
+    </a>
+	<a href="">
       <button class="btn">View All Academic Tasks</button>
-    </a> -->
+    </a>
+	<a href="">
+      <button class="btn">View All Personal Tasks</button>
+    </a>
+	<a href="">
+      <button class="btn">View All Tasks</button>
+    </a>
+	
   </div>
 </div>
 </body>
