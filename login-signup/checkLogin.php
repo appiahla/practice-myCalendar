@@ -88,9 +88,10 @@ if (!$link) {
           //       echo "The passwords match!";
           //   }
         
+          echo "Course Number: ".$row_course['course_num']."<br>";
           echo "Course Name: ".$row_course['course_name']."<br>";
-          echo "Row";
-
+          echo "Professor: ".$row_course['professor_name']."<br>";
+          echo "Location: ".$row_course['location']."<br>";
         
         }
     } else {
