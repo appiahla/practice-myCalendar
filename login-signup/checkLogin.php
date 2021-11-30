@@ -25,11 +25,17 @@ if (!$link) {
     
     $password = $_POST['password'];
 
-    $_SESSION['v_num'] = $v_num;
+    if(!isset($_SESSION['v_num']) && empty($_SESSION['v_num']) {
+      $_SESSION['v_num'] = $v_num;
+      $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
+    } else {
+      $temp = $_SESSION['v_num'];
+      $sql_user = "SELECT * FROM Student WHERE v_num = '$temp'";
+    }
 
     //now insert them into the database
     //see if the v_num exists
-    $sql_user = "SELECT * FROM Student WHERE v_num = $_SESSION['v_num']";
+    $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
            
     if ($result_user = mysqli_query($link,$sql_user)) {
 
