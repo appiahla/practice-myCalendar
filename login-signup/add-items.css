@@ -167,12 +167,12 @@
   /*so the quiz doesn't move below test*/
   #personalTab {
     position: relative;
-    top: -620px;
+    top: -608px;
     right: -117px;
   }
   .task label[for='personalTab'] {
     position: relative;
-    top: -620px;
+    top: -608px;
     right: -115.5px;
   }
   
