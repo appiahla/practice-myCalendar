@@ -71,18 +71,18 @@
                     while($row_current_assignments = $assignments->fetch_assoc()) {
 
                         //save variables in the case of wanting to edit
-                        $_SESSION['assignment_title'] = $row_current_assignments['assignment_title'];
-                        $_SESSION['assignment_date'] = $row_current_assignments['due_date'];
-                        $_SESSION['assignment_course'] = $row_current_assignments['course_name_assignment'];
-                        $_SESSION['assignment_description'] = $row_current_assignments['description_section'];
-                        $_SESSION['assignment_notes']= $row_current_assignments['notes'];
+                        $assignment_title = $row_current_assignments['assignment_title'];
+                        $assignment_date = $row_current_assignments['due_date'];
+                        $assignment_course = $row_current_assignments['course_name_assignment'];
+                        $assignment_description = $row_current_assignments['description_section'];
+                        $assignment_notes= $row_current_assignments['notes'];
 
                     echo "Assignment Title: ".$row_current_assignments['assignment_title']."<br>";
                     echo "Assignment Due Date: ".$row_current_assignments['due_date']."<br>";
                     echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
                     echo "Assignment Description: ".$row_current_assignments['description_section']."<br>";
                     echo "Assignment Notes: ".$row_current_assignments['notes']."<br>";
-                    echo "<a href='./editAssignment.php'>
+                    echo "<a href='./editAssignment.php?data=<?=$assignment_title?>'>
                             <button class='btn' id='viewAll'>Edit</button>
                         </a>";
 
