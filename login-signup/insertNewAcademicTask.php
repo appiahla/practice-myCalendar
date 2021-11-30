@@ -17,22 +17,40 @@ if (!$link) {
 
     
     //Get the variables that will be inserted into the database
-    $type = 'Quiz';
-    
-    $title = $_POST['QuizName'];
-    
-    $date_of = $_POST['QuizDate'];
-    
-    $course_name = $_POST['QuizCourseName'];
+    $title = $_POST['AcaTaskName'];
 
-    $material = $_POST['QuizMaterial'];
-  
-    $notes =  $_POST['QuizNotes'];
+    $course = $_POST['AcaTaskCourse'];
+
+    $description = $_POST['AcaTaskDesc'];
+
+    $date = $_POST['AcaTaskDate'];
+
+    $status = $_POST['AcaTaskStatus'];
+
+    $monday = $_POST['monday'];
+    
+    $tuesday = $_POST['tuesday'];
+    
+    $wednesday = $_POST['wednesday'];
+    
+    $thursday = $_POST['thursday'];
+    
+    $friday = $_POST['friday'];
+    
+    $saturday = $_POST['saturday'];
+    
+    $sunday = $_POST['sunday'];
+    
+    $start = $_POST['AcaTaskRecurrStart'];
+    
+    $end = $_POST['AcaTaskRecurrEnd'];
+    
+    $v_num = 'V00875392';
 
     //now insert them into the database
     //see if the v_num exists
-    $sql =  "INSERT INTO Assessment (`assessment_type`, `assessment_title`, `course_name_assessment`, `date_of`, `material`, `notes`) 
-    VALUES ('$type', '$title', '$course_name', '$date_of', '$material', '$notes')";
+    $sql =  "INSERT INTO AcademicTask (`task_title`, `task_course `, `task_description`, `date_of`, `task_status`, `recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
+    VALUES ('$title', '$course', '$description', '$date', '$status', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$v_num')";
            
              
            if (mysqli_query($link, $sql)) {    
