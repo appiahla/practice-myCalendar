@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
 $db_user = 'admin';
 $db_pass = 'databasegroup';
@@ -23,9 +25,11 @@ if (!$link) {
     
     $password = $_POST['password'];
 
+    $_SESSION['v_num'] = $v_num;
+
     //now insert them into the database
     //see if the v_num exists
-    $sql_user = "SELECT * FROM Student WHERE v_num = '$v_num'";
+    $sql_user = "SELECT * FROM Student WHERE v_num = $_SESSION['v_num']";
            
     if ($result_user = mysqli_query($link,$sql_user)) {
 
