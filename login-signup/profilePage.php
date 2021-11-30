@@ -36,6 +36,21 @@
     <h2 class="title">Profile</h2> 
 	<div style="border: 1px solid black">
 	<? 
+		$db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
+        $db_user = 'admin';
+        $db_pass = 'databasegroup';
+        $db_name = 'groupMyCalendar';
+        $db_port = '3306';
+
+        $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
+
+
+        // Check connection
+        if (!$link) {
+                
+            //kill the connection
+            die("Connection failed:" .mysqli_connect_error());
+        }
           // student view variables
           $vnum = $_POST['V_Number'];
           $username = $_POST['Username'];
@@ -79,6 +94,7 @@
           // Free result set
           mysqli_free_result($result_current_profile);
           }
+		  mysqli_close($link);
         ?>
 	</div>
     <!-- <a href="">
