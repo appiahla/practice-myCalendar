@@ -113,7 +113,7 @@
               </label>
 
               <input type='checkbox' id='recurringTask' name='recurring' value='Recurring'"
-              .($edit_taskA_recurring ? "checked" : "")."
+              .($edit_taskP_recurring ? "checked" : "")."
               >
                   <label for='recurring' style='font-weight:400;'> Recurring Task:</label><br><br>
 
