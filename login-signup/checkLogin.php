@@ -256,10 +256,12 @@ if (!$link) {
               //if there is a row
               if($rowcount_current_recurring_tasks > 0) { 
 
+                echo "On Going Recurrent Tasks Today";
               // output data of each row
               while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
               
                 echo "Title: ".$row_current_tasks['Title']."<br>";
+                echo "Type: ".$row_current_tasks['Type']."<br>";
                 echo "Due Date: ".$row_current_tasks['Status']."<br>";
                 echo "Description: ".$row_current_tasks['Description']."<br>";
                 echo "Start: ".$row_current_tasks['Start']."<br>";
