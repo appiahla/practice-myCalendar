@@ -106,14 +106,6 @@
 						mysqli_close($link);
 					?>
 				</div>
-				
-				<a href="./showAllCourses.php">
-				<button class="btn">View All Courses</button>
-				</a>
-
-				<a href="./showAllAssignments.php">
-				<button class="btn">View All Assignments</button>
-				</a>
 
 				<!-- Assessments -->
 				<a href="./showAllTests.php">
@@ -127,7 +119,7 @@
 				<a href="">
 				<button class="btn">View All Assessments</button>
 				</a>
-				
+
 				<!-- Tasks -->
 				<a href="./showAllAcademicTasks.php">
 				<button class="btn">View All Academic Tasks</button>
@@ -140,6 +132,15 @@
 				<a href="">
 				<button class="btn">View All Tasks</button>
 				</a>
+				
+				<a href="./showAllCourses.php">
+				<button class="btn">View All Courses</button>
+				</a>
+
+				<a href="./showAllAssignments.php">
+				<button class="btn">View All Assignments</button>
+				</a>
+				
 				
 			</div>
 		</div>
