@@ -128,7 +128,7 @@ if (!$link) {
         <app-class-view>
           <div id="class-view-flex">
             <div class="class">
-                <? 
+                <?php
                   // course variables
                   $course_num = $_POST['course_num'];
                   $course_name = $_POST['course_name'];
@@ -171,7 +171,7 @@ if (!$link) {
 
     <div class="home-group">
         <h3 class="home-title">Assignments Due Soon</h3>
-        <? 
+        <?php
           // assignment variables
           $title = $_POST['Title'];
           $due_date = $_POST['Due_Date'];
@@ -234,12 +234,12 @@ if (!$link) {
           <?php
             echo "I'm here in the todays task";
 
-          // // task variables
-          // $title = $_POST['Title'];
-          // $status = $_POST['Status'];
-          // $start = $_POST['Start'];
-          // $description = $_POST['Description'];
-          // $end = $_POST['End'];
+          // task variables
+          $title = $_POST['Title'];
+          $status = $_POST['Status'];
+          $start = $_POST['Start'];
+          $description = $_POST['Description'];
+          $end = $_POST['End'];
 
           $temp_tasks = $_SESSION['v_num'];
           echo"temp_tasks number is: ";
@@ -247,9 +247,11 @@ if (!$link) {
 
           $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
 
-          $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
+          // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
 
           if ($result_current_recurring_tasks = mysqli_query($link, $sql_current_tasks_recurring)) {
+            echo"result_current_recurring_tasks is: ";
+            echo($result_current_recurring_tasks);
               // Return the number of rows in result set
               $rowcount_current_recurring_tasks = mysqli_num_rows($result_current_recurring_tasks);
               echo("Row count is: ");
@@ -276,6 +278,9 @@ if (!$link) {
           }
           // Free result set
           mysqli_free_result($result_current_tasks);
+          }
+          else {
+            echo("not working");
           }
         ?>
     </div>
