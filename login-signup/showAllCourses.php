@@ -102,26 +102,26 @@
                     echo nl2br("<h4>Professor: $course_professor</h4>\n\n");
 
                     echo nl2br("<h4>Location: $course_location</h4>\n");
-                    echo nl2br("<h4>$course_address</h4>\n\n");
+                    echo nl2br("<h4 style='font-weight  400;'>$course_address</h4>\n\n");
 
                     echo nl2br("<h4>Meeting Times:</h4>\n\n");
                     
                     if($course_monday != ''){
-                        echo nl2br("$course_monday  ");      
+                        echo nl2br("<li>$course_monday</li>");      
                     }
 
                     if($course_tuesday != ''){
-                        echo nl2br("$course_tuesday  ");  
+                        echo nl2br("<li>$course_tuesday</li>");  
                     }
                     if($course_wednesday != ''){
-                        echo nl2br("$course_wednesday  ");  
+                        echo nl2br("<li>$course_wednesday</li>");  
                     }
                     if($course_thursday != ''){
-                        echo nl2br("$course_thursday  ");  
+                        echo nl2br("<li>$course_thursday</li>");  
                     }
                         
                     if($course_friday != ''){
-                        echo nl2br("$course_friday  ");  
+                        echo nl2br("<li>$course_friday</li>");  
                     }
 
                     echo nl2br("\n");
