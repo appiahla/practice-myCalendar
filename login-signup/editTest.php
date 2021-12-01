@@ -76,7 +76,7 @@
                 
                 <label for='testCourseName'>
                   Course Name:
-                  <input type='text' id='testCourseName' name='TestCourseName' vlaue='$edit_assessmentT_course'><br><br>
+                  <input type='text' id='testCourseName' name='TestCourseName' value='$edit_assessmentT_course'><br><br>
                 </label>
                 
                 <label for='testMaterial'>
