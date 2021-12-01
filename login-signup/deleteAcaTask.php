@@ -223,7 +223,7 @@
                         </form>";
                         echo "<br>";
                       
-                      echo "<form action='./deleteAcacTask.php' method='POST' id='deleteBtn'>
+                      echo "<form action='./deleteAcaTask.php' method='POST' id='deleteBtn'>
                         <input type='hidden' name='taskA_id' value='$taskA_id'>
                       
                         <button type='submit' class='btn'>Delete</button>
