@@ -112,7 +112,7 @@
                         }
                     }
                     echo "<form action='./viewGrades.php' method='POST'>                         
-                        <button type='submit' class='btn' id='viewAll' style='position: relative;left: 30%; margin-top: 15px;'>Go Back To Grades</button>
+                        <button type='submit' class='btn' id='viewAll' style='position: relative;left: 35%; margin-top: 15px;'>Go Back To Grades</button>
                         </form>";
                         echo "<br>";
                 } 
