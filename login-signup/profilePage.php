@@ -107,6 +107,8 @@
 					?>
 				</div>
 
+				<div class="buttonSection"
+
 				<!-- Assessments -->
 				<a href="./showAllAssessments.php">
 				<button class="btn">View All Assessments</button>
@@ -145,7 +147,7 @@
 				<a href="./viewGrades.php">
 				<button class="btn">View Grades</button>
 				</a>
-				
+				</div>
 				
 			</div>
 		</div>
