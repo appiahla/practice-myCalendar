@@ -197,8 +197,8 @@
 
                     }
                     
-                    echo nl2br("<h5>Staring on: </h5>\n\n $taskA_start\n\n");
-                    echo nl2br("<h5>Ending on: </h5>\n\n $taskA_end\n\n");
+                    echo nl2br("<h4>Staring on: </h4>  $taskA_start\n\n");
+                    echo nl2br("<h4>Ending on: </h4>   $taskA_end\n\n");
                     }
 
                     echo "<form action='./editAcademicTask.php' method='POST'>
