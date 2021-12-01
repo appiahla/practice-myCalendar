@@ -134,12 +134,16 @@
 				</a>
 				
 				<!-- Other -->
+				<a href="./showAllAssignments.php">
+				<button class="btn">View All Assignments</button>
+				</a>
+
 				<a href="./showAllCourses.php">
 				<button class="btn">View All Courses</button>
 				</a>
 
-				<a href="./showAllAssignments.php">
-				<button class="btn">View All Assignments</button>
+				<a href="">
+				<button class="btn">View Grades</button>
 				</a>
 				
 				
