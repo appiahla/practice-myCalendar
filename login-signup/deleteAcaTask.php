@@ -22,7 +22,7 @@
         $get_v = $_SESSION['v_num'];
 
         //see if the v_num exists
-        $sql =  "DELETE FROM AcademicTask WHERE task_id='$delete_taskA_id' AND assignment_v_number='$get_v'";
+        $sql =  "DELETE FROM AcademicTask WHERE task_id='$delete_taskA_id' AND v_number='$get_v'";
 
         if (mysqli_query($link,$sql)) {
             echo("Deleted");
