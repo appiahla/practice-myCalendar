@@ -100,6 +100,10 @@ FROM AcademicTask
 ORDER BY date_of ASC LIMIT 1;
 
 
+-- 
+-- 
+-- all other queries used
+
 -- display the 5 assignments due soon
 CALL assignments_due_soon('V00875392');
 
