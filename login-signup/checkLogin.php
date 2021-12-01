@@ -272,9 +272,8 @@ if (!$link) {
                 $course = $row_current_tasks['task_course'];
 
 
-                if($taskRecurring == 'Recurring'){
-                  echo" recurring ";
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurrint  $title </h4>\n\n");
+                if($task_recurring == 'Recurring'){
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring:  $title </h4>\n\n");
                   
                     //null check
                     if ($course != '') {
