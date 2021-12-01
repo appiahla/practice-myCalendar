@@ -35,7 +35,7 @@
   <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Quizzes</h2>
+    <h2 class="title">Your Courses</h2>
     <div class="mytabs">
         
     <?php
@@ -94,7 +94,7 @@
                     echo nl2br("<h3> Course: $course_name</h3>\n\n");
 
                     if($course_section==1){
-                        echo nl2br("<h4>$course_num-001 $course_crn</h4>\n\n");
+                        echo nl2br("<div class='indent'><h4>$course_num-001 $course_crn</h4>\n\n");
                     }else{
                         echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
                     }
@@ -102,7 +102,7 @@
                     echo nl2br("<h4>Professor: $course_professor</h4>\n\n");
 
                     echo nl2br("<h4>Location: $course_location</h4>\n");
-                    echo nl2br("<h4 style='font-weight  400;'>$course_address</h4>\n\n");
+                    echo nl2br("<h4 style='font-weight: 400;'>$course_address</h4>\n\n");
 
                     echo nl2br("<h4>Meeting Times:</h4>\n\n");
                     
@@ -125,7 +125,7 @@
                     }
 
                     echo nl2br("\n");
-                    echo nl2br("<h5>At $course_start-$course_end</h5>\n\n");
+                    echo nl2br("<h5>At $course_start-$course_end</h5>\n\n</div>");
             
                     }
                 } else {
