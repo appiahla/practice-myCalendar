@@ -78,12 +78,12 @@
                         $course_num = $row_current_course['course_num'];
                         $course_name = $row_current_course['course_name'];
                         $course_section = $row_current_course['section_num'];
-                        $course_grade = $$row_current_course['grade'];
+                        $course_grade = $row_current_course['grade'];
                 
 
 
                     
-                    echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course: $course_name</h2> <h4>$course_grade</h4>\n\n");
+                    echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course: $course_name: </h2><h4>$course_grade</h4>\n\n");
 
                     if($course_section==1){
                         echo nl2br("<h4>$course_num-001 $course_crn</h4>\n\n");
