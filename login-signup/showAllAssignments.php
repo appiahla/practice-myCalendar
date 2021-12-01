@@ -16,7 +16,7 @@
               <a href="https://team2-508database.herokuapp.com/login-signup/checkLogin.php">Home</a>
             </li>
             <li class="list-item">
-              <a a href="">
+              <a href="https://team2-508database.herokuapp.com/login-signup/addItems.php">
                 <button class="btn">+ Add</button>
               </a>
             </li>

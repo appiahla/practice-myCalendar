@@ -16,7 +16,7 @@
               <a href="https://team2-508database.herokuapp.com/login-signup/checkLogin.php">Home</a>
             </li>
             <li class="list-item">
-              <a a href="">
+              <a href="https://team2-508database.herokuapp.com/login-signup/addItems.php">
                 <button class="btn">+ Add</button>
               </a>
             </li>
@@ -56,8 +56,7 @@
           
           //Get the variables that will be inserted into the database
           $id = $_POST['AssignmentId'];
-          echo($id);
-          
+
           $title = $_POST['AssignmentName'];
           
           $date = $_POST['DueDate'];
