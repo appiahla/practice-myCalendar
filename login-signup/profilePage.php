@@ -108,7 +108,7 @@
 				</div>
 
 				<!-- Assessments -->
-				<a href="">
+				<a href="./showAllAssessments.php">
 				<button class="btn">View All Assessments</button>
 				</a>
 
