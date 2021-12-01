@@ -25,7 +25,7 @@
         $sql =  "DELETE FROM Assessment WHERE assessment_id='$delete_assessmentT_id' AND assessment_type='Test' AND assessment_v_number='$get_v'";
 
         if (mysqli_query($link,$sql)) {
-            
+            echo("Deleted");
     
         }
                 
