@@ -296,7 +296,7 @@ if (!$link) {
 
 
                 if($taskRecurring == 'Recurring'){
-                  echo"recurring";
+                  echo" recurring ";
               //     echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurrint  $title </h4>\n\n");
                   
               //       //null check
