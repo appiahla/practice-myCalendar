@@ -245,7 +245,7 @@ if (!$link) {
           echo"temp_tasks number is: ";
           echo($temp_tasks);
 
-          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
+          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks')";
 
           // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
           if ($result_current_recurring_tasks = mysqli_query($link,$sql_current_tasks_recurring)) {
