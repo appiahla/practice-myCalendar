@@ -112,12 +112,12 @@
                         echo "Task Date: ".$row_current_taskP['date_of']."<br>";
                     }
 
-                    if ($taskP_recurring != '') {
+                    if ($taskP_status != '') {
                         echo "Task Status: ".$row_current_taskP['task_status']."<br>";
                     }
 
                     // check if it is recurring
-                    if ($taskA_recurring != '') {
+                    if ($taskP_recurring != '') {
                         echo "Task Is Recurring On: <br>";
 
                     
