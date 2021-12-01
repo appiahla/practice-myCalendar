@@ -246,32 +246,89 @@ if (!$link) {
 
           $temp_tasks = $_SESSION['v_num'];
 
-          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks')";
+          $sql_current_tasks = "CALL get_todays_tasks('$temp_tasks')";
 
           // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
-          if ($result_current_recurring_tasks = mysqli_query($link,$sql_current_tasks_recurring)) {
+          if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
 
               // Return the number of rows in result set
-              $rowcount_current_recurring_tasks = mysqli_num_rows($result_current_recurring_tasks);
+              $rowcount_current_tasks = mysqli_num_rows($result_current_tasks);
 
               //if there is a row
-              if($rowcount_current_recurring_tasks > 0) { 
+              if($rowcount_current_tasks > 0) { 
 
                 echo "On Going Recurrent Tasks Today";
               // output data of each row
-              while($row_current_recurring_tasks = $result_current_recurring_tasks->fetch_assoc()) {
-              
-                echo "Title: ".$row_current_recurring_tasks['Title']."<br>";
-                echo "Type: ".$row_current_recurring_tasks['Type']."<br>";
-                echo "Status ".$row_current_recurring_tasks['Status']."<br>";
-                echo "Description: ".$row_current_recurring_tasks['Description']."<br>";
-                echo "Start: ".$row_current_recurring_tasks['Start']."<br>";
-                echo "End: ".$row_current_recurring_tasks['End']."<br>";
+              while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
+                
+                $title = $row_current_tasks['task_title'];
+                $date_of = $row_current_tasks['date_of'];
+                $task_description = $row_current_tasks['task_description'];
+                $task_status = $row_current_tasks['task_status'];
+                $task_recurring = $row_current_tasks['task_recurring'];
+                $start = $row_current_tasks['start_date'];
+                $end = $row_current_tasks['end_date'];
+                $type = $row_current_tasks['task_type'];
+                $location = $row_current_tasks['task_location'];
+                $course = $row_current_tasks['task_course'];
 
-                echo "<br>";
+                //check if it is recurring or not
+                if($taskRecurring == NULL){
+                  echo nl2br("<h3> Tasks To Do Today: <h3>\n\n");
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+                  
+                    //null check
+                    if ($type != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                    }
+
+                    if ($task_status != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                    }
+
+                    if ($location != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                    }
+                  
+                    if ($task_description != '') {
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+                    }
+                }
+
+
+                if($taskRecurring == 'Recurring'){
+                  echo nl2br("<h3> Recurring Tasks To Do Today: <h3>\n\n");
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+                  
+                    //null check
+                    if ($course != '') {
+                      echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
+                    }
+                    if ($type != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                    }
+                    
+                    if ($task_status != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                    }
+                  
+                    if( $start != ''){
+                      echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>Start Date:</h5>
+                                <p style='margin-top: -63px;padding-left: 125px;'> $start </p> \n\n");
+                    }
+
+                    if( $end != ''){
+                      echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>End Date:</h5>
+                                <p style='margin-top: -63px;padding-left: 125px;'> $end </p> \n\n");
+                    }
+                  
+                    if ($task_description != '') {
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+                    }
+                }
               }
           } else {
-            echo "No tasks yet!";
+            echo "No Tasks Today, Enjoy!";
           }
           // Free result set
           mysqli_free_result($result_current_recurring_tasks);
@@ -279,40 +336,6 @@ if (!$link) {
           else {
             printf("error: %s\n", mysqli_error($link));
           }
-
-          
-          $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks')";
-
-          // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
-          if ($result_current_not_recurring_tasks = mysqli_query($link,$sql_current_tasks_not_recurring)) {
-
-              // Return the number of rows in result set
-              $rowcount_current_not_recurring_tasks = mysqli_num_rows($result_current_not_recurring_tasks);
-
-              //if there is a row
-              if($rowcount_current_not_recurring_tasks > 0) { 
-
-                echo "Tasks For Today";
-              // output data of each row
-              while($row_current_not_recurring_tasks = $result_current_not_recurring_tasks->fetch_assoc()) {
-              
-                echo "Title: ".$row_current_not_recurring_tasks['task_title']."<br>";
-                echo "Type: ".$row_current_not_recurring_tasks['task_type']."<br>";
-                echo "Status: ".$row_current_not_recurring_tasks['task_status']."<br>";
-                echo "Description: ".$row_current_not_recurring_tasks['task_description']."<br>";
-
-                echo "<br>";
-              }
-          } else {
-            echo "No tasks yet!";
-          }
-          // Free result set
-          mysqli_free_result($result_current_not_recurring_tasks);
-          }
-          else {
-            printf("error: %s\n", mysqli_error($link));
-          }
-
         ?>
     </div>
     </div>
