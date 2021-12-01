@@ -41,16 +41,22 @@
 
             // get the values 
             $edit_assessmentT_id = $_POST['assessmentT_id'];
+            echo($edit_assessmentT_id);
 
             $edit_assessmentT_title = $_POST['assessmentT_title'];
+            echo($edit_assessmentT_title);
 
             $edit_assessmentT_date = $_POST['assessmentT_date'];
+            echo($edit_assessmentT_date);
 
             $edit_assessmentT_course = $_POST['assessmentT_course'];
+            echo($edit_assessmentT_course);
 
             $edit_assessmentT_material= $_POST['assessmentT_material'];
+            echo($edit_assessmentT_material);
 
             $edit_assessmentT_notes = $_POST['assessmentT_notes'];
+            echo($edit_assessmentT_notes);
 
             //edit form
             echo "
@@ -83,7 +89,7 @@
                   <textarea id='testNotes' name='TestNotes'>$edit_assessmentT_notes</textarea><br><br>
                 </label>
                 
-                <input class='btn' type='submit' value='Update' style='position: relative;top: 40px;left: -250px;'>
+                <input class='btn' type='submit' value='Update'>
               </form>"
         ?>
         </div>
