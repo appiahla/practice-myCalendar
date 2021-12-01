@@ -271,60 +271,59 @@ if (!$link) {
                 $location = $row_current_tasks['task_location'];
                 $course = $row_current_tasks['task_course'];
 
-                //check if it is recurring or not
-                if($taskRecurring == NULL){
-                  echo"not recurring";
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+
+                if($taskRecurring == 'Recurring'){
+                  echo" recurring ";
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurrint  $title </h4>\n\n");
                   
                     //null check
+                    if ($course != '') {
+                      echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
+                    }
                     if ($type != '') {
                       echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
                     }
-
+                    
                     if ($task_status != '') {
                       echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
                     }
+                  
+                    if( $start != ''){
+                      echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>Start Date:</h5>
+                                <p style='margin-top: -63px;padding-left: 125px;'> $start </p> \n\n");
+                    }
 
-                    if ($location != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                    if( $end != ''){
+                      echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>End Date:</h5>
+                                <p style='margin-top: -63px;padding-left: 125px;'> $end </p> \n\n");
                     }
                   
                     if ($task_description != '') {
                       echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
                     }
-                }
-
-
-                if($taskRecurring == 'Recurring'){
-                  echo" recurring ";
-              //     echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurrint  $title </h4>\n\n");
-                  
-              //       //null check
-              //       if ($course != '') {
-              //         echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
-              //       }
-              //       if ($type != '') {
-              //         echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
-              //       }
-                    
-              //       if ($task_status != '') {
-              //         echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
-              //       }
-                  
-              //       if( $start != ''){
-              //         echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>Start Date:</h5>
-              //                   <p style='margin-top: -63px;padding-left: 125px;'> $start </p> \n\n");
-              //       }
-
-              //       if( $end != ''){
-              //         echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>End Date:</h5>
-              //                   <p style='margin-top: -63px;padding-left: 125px;'> $end </p> \n\n");
-              //       }
-                  
-              //       if ($task_description != '') {
-              //         echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
-              //       }
                }
+                              //  //check if it is recurring or not
+                              //  if($taskRecurring == NULL){
+                              //   echo"not recurring";
+                              //   echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+                                
+                              //     //null check
+                              //     if ($type != '') {
+                              //       echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                              //     }
+              
+                              //     if ($task_status != '') {
+                              //       echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                              //     }
+              
+                              //     if ($location != '') {
+                              //       echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                              //     }
+                                
+                              //     if ($task_description != '') {
+                              //       echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+                              //     }
+                              // }
                }
           } else {
             echo "No Tasks Today, Enjoy!";
