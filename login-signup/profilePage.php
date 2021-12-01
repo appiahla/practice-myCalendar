@@ -121,7 +121,7 @@
 				</a>
 
 				<!-- Tasks -->
-				<a href="">
+				<a href="./showAllTasks.php">
 				<button class="btn">View All Tasks</button>
 				</a>
 
