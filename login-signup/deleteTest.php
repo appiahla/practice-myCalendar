@@ -13,6 +13,7 @@
     $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
 
     $delete_assessmentT_id = $_POST['assessmentT_id'];
+    echo($delete_assessmentT_id);
 
     // Check connection
     if (!$link) {
@@ -28,7 +29,6 @@
 
         if (mysqli_query($link,$sql)) {
             echo("Deleted");
-    
         }
                 
         else {
