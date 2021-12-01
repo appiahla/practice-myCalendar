@@ -89,7 +89,7 @@ if (!$link) {
     <script>
         setTimeout(function() {
         var loader = document.getElementById("alert");
-        loader.style.transition = '2s';
+        loader.style.transition = '2.5s';
         loader.style.opacity = '0';
         loader.style.visibility = 'hidden';
         loader.style.display = 'none';
