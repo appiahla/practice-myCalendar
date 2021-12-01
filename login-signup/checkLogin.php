@@ -140,8 +140,8 @@ if (!$link) {
 
                         
                         echo nl2br("<h4> $course_num_login $course_name_login </h4>\n\n");
-                        echo nl2br("<p> $course_proff_login <p> \n\n");
-                        echo nl2br("<p> $course_location_login <p> \n\n");
+                        echo nl2br("<p> $course_proff_login </p> \n\n");
+                        echo nl2br("<p> $course_location_login </p> \n\n");
 
                         echo "<br>";
                       }
