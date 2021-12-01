@@ -93,13 +93,13 @@
               <label for='status'>Task Status: </label>
                 <select name='AcaTaskStatus' id='status' value='$edit_taskA_status'>
                     <option value='Not Started'"
-                        .($edit_taskA_status ? "selected" : "")."
+                        .($edit_taskA_status="Not Started" ? "selected" : "")."
                     >Not Started</option>
                     <option value='On Going'"
-                        .($edit_taskA_status ? "selected" : "")."
+                        .($edit_taskA_status="On Going" ? "selected" : "")."
                     >On Going</option>
                     <option value='Completed'"
-                        .($edit_taskA_status ? "selected" : "")."
+                        .($edit_taskA_status="Completed" ? "selected" : "")."
                     >Completed</option>
                   </select>
                   <br><br><br>
