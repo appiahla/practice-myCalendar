@@ -245,30 +245,61 @@ if (!$link) {
           $end = $_POST['End'];
 
           $temp_tasks = $_SESSION['v_num'];
-          echo"temp_tasks number is: ";
-          echo($temp_tasks);
 
-          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks')";
+          // $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks')";
+
+          // // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
+          // if ($result_current_recurring_tasks = mysqli_query($link,$sql_current_tasks_recurring)) {
+
+          //     // Return the number of rows in result set
+          //     $rowcount_current_recurring_tasks = mysqli_num_rows($result_current_recurring_tasks);
+
+          //     //if there is a row
+          //     if($rowcount_current_recurring_tasks > 0) { 
+
+          //       echo "On Going Recurrent Tasks Today";
+          //     // output data of each row
+          //     while($row_current_recurring_tasks = $result_current_recurring_tasks->fetch_assoc()) {
+              
+          //       echo "Title: ".$row_current_recurring_tasks['Title']."<br>";
+          //       echo "Type: ".$row_current_recurring_tasks['Type']."<br>";
+          //       echo "Status ".$row_current_recurring_tasks['Status']."<br>";
+          //       echo "Description: ".$row_current_recurring_tasks['Description']."<br>";
+          //       echo "Start: ".$row_current_recurring_tasks['Start']."<br>";
+          //       echo "End: ".$row_current_recurring_tasks['End']."<br>";
+
+          //       echo "<br>";
+          //     }
+          // } else {
+          //   echo "No tasks yet!";
+          // }
+          // // Free result set
+          // mysqli_free_result($result_current_tasks);
+          // }
+          // else {
+          //   printf("error: %s\n", mysqli_error($link));
+          // }
+
+          
+          $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks')";
 
           // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
-          if ($result_current_recurring_tasks = mysqli_query($link,$sql_current_tasks_recurring)) {
+          if ($result_current_not_recurring_tasks = mysqli_query($link,$sql_current_tasks_not_recurring)) {
 
               // Return the number of rows in result set
-              $rowcount_current_recurring_tasks = mysqli_num_rows($result_current_recurring_tasks);
-              
-              //if there is a row
-              if($rowcount_current_recurring_tasks > 0) { 
+              $rowcount_current_not_recurring_tasks = mysqli_num_rows($result_current_not_recurring_tasks);
 
-                echo "On Going Recurrent Tasks Today";
+              //if there is a row
+              if($rowcount_current_not_recurring_tasks > 0) { 
+
+                echo "Tasks For Today";
               // output data of each row
-              while($row_current_recurring_tasks = $result_current_recurring_tasks->fetch_assoc()) {
+              while($row_current_not_recurring_tasks = $result_current_not_recurring_tasks->fetch_assoc()) {
               
-                echo "Title: ".$row_current_recurring_tasks['Title']."<br>";
-                echo "Type: ".$row_current_recurring_tasks['Type']."<br>";
-                echo "Due Date: ".$row_current_recurring_tasks['Status']."<br>";
-                echo "Description: ".$row_current_recurring_tasks['Description']."<br>";
-                echo "Start: ".$row_current_recurring_tasks['Start']."<br>";
-                echo "End: ".$row_current_recurring_tasks['End']."<br>";
+                echo "Title: ".$row_current_not_recurring_tasks['task_title']."<br>";
+                echo "Type: ".$row_current_not_recurring_tasks['task_type']."<br>";
+                echo "Status: ".$row_current_not_recurring_tasks['task_status']."<br>";
+                echo "Description: ".$row_current_not_recurring_tasks['task_description']."<br>";
 
                 echo "<br>";
               }
@@ -281,6 +312,7 @@ if (!$link) {
           else {
             printf("error: %s\n", mysqli_error($link));
           }
+
         ?>
     </div>
     </div>
