@@ -67,7 +67,7 @@ CALL find_tasks(“Software as a Service’);
 
 -- Query 13: find the number of assignments that are incomplete for a time period
 
--- Query 14: find the best time for a new recurring event 
+-- Query 14: show all recurring tasks 
 
 -- Query 15: find what courses I have a test for in the upcoming week
 SELECT course_name_assessment
@@ -79,7 +79,7 @@ SELECT task_title AS Title, task_with AS Accompanying, task_description AS Descr
 FROM PersonalTask
 WHERE task_with IS NOT NULL AND v_number = 'V00875392';
 
--- Query 17, 18: delete a specific assignment, task, or course; update a specific meeting/task/etc
+-- Query 17, 18: delete a specific assignment, task; update a specific meeting/task/etc
 -- done with the update/delete queries
 
 -- Query 19: select notes on my assessment
