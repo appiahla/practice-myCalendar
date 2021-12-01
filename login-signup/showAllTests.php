@@ -97,8 +97,16 @@
                     
                                 <button type='submit' class='btn' id='viewAll'>Edit</button>
                             </form>";
+                          echo "<br>";
 
-                        echo "<br>";
+                          echo "<form action='./deleteTest.php' method='POST'>
+                                <input type='hidden' name='assessmentT_id' value='$assessmentT_id'>
+                              
+                                <button type='submit' class='btn' id='viewAll'>Delete</button>
+                            </form>";
+                          echo "<br>";
+
+                          
                         }
                     } else {
                     echo "No Tests yet!";
