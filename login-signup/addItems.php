@@ -20,22 +20,6 @@ session_start();
     $get_v = $_SESSION['v_num'];
 
     $sql = "SELECT course_name FROM Course WHERE v_number='$get_v'";
-
-    if ($result = mysqli_query($link,$sql)) {
-      // Return the number of rows in result set
-      $rowcount_result = mysqli_num_rows($result);
-  
-      //if there is a row
-      if($rowcount_result > 0) { 
-
-          // output data of each row
-          while($row_current_result = $result->fetch_assoc()) {
-          
-            $result_name= $row_current_result['course_name'];
-            echo $result_name;
-          }
-      }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -69,6 +53,26 @@ session_start();
   
 <body>
   <div id="day-view-container">
+  <div class="alert alert-success">
+    <?php 
+    echo "<h3>Classes You Are Enrolled In:</h3>";
+    if ($result = mysqli_query($link,$sql)) {
+      // Return the number of rows in result set
+      $rowcount_result = mysqli_num_rows($result);
+  
+      //if there is a row
+      if($rowcount_result > 0) { 
+
+          // output data of each row
+          while($row_current_result = $result->fetch_assoc()) {
+          
+            $result_name= $row_current_result['course_name'];
+            echo nl2br("<li> $result_name </li>\n");
+          }
+      }
+    }
+    ?>
+    </div>
     <div id="input-field">
       <h2 class="title">Please Input A New: </h2>
 
