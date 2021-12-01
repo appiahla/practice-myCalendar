@@ -230,7 +230,6 @@ if (!$link) {
 
     <div class="home-group">
         <h3 class="home-title">Today's Tasks</h3>
-          <!-- <p class="edit"> Why isn't anything showing up? </p> -->
 
           <?php
             echo "I'm here in the todays task";
@@ -242,7 +241,9 @@ if (!$link) {
           // $description = $_POST['Description'];
           // $end = $_POST['End'];
 
-          // $temp_tasks = $_SESSION['v_num'];
+          $temp_tasks = $_SESSION['v_num'];
+          echo"temp_tasks vn number is: ";
+          echo($temp_tasks);
 
           // $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
 
