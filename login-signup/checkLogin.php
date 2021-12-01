@@ -49,7 +49,10 @@ if (!$link) {
     
     //if there is a row
     if($rowcount == 1) { 
-        echo "<h3>You are in the database!.</h3>\n"; 
+
+
+        echo "<div class='alert alert-success'
+                <strong>Success!</strong> You are in the database!</div>\n"; 
 
             // output data of each row
             while($row = $result_user->fetch_assoc()) {
@@ -187,7 +190,7 @@ if (!$link) {
                 $assign_notes_login = $row_current_assignments['Notes'];
 
 
-                echo nl2br("<h3 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $assign_title_login </h3>\n\n");
+                echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $assign_title_login </h4>\n\n");
                   
                 //null check
                 if ($assign_description_login != '') {
