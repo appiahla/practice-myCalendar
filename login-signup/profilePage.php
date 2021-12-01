@@ -142,7 +142,7 @@
 				<button class="btn">View All Courses</button>
 				</a>
 
-				<a href="">
+				<a href="./viewGrades.php">
 				<button class="btn">View Grades</button>
 				</a>
 				
