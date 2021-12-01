@@ -35,54 +35,56 @@
 <div id="day-view-container">
   <div id="input-field">
     <div class="mytabs">
-        <h2 class='title'>Edit Assignment</h2>
+        <h2 class='title'>Edit Test</h2>
+        
         <?php
+
             // get the values 
-            $edit_assignment_id = $_POST['assignment_id'];
+            $edit_assessmentT_id = $_POST['assessmentT_id'];
 
-            $edit_assignment_title = $_POST['assignment_title'];
+            $edit_assessmentT_title = $_POST['assessmentT_title'];
 
-            $edit_assignment_date = $_POST['assignment_date'];
+            $edit_assessmentT_date = $_POST['assessmentT_date'];
 
-            $edit_assignment_course = $_POST['assignment_course'];
+            $edit_assessmentT_course = $_POST['assessmentT_course'];
 
-            $edit_assignment_description = $_POST['assignment_description'];
+            $edit_assessmentT_material= $_POST['assessmentT_material'];
 
-            $edit_assignment_notes = $_POST['assignment_notes'];
+            $edit_assessmentT_notes = $_POST['assessmentT_notes'];
 
             //edit form
             echo "
-                <form method='POST' action='updateEditAssignment.php'>
+                <form method='POST' action='updateEditTest.php'>
 
-                <input type='hidden' name='AssignmentId' value='$edit_assignment_id'>
-                
-                <label for='assignmentName'>
-                    Assignment Title:
-                    <input id='assignmentName' type='text' name='AssignmentName' value='$edit_assignment_title'><br><br>
+                <input type='hidden' name='TestID' value='$edit_assessmentT_id'>
+
+                <label for='testName'>
+                  Test Title:
+                  <input type='text' id='testName' name='TestName' value=$edit_assessmentT_title><br><br>
                 </label>
                 
-                <label for='dueDate'>
-                    Due Date:
-                    <input  id='dueDate' type='date' name='DueDate' value='$edit_assignment_date'><br><br>
+                <label for='testDate'>
+                 Test Date:
+                  <input type='date' id='testDate' name='TestDate' value=$edit_assessmentT_date><br><br>
                 </label>
                 
-                <label for='courseName'>
-                    Course Name:
-                    <input  id='courseName' type='text' name='CourseName' value='$edit_assignment_course'><br><br>
+                <label for='testCourseName'>
+                  Course Name:
+                  <input type='text' id='testCourseName' name='TestCourseName' vlaue=$edit_assessmentT_course><br><br>
                 </label>
                 
-                <label for='assignmentDesc'>
-                    Description:
-                    <textarea id='assignmentDesc' name='AssignmentDesc'>$edit_assignment_description</textarea><br><br>
+                <label for='testMaterial'>
+                  Material:
+                  <textarea id='testMaterial' name='TestMaterial'>$edit_assessmentT_material</textarea><br><br>
                 </label>
                 
-                <label for='assignmentNotes'>
-                    Notes:
-                    <textarea id='assignmentNotes' name='AssignmentNotes'>$edit_assignment_notes</textarea><br><br>
+                <label for='testNotes'>
+                  Notes:
+                  <textarea id='testNotes' name='TestNotes'>$edit_assessmentT_notes</textarea><br><br>
                 </label>
                 
-                <input class='btn' type='submit' value='Update' style='margin-top: 5px; margin-left: 24px;'>
-                </form>"
+                <input class='btn' type='submit' value='Update' style='position: relative;top: 40px;left: -250px;'>
+              </form>"
         ?>
         </div>
         </div>

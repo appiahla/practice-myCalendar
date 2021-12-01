@@ -34,6 +34,7 @@
 <body>
 <div id="day-view-container">
   <div id="input-field">
+    <h2 class="title">Your Assignments</h2>
     <div class="mytabs">
         <?php
 
@@ -101,7 +102,7 @@
                 echo "No Assignments yet!";
             }
             // Free result set
-            mysqli_free_result($result_current_tasks);
+            mysqli_free_result($row_current_assignments);
             }
                     
             else {
