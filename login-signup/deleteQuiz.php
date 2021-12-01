@@ -88,7 +88,7 @@
             //kill the connection
             die("Connection failed:" .mysqli_connect_error());
         }
-        
+
             $get_v = $_SESSION['v_num'];
 
             //see if the v_num exists
@@ -152,7 +152,7 @@
                         echo "<form action='./deleteQuiz.php' method='POST'>
                                 <input type='hidden' name='assessmentQ_id' value='$assessmentQ_id'>
                       
-                                <button type='submit' class='btn' id='deleteBtn'>Delete</button>
+                                <button type='submit' class='btn' id='deleteBtnQ'>Delete</button>
                           </form>";
                           echo "<br>";
 
