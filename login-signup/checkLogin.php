@@ -231,44 +231,46 @@ if (!$link) {
     <div class="home-group">
         <h3 class="home-title">Today's Tasks</h3>
         <?php
-          // task variables
-          $title = $_POST['Title'];
-          $status = $_POST['Status'];
-          $start = $_POST['Start'];
-          $description = $_POST['Description'];
-          $end = $_POST['End'];
-
-          $temp_tasks = $_SESSION['v_num'];
-
-          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
-
-          $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
 
 
-          if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
-              // Return the number of rows in result set
-          $rowcount_current_tasks = mysqli_num_rows($result_current_tasks);
+          // // task variables
+          // $title = $_POST['Title'];
+          // $status = $_POST['Status'];
+          // $start = $_POST['Start'];
+          // $description = $_POST['Description'];
+          // $end = $_POST['End'];
+
+          // $temp_tasks = $_SESSION['v_num'];
+
+          // $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
+
+          // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
+
+
+          // if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
+          //     // Return the number of rows in result set
+          // $rowcount_current_tasks = mysqli_num_rows($result_current_tasks);
           
-          //if there is a row
-          if($rowcount_current_tasks > 0) { 
+          // //if there is a row
+          // if($rowcount_current_tasks > 0) { 
 
-              // output data of each row
-              while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
+          //     // output data of each row
+          //     while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
               
-                echo "Title: ".$row_current_tasks['Title']."<br>";
-                echo "Due Date: ".$row_current_tasks['Status']."<br>";
-                echo "Description: ".$row_current_tasks['Description']."<br>";
-                echo "Start: ".$row_current_tasks['Start']."<br>";
-                echo "End: ".$row_current_tasks['End']."<br>";
+          //       echo "Title: ".$row_current_tasks['Title']."<br>";
+          //       echo "Due Date: ".$row_current_tasks['Status']."<br>";
+          //       echo "Description: ".$row_current_tasks['Description']."<br>";
+          //       echo "Start: ".$row_current_tasks['Start']."<br>";
+          //       echo "End: ".$row_current_tasks['End']."<br>";
 
-                echo "<br>";
-              }
-          } else {
-            echo "No tasks yet!";
-          }
-          // Free result set
-          mysqli_free_result($result_current_tasks);
-          }
+          //       echo "<br>";
+          //     }
+          // } else {
+          //   echo "No tasks yet!";
+          // }
+          // // Free result set
+          // mysqli_free_result($result_current_tasks);
+          // }
         ?>
     </div>
     </div>
