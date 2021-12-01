@@ -56,7 +56,6 @@ if (!$link) {
 
             // output data of each row
             while($row = $result_user->fetch_assoc()) {
-              echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
             
                 //check if the email is correct
                 if ($row["username"] != $email){ 
@@ -87,7 +86,6 @@ if (!$link) {
     <title>Homepage</title>
     <link rel = "stylesheet" href = "../navigation.css">
     <link rel = "stylesheet" type = "text/css" href = "../home-style.css">
-    <script>$(".alert").alert('close')</script>
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
