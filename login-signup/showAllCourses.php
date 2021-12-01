@@ -65,7 +65,7 @@
             if ($course = mysqli_query($link,$sql)) {
                 
                 // Return the number of rows in result set
-                $rowcount_assessmentsQ = mysqli_num_rows($course);
+                $rowcount_course = mysqli_num_rows($course);
                 
                 //if there is a row
                 if($rowcount_course> 0) {
