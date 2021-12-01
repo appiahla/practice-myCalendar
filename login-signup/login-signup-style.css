@@ -69,12 +69,12 @@
     background: #fff;
   }
   
-  .login, .test label {
+  .login label {
     padding: 4px;
     background: white;
   }
   
-  .signUp, .quiz label {
+  .signUp label {
     padding: 4px;
     background: white;
   }
