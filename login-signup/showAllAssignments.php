@@ -78,7 +78,6 @@
                         $assignment_description = $row_current_assignments['description_section'];
                         $assignment_notes= $row_current_assignments['notes'];
 
-                    echo "Assignment ID: ".$row_current_assignments['assignment_id']."<br>";
                     echo "Assignment Title: ".$row_current_assignments['assignment_title']."<br>";
                     echo "Assignment Due Date: ".$row_current_assignments['due_date']."<br>";
                     echo "Assignment Course: ".$row_current_assignments['course_name_assignment']."<br>";
