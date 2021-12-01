@@ -97,7 +97,7 @@
 					?>
 				</div>
 				
-				<a href="">
+				<a href="./showAllCourses.php">
 				<button class="btn">View All Courses</button>
 				</a>
 
