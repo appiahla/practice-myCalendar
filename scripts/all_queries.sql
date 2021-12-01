@@ -244,6 +244,7 @@ SET `assessment_title`='$title',
 	`notes`='$notes'
 WHERE `assessment_type`='Test' AND `assessment_id`='$id' AND `assessment_v_number`='$get_v';
 
+<<<<<<< HEAD:scripts/all_queries.sql
 -- show academic and personal tasks
 SELECT task_id, v_number, task_title, task_type, task_course, NULL as task_with, NULL as task_location, task_description, date_of, task_status, task_recurring, recurringMon, recurringTues, recurringWed, recurringThurs, recurringFri, recurringSat, recurringSun, start_date, end_date
   FROM AcademicTask
@@ -253,5 +254,7 @@ SELECT task_id, v_number, task_title, task_type, NULL as task_course, task_with,
   
   WHERE v_number='V00875392';
   
+=======
+>>>>>>> 99ba0f3 (home page and querirs check):scripts/queries.sql
 --alter update foreign key constraint
 ALTER TABLE Assessment ADD FOREIGN KEY (course_name_assessment) REFERENCES Course(course_name) ON UPDATE CASCADE;
