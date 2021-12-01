@@ -188,12 +188,20 @@ if (!$link) {
 
 
                 echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 10px;'> $assign_title_login </h4>\n\n");
-                echo nl2br("<p style='margin-top: -25px;padding-left: 30px;'> $assign_description_login </p> \n\n");
-                echo nl2br("<h5 style='margin-top: -40px;padding-left: 30px;font-size: medium;'>Due Date:</h5>
+                  if ($assign_description_login != '') {
+                   echo nl2br("<p style='margin-top: -25px;padding-left: 30px;'> $assign_description_login </p> \n\n");
+                  }
+               
+                if( $assign_due_date_login != ''){
+                  echo nl2br("<h5 style='margin-top: -40px;padding-left: 30px;font-size: medium;'>Due Date:</h5>
                             <p style='margin-top: -63px;padding-left: 107px;'> $assign_due_date_login </p> \n\n");
+                }
+                
                 echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 30px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 107px;'>$assign_course_login </p> \n\n");
-                echo nl2br("<p style='margin-top: -35px;padding-left: 30px;'>Notes: $assign_notes_login </p> \n\n");
-
+              
+                if ($assign_notes_login != '') {
+                  echo nl2br("<p style='margin-top: -35px;padding-left: 30px;'>Notes: $assign_notes_login </p> \n\n");
+                }
                 echo "<br>";
               }
           } else {
