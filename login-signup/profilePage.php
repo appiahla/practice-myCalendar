@@ -75,15 +75,25 @@
 
 									// output data of each row
 									while($row_current_profile = $result_current_profile->fetch_assoc()) {
+
+										$vnum = $row_current_profile['V_Number'];
+										$email = $row_current_profile['Username'];
+										$firstN = $row_current_profile['First_name'];
+										$lastN =$row_current_profile['Last_name'];
+										$date_of_birth = $row_current_profile['DOB'];
+										$age = $row_current_profile['Age'];
+										$school_year =$row_current_profile['School_Year'];
+										$gpa = $row_current_profile['GPA'];
 									
-										echo "V-number: ".$row_current_profile['V_Number']."<br>";
-										echo "Username: ".$row_current_profile['Username']."<br>";
-										echo "First Name: ".$row_current_profile['First_name']."<br>";
-										echo "Last Name: ".$row_current_profile['Last_name']."<br>";
-										echo "Date of Birth: ".$row_current_profile['DOB']."<br>";
-										echo "Age: ".$row_current_profile['Age']."<br>";
-										echo "School Year: ".$row_current_profile['School_Year']."<br>";
-										echo "GPA: ".$row_current_profile['GPA']."<br>";
+										echo nl2br("<div id='profileInfo'>");
+										echo nl2br("<h4> V-number:</h4>  $vnum\n\n");
+										echo nl2br("<h4>Username:</h4>  $email\n\n");
+										echo nl2br("<h4>Name:</h4>  $firstN $lastN\n\n");
+										echo nl2br("<h4>Date of Birth:</h4>  $date_of_birth\n\n");
+										echo nl2br("<h4>Age:</h4>  $age\n\n");
+										echo nl2br("<h4>School Year:</h4>  $school_year\n\n");
+										echo nl2br("<h4>GPA:</h4>  $gpa\n\n");
+										echo nl2br("</div>");
 
 										echo "<br>";
 									}
