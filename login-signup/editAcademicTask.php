@@ -100,7 +100,7 @@
                 </label>
 
                 <input type='checkbox' id='recurringTask' name='recurring' value='Recurring'"
-                    .(!$edit_taskA_recurring ? "checked" : "")."
+                    .($edit_taskA_recurring ? "checked" : "")."
                 >
                     <label for='recurring' style='font-weight:400;''> Recurring Task:</label><br><br>
 
@@ -108,37 +108,37 @@
               <label for='acaTaskRecurrDay'>Weekdays: </label>
                   
                   <input type='checkbox' id='acaTaskRecurrDay' name='monday' value='Monday'"
-                    .(!$edit_taskA_monday ? "checked" : "").
+                    .($edit_taskA_monday ? "checked" : "").
                   ">
                     <label for='monday' style='font-weight:400;'> Monday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='tuesday' value='Tuesday' style='position: relative;right: -102px;'"
-                  .(!$edit_taskA_tuesday ? "checked" : "").
+                  .($edit_taskA_tuesday ? "checked" : "").
                   ">
                     <label for='tuesday' style='font-weight:400; position: relative;right: -103px;'> Tuesday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='wednesday' value='Wednesday' style='position: relative;right: -102px;'"
-                  .(!$edit_taskA_wednesday ? "checked" : "").
+                  .($edit_taskA_wednesday ? "checked" : "").
                   ">
                   <label for='wendsday' style='font-weight:400; position: relative;right: -103px;'> Wendsday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='thursday' value='Thursday' style='position: relative;right: -102px;'"
-                  .(!$edit_taskA_thursday ? "checked" : "").
+                  .($edit_taskA_thursday ? "checked" : "").
                   ">
                   <label for='thursday' style='font-weight:400; position: relative;right: -103px;'> Thursday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='friday' value='Friday' style='position: relative;right: -102px;'"
-                  .(!$edit_taskA_friday ? "checked" : "").
+                  .($edit_taskA_friday ? "checked" : "").
                   ">
                   <label for='firday' style='font-weight:400; position: relative;right: -103px;'> Friday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='saturday' value='Saturday' style='position: relative;right: -102px;'"
-                  .(!$edit_taskA_saturday ? "checked" : "").
+                  .($edit_taskA_saturday ? "checked" : "").
                   ">
                   <label for='staurday' style='font-weight:400; position: relative;right: -103px;'> Saturday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='sunday' value='Sunday' style='position: relative;right: -102px;'"
-                  .(!$edit_taskA_sunday ? "checked" : "").
+                  .($edit_taskA_sunday ? "checked" : "").
                   ">
                   <label for='sunday' style='font-weight:400; position: relative;right: -103px;'> Sunday</label><br><br>
 
