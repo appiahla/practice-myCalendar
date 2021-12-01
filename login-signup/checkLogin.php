@@ -59,14 +59,16 @@ if (!$link) {
               echo "V Number: " . $row["v_num"]. " - Email: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
             
                 //check if the email is correct
-                if ($row["username"] == $email){ 
-                    echo "The emails match!";
+                if ($row["username"] != $email){ 
+                  echo "<div class='alert alert-danger'
+                        <strong>Failure!</strong> You entered the wrong email!</div>\n"; 
                 }
 
                 //check if the password is correct
-                if ($row["password"] == $password) {
-                    echo "The passwords match!";
-                }
+                if ($row["password"] != $password) {
+                  echo "<div class='alert alert-danger'
+                      <strong>Failure!</strong> You entered the wrong password!</div>\n"; 
+                 }
 
             }
           } else {
@@ -85,6 +87,7 @@ if (!$link) {
     <title>Homepage</title>
     <link rel = "stylesheet" href = "../navigation.css">
     <link rel = "stylesheet" type = "text/css" href = "../home-style.css">
+    <script>$(".alert").alert('close')</script>
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
