@@ -111,7 +111,7 @@
     ?>
 
     </div>
-    <a href="./showAllAssessments.php">
+    <a href="./showAllTests.php">
       <button class="btn" id="viewAll">View All Tests</button>
     </a>
   </div>

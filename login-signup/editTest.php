@@ -66,17 +66,17 @@
 
                 <label for='testName'>
                   Test Title:
-                  <input type='text' id='testName' name='TestName' value=$edit_assessmentT_title><br><br>
+                  <input type='text' id='testName' name='TestName' value='$edit_assessmentT_title'><br><br>
                 </label>
                 
                 <label for='testDate'>
                  Test Date:
-                  <input type='date' id='testDate' name='TestDate' value=$edit_assessmentT_date><br><br>
+                  <input type='date' id='testDate' name='TestDate' value='$edit_assessmentT_date'><br><br>
                 </label>
                 
                 <label for='testCourseName'>
                   Course Name:
-                  <input type='text' id='testCourseName' name='TestCourseName' vlaue=$edit_assessmentT_course><br><br>
+                  <input type='text' id='testCourseName' name='TestCourseName' vlaue='$edit_assessmentT_course'><br><br>
                 </label>
                 
                 <label for='testMaterial'>
@@ -89,7 +89,7 @@
                   <textarea id='testNotes' name='TestNotes'>$edit_assessmentT_notes</textarea><br><br>
                 </label>
                 
-                <input class='btn' type='submit' value='Update'>
+                <input class='btn' type='submit' value='Update 'style='margin-left: 24px;'>
               </form>"
         ?>
         </div>

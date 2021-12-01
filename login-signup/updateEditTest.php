@@ -52,66 +52,66 @@
           //kill the connection
           die("Connection failed:" .mysqli_connect_error());
       }
-
           
           //Get the variables that will be inserted into the database
-          $id = $_POST['AssignmentId'];
+          $id = $_POST['TestID'];
 
-          $title = $_POST['AssignmentName'];
+          $title = $_POST['TestName'];
           
-          $date = $_POST['DueDate'];
+          $date = $_POST['TestDate'];
           
-          $course_name = $_POST['CourseName'];
+          $course_name = $_POST['TestCourseName'];
 
-          $description = $_POST['AssignmentDesc'];
+          $material = $_POST['TestMaterial'];
         
-          $notes =  $_POST['AssignmentNotes'];
+          $notes =  $_POST['TestNotes'];
 
           $get_v = $_SESSION['v_num'];
 
           //now insert them into the database
           //see if the v_num exists
-          $sql = "UPDATE Assignment
-                    SET `assignment_title`='$title',
-                        `due_date`='$date',
-                        `course_name_assignment`='$course_name',
-                        `description_section`='$description',
+          $sql = "UPDATE Assessment
+                    SET `assessment_title`='$title',
+                        `date_of`='$date',
+                        `course_name_assessment`='$course_name',
+                        `material`='$material',
                         `notes`='$notes'
-                     WHERE `assignment_id`='$id' AND `assignment_v_number`='$get_v'";
-                  
+                    WHERE `assessment_type`='Test' AND `assessment_id`='$id' AND `assessment_v_number`='$get_v'";
+
                 if (mysqli_query($link, $sql)) {    
 
                     //Success Message
-                    echo nl2br("<h2 class='title'>Your Assignment Successfully Updated!</h2>\n\n");
+                    echo nl2br("<h2 class='title'>Your Test Successfully Updated!</h2>\n\n");
 
-                    //show the title
-                    echo nl2br("<h3> Assignment Title:</h3>  $title\n\n");
+                    // show the title
+                    echo nl2br("<h3> Test Title:</h3>  $title\n\n");
 
-                    //show the course
-                    echo nl2br("<h3> Assignment Course:</h3>  $course_name\n\n");
-
-
-                    if ($date != ''){
-                    
-                      echo nl2br("<h3> Assignment Date:</h3>  $date\n\n");
-                      
+                    echo nl2br("<h3> Test Course:</h3>  $course_name\n\n");
+                                
+                    if ($date_of != ''){
+                                
+                        echo nl2br("<h3> Test Date:</h3>  $date_of\n\n");
+                                
                     }
-  
-                    if ($description != '') {
-  
-                      echo nl2br("<h3> Assignment Description:</h3>  $description\n\n");
-  
+            
+                    if ($material != '') {
+            
+                        echo nl2br("<h3> Test Material:</h3>  $material\n\n");
+
                     }
-                      
+                            
                     if ($notes != ''){
-  
-                      echo nl2br("<h3> Assignment Notes:</h3>  $notes\n\n");
-  
+            
+                        echo nl2br("<h3> Test Notes:</h3>  $notes\n\n");
+            
                     }
-                    
-              } else {
-                  echo "Error: " . $sql . "<br>" . mysqli_error($link);
-              }
+                } 
+                
+                else {
+
+                echo "Error: " . $sql . "<br>" . mysqli_error($link);
+            }
+
 
       mysqli_close($link);
 
