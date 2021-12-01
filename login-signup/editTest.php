@@ -41,22 +41,16 @@
 
             // get the values 
             $edit_assessmentT_id = $_POST['assessmentT_id'];
-            echo($edit_assessmentT_id);
 
             $edit_assessmentT_title = $_POST['assessmentT_title'];
-            echo($edit_assessmentT_title);
 
             $edit_assessmentT_date = $_POST['assessmentT_date'];
-            echo($edit_assessmentT_date);
 
             $edit_assessmentT_course = $_POST['assessmentT_course'];
-            echo($edit_assessmentT_course);
 
             $edit_assessmentT_material= $_POST['assessmentT_material'];
-            echo($edit_assessmentT_material);
 
             $edit_assessmentT_notes = $_POST['assessmentT_notes'];
-            echo($edit_assessmentT_notes);
 
             //edit form
             echo "

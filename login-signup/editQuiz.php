@@ -40,50 +40,56 @@
         <?php
 
             // get the values 
-            $edit_assessmentT_id = $_POST['assessmentT_id'];
+            $edit_assessmentQ_id = $_POST['assessmentQ_id'];
+            echo($edit_assessmentT_id);
 
-            $edit_assessmentT_title = $_POST['assessmentT_title'];
+            $edit_assessmentQ_title = $_POST['assessmentQ_title'];
+            echo($edit_assessmentQ_title);
 
-            $edit_assessmentT_date = $_POST['assessmentT_date'];
+            $edit_assessmentQ_date = $_POST['assessmentQ_date'];
+            echo($edit_assessmentQ_date);
 
-            $edit_assessmentT_course = $_POST['assessmentT_course'];
+            $edit_assessmentQ_course = $_POST['assessmentQ_course'];
+            echo($edit_assessmentQ_course);
 
-            $edit_assessmentT_material= $_POST['assessmentT_material'];
+            $edit_assessmentQ_material= $_POST['assessmentQ_material'];
+            echo($edit_assessmentQ_material);
 
-            $edit_assessmentT_notes = $_POST['assessmentT_notes'];
+            $edit_assessmentQ_notes = $_POST['assessmentQ_notes'];
+            echo($edit_assessmentQ_notes);
 
             //edit form
             echo "
-                <form method='POST' action='updateEditTest.php'>
+                <form method='POST' action='updateEditQuiz.php'>
 
-                <input type='hidden' name='TestID' value='$edit_assessmentT_id'>
+                <input type='hidden' name='QuizID' value='$edit_assessmentQ_id'>
 
-                <label for='testName'>
-                  Test Title:
-                  <input type='text' id='testName' name='TestName' value=$edit_assessmentT_title><br><br>
+                <label for='quizName'>
+                    Quiz Title:
+                    <input type='text' id='quizName' name='QuizName' value='$edit_assessmentQ_id'><br><br>
                 </label>
                 
-                <label for='testDate'>
-                 Test Date:
-                  <input type='date' id='testDate' name='TestDate' value=$edit_assessmentT_date><br><br>
+                <label for='quizDate'>
+                    Quiz Date:
+                    <input type='date' id='quizDate' name='QuizDate' value='$edit_assessmentQ_date'><br><br>
                 </label>
                 
-                <label for='testCourseName'>
-                  Course Name:
-                  <input type='text' id='testCourseName' name='TestCourseName' vlaue=$edit_assessmentT_course><br><br>
+                <label for='quizCourseName'>
+                    Course Name:
+                    <input type='text' id='quizCourseName' name='QuizCourseName' value='$edit_assessmentQ_course'><br><br>
                 </label>
                 
-                <label for='testMaterial'>
-                  Material:
-                  <textarea id='testMaterial' name='TestMaterial'>$edit_assessmentT_material</textarea><br><br>
+                <label for='quizMaterial'>
+                    Material:
+                    <textarea id='quizMaterial' name='QuizMaterial'>$edit_assessmentQ_material</textarea><br><br>
                 </label>
                 
-                <label for='testNotes'>
-                  Notes:
-                  <textarea id='testNotes' name='TestNotes'>$edit_assessmentT_notes</textarea><br><br>
+                <label for='quizNotes'>
+                    Notes:
+                    <textarea id='quizNotes' name='QuizNotes'>$edit_assessmentQ_notes</textarea><br><br>
                 </label>
-                
-                <input class='btn' type='submit' value='Update' style='position: relative;top: 40px;left: -250px;'>
+                    
+                <input class='btn' type='submit' value='Update 'style='margin-left: 24px;'>
               </form>"
         ?>
         </div>

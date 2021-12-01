@@ -110,7 +110,7 @@
 
         ?>
     </div>
-    <a href="">
+    <a href="./showAllQuizzes.php">
       <button class="btn" id="viewAll">View All Quizzes</button>
     </a>
   </div>
