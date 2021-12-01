@@ -98,7 +98,7 @@
               </label>
               
               <label for='status'>Task Status: </label>
-                <select name='PersonalTaskStatus id='status' value='$edit_taskP_status'>
+                <select name='PersonalTaskStatus' id='status' value='$edit_taskP_status'>
                     <option value='Not Started'"
                     .($edit_taskP_status=="Not Started" ? "selected" : "")."
                     >Not Started</option>
