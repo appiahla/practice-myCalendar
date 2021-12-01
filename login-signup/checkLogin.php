@@ -89,9 +89,10 @@ if (!$link) {
     <script>
         setTimeout(function() {
         var loader = document.getElementById("alert");
-        loader.style.transition = '.5s';
+        loader.style.transition = '2s';
         loader.style.opacity = '0';
         loader.style.visibility = 'hidden';
+        loader.style.display = 'none';
         }, 1250);
     </script>
     <nav class="nav-bar" >
