@@ -89,7 +89,7 @@ if (!$link) {
     <script>
         setTimeout(function() {
           var loader = document.getElementById("alert");
-          loader.style.transition = '4s';
+          loader.style.transition = '7s';
           loader.style.opacity = '0';
           loader.style.visibility = 'hidden';
           loader.style.display = 'none';
@@ -230,7 +230,7 @@ if (!$link) {
 
     <div class="home-group">
         <h3 class="home-title">Today's Tasks</h3>
-        <? 
+        <?php
           // task variables
           $title = $_POST['Title'];
           $status = $_POST['Status'];
@@ -240,7 +240,10 @@ if (!$link) {
 
           $temp_tasks = $_SESSION['v_num'];
 
-          $sql_current_tasks = "CALL create_todays_tasks('$temp_tasks');";
+          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
+
+          $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
+
 
           if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
               // Return the number of rows in result set
