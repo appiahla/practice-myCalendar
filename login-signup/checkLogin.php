@@ -274,7 +274,6 @@ if (!$link) {
 
                 //check if it is recurring or not
                 if($taskRecurring == NULL){
-                  echo nl2br("<h3> Tasks To Do Today: <h3>\n\n");
                   echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
                   
                     //null check
@@ -297,8 +296,7 @@ if (!$link) {
 
 
                 if($taskRecurring == 'Recurring'){
-                  echo nl2br("<h3> Recurring Tasks To Do Today: <h3>\n\n");
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring Event: $title </h4>\n\n");
                   
                     //null check
                     if ($course != '') {
