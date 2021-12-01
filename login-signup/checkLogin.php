@@ -115,7 +115,6 @@ if (!$link) {
         <app-class-view>
           <div id="class-view-flex">
             <div class="class">
-              <h4 class="class-name">Database</h4>
                 <? 
                   // course variables
                   $course_num = $_POST['course_num'];
