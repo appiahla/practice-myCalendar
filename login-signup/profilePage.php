@@ -108,6 +108,10 @@
 				</div>
 
 				<!-- Assessments -->
+				<a href="">
+				<button class="btn">View All Assessments</button>
+				</a>
+
 				<a href="./showAllTests.php">
 				<button class="btn">View All Tests</button>
 				</a>
@@ -116,11 +120,11 @@
 				<button class="btn">View All Quizzes</button>
 				</a>
 
+				<!-- Tasks -->
 				<a href="">
-				<button class="btn">View All Assessments</button>
+				<button class="btn">View All Tasks</button>
 				</a>
 
-				<!-- Tasks -->
 				<a href="./showAllAcademicTasks.php">
 				<button class="btn">View All Academic Tasks</button>
 				</a>
@@ -128,11 +132,8 @@
 				<a href="./showAllPersonalTasks.php">
 				<button class="btn">View All Personal Tasks</button>
 				</a>
-
-				<a href="">
-				<button class="btn">View All Tasks</button>
-				</a>
 				
+				<!-- Other -->
 				<a href="./showAllCourses.php">
 				<button class="btn">View All Courses</button>
 				</a>
