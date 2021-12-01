@@ -28,7 +28,7 @@ ORDER BY start_time;
 SELECT course_num AS Course, location as Location, address as Address, TIME_FORMAT(start_time, "%r") as Start, TIME_FORMAT(end_time, "%r") as End
 FROM Course
 WHERE meetTues IS NOT NULL
-ORDER BY start_time ASC;
+ORDER BY start_time;
 
 -- wednesday
 SELECT course_num AS Course, location as Location, address as Address, TIME_FORMAT(start_time, "%r") as Start, TIME_FORMAT(end_time, "%r") as End
