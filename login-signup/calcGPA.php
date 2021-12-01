@@ -74,7 +74,43 @@
                         $course_total_credit = $row_current_course['total_credit'];
                         
                         $finalGPA = ($course_total_grade*$course_total_credit)/$course_total_credit;
-                        echo($finalGPA);
+                        echo("final calulation is" + $finalGPA);
+
+
+                        if (93 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 4.0!</h2>\n\n");
+                        }
+                        else if (90 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 3.7!</h2>\n\n");
+                        }
+                        else if (87 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 3.3!</h2>\n\n");
+                        }
+                        else if (83 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 3.0!</h2>\n\n");
+                        }
+                        else if (80 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 2.7!</h2>\n\n");
+                        }
+                        else if (77 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 2.3!</h2>\n\n");
+                        }
+                        else if (73 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 2.0!</h2>\n\n");
+                        }
+                        else if (70 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 1.7!</h2>\n\n");
+                        }
+                        else if (67 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 1.3!</h2>\n\n");
+                        }
+                        else if (65 <= $finalGPA){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 1.0!</h2>\n\n");
+                        }
+                        else if ($finalGPA > 65){
+                            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 0.0!</h2>\n\n");
+                        }
+
                     }
                 } 
                 
@@ -88,8 +124,6 @@
             else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($link);
             }
-
-        mysqli_close($link);
         ?>
         
     <?php
