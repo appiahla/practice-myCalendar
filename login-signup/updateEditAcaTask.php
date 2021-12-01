@@ -58,70 +58,150 @@
           $id = $_POST['AcaTaskID'];
 
           $title = $_POST['AcaTaskName'];
-          
-          $course_name = $_POST['AcaTaskCourse'];
-          
+
+          $course = $_POST['AcaTaskCourse'];
+
           $description = $_POST['AcaTaskDesc'];
-          
+
           $date = $_POST['AcaTaskDate'];
-          
-                    
-        
-          $notes =  $_POST['AssignmentNotes'];
+
+          $status = $_POST['AcaTaskStatus'];
+
+          $recurring = $_POST['recurring'];
+
+          $monday = $_POST['monday'];
+            
+          $tuesday = $_POST['tuesday'];
+            
+          $wednesday = $_POST['wednesday'];
+            
+          $thursday = $_POST['thursday'];
+            
+          $friday = $_POST['friday'];
+            
+          $saturday = $_POST['saturday'];
+            
+          $sunday = $_POST['sunday'];
+            
+          $start = $_POST['AcaTaskRecurrStart'];
+            
+          $end = $_POST['AcaTaskRecurrEnd'];
 
           $get_v = $_SESSION['v_num'];
 
           //now insert them into the database
           //see if the v_num exists
-          $sql = "UPDATE Assignment
-                    SET `assignment_title`='$title',
-                        `due_date`='$date',
-                        `course_name_assignment`='$course_name',
-                        `description_section`='$description',
-                        `notes`='$notes'
-                     WHERE `assignment_id`='$id' AND `assignment_v_number`='$get_v'";
+
+          $sql = "UPDATE AcademicTask
+                    SET
+                        `task_title`='$title',
+                        `task_course`='$course',
+                        `task_description`='$description',
+                        `date_of`='$date',
+                        `task_status`='$status',
+                        `task_recurring`='$recurring',
+                        `recurringMon`='$monday',
+                        `recurringTues`='$tuesday',
+                        `recurringWed`='$wednesday',
+                        `recurringThurs`='$thursday',
+                        `recurringFri`='$friday',
+                        `recurringSat`='$saturday',
+                        `recurringSun`='$sunday',
+                        `start_date`='$start',
+                        `end_date`='$end'
+                    WHERE `task_id`='$id' AND `v_number`='$get_v'";
                   
                 if (mysqli_query($link, $sql)) {    
 
-                    //Success Message
-                    echo nl2br("<h2 class='title'>Your Assignment Successfully Updated!</h2>\n\n");
+                  //Success Message
+                  echo nl2br("<h2 class='title'>Your Academic Task was Updated Successfully!</h2>\n\n");
+                  
+                  // show the title
+                  echo nl2br("<h3> Task Title:</h3>  $title\n\n");
 
-                    //show the title
-                    echo nl2br("<h3> Assignment Title:</h3>  $title\n\n");
+                  // check for null
+                  if ($course != '') {
 
-                    //show the course
-                    echo nl2br("<h3> Assignment Course:</h3>  $course_name\n\n");
+                  echo nl2br("<h3> Task Course:</h3>  $course\n\n");
+
+                  }
+                  
+                  if ($description != ''){
+                  echo nl2br("<h3> Task Description:</h3>  $description\n\n");
+                  }
+
+                  if ($date != '') {
+
+                  echo nl2br("<h3> Task Date:</h3>  $date\n\n");
+
+                  }
+                  
+                  if ($status != ''){
+
+                  echo nl2br("<h3> Task Status:</h3>  $status\n\n");
+
+                  }
+
+                  //check if the task is recurring
+                  if ($recurring != ''){
+
+                  echo nl2br("<h3>Task is Recurring on: </h3>\n\n");
 
 
-                    if ($date != ''){
-                    
-                      echo nl2br("<h3> Assignment Date:</h3>  $date\n\n");
+                  if ($monday != ''){
                       
-                    }
-  
-                    if ($description != '') {
-  
-                      echo nl2br("<h3> Assignment Description:</h3>  $description\n\n");
-  
-                    }
+                      echo nl2br("$monday\n\n");
+                  
+                  }
+
+                  if ($tuesday != ''){
                       
-                    if ($notes != ''){
-  
-                      echo nl2br("<h3> Assignment Notes:</h3>  $notes\n\n");
-  
-                    }
-                    
-              } else {
-                  echo "Error: " . $sql . "<br>" . mysqli_error($link);
+                      echo nl2br("$tuesday\n\n");
+
+                  }
+                  
+                  if ($wednesday != ''){
+
+                      echo nl2br("$wednesday\n\n");
+
+                  }
+
+                  if ($thursday != ''){
+
+                      echo nl2br("$thursday\n\n");
+
+                  }
+                  
+                  if ($friday != ''){
+
+                      echo nl2br("$friday\n\n");
+                  }
+
+                  if ($saturday != ''){
+
+                      echo nl2br("$saturday\n\n");
+                  }
+
+                  if ($sunday != ''){
+                      
+                      echo nl2br("$sunday\n\n");
+
+                  }
+                  
+                  echo nl2br("<h4>Staring on: </h4>\n\n $start\n\n");
+                  echo nl2br("<h4>Ending on: </h4>\n\n $end\n\n");
               }
+          } else {
+              echo "Error: " . $sql . "<br>" . mysqli_error($link);
+          }
 
-      mysqli_close($link);
+  mysqli_close($link);
 
-      ?>
+?>
 
     </div>
-    <a href="./showAllAssignments.php">
-      <button class="btn" id="viewAll">View All Assignments</button>
+    <a href="./showAllAcademicTasks.php">
+      <button class="btn" id="viewAll">View All Academic Tasks</button>
     </a>
   </div>
 </div>
