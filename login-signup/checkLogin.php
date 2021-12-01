@@ -188,9 +188,11 @@ if (!$link) {
 
 
                 echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 10px;'> $assign_title_login </h4>\n\n");
-                  if ($assign_description_login != '') {
-                   echo nl2br("<p style='margin-top: -25px;padding-left: 30px;'> $assign_description_login </p> \n\n");
-                  }
+                  
+                //null check
+                if ($assign_description_login != '') {
+                  echo nl2br("<p style='margin-top: -25px;padding-left: 30px;'> $assign_description_login </p> \n\n");
+                }
                
                 if( $assign_due_date_login != ''){
                   echo nl2br("<h5 style='margin-top: -40px;padding-left: 30px;font-size: medium;'>Due Date:</h5>
