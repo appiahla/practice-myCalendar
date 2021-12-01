@@ -107,10 +107,10 @@
 
               <label for='acaTaskRecurrDay'>Weekdays: </label>
                   
-                  <input type='checkbox' id='acaTaskRecurrDay' name='monday' value='Monday'"
+                  <input type='checkbox' id='acaTaskRecurrDay' name='monday' value='Monday' style='left: -27px;position: relative;'"
                     .($edit_taskA_monday ? "checked" : "").
                   ">
-                    <label for='monday' style='font-weight:400;'> Monday</label><br>
+                    <label for='monday' style='position: relative;font-weight:400;left: -27px;'> Monday</label><br>
 
                   <input type='checkbox' id='acaTaskRecurrDay' name='tuesday' value='Tuesday' style='position: relative;right: -102px;'"
                   .($edit_taskA_tuesday ? "checked" : "").
