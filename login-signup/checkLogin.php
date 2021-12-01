@@ -187,7 +187,7 @@ if (!$link) {
                 $assign_notes_login = $row_current_assignments['Notes'];
 
 
-                echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $assign_title_login </h4>\n\n");
+                echo nl2br("<h3 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $assign_title_login </h3>\n\n");
                   
                 //null check
                 if ($assign_description_login != '') {
