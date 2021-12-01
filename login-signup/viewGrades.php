@@ -95,7 +95,7 @@
                     echo "<form action='./calcGPA.php' method='POST'>
                         <input type='hidden' name='course_grade' value='$course_grade'>
                          
-                         <button type='submit' class='btn' id='viewAll'>Calculate GPA Semester</button>
+                         <button type='submit' class='btn' id='viewAll' style='position: relative;left: 30%; margin-top: 15px;'>Calculate Semester GPA</button>
                         </form>";
                      echo "<br>";
    
