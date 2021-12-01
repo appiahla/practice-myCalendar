@@ -119,7 +119,7 @@
 				</a>
 				
 				<!-- Tasks -->
-				<a href="">
+				<a href="./showAllAcademicTasks.php">
 				<button class="btn">View All Academic Tasks</button>
 				</a>
 
