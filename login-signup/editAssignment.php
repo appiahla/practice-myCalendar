@@ -39,7 +39,6 @@
         <?php
             // get the values 
             $edit_assignment_id = $_POST['assignment_id'];
-            echo($edit_assignment_id);
 
             $edit_assignment_title = $_POST['assignment_title'];
 
@@ -55,7 +54,7 @@
             echo "
                 <form method='POST' action='updateEditAssignment.php'>
 
-                <input type='hidden' name='AssignmentId' value='$assignment_id'>
+                <input type='hidden' name='AssignmentId' value='$edit_assignment_id'>
                 
                 <label for='assignmentName'>
                     Assignment Title:
