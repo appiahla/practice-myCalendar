@@ -101,14 +101,24 @@
 				<button class="btn">View All Courses</button>
 				</a>
 
-				<a href="">
+				<a href="./showAllAssignments.php">
 				<button class="btn">View All Assignments</button>
+				</a>
+
+				<!-- Assessments -->
+				<a href="./showAllTests.php">
+				<button class="btn">View All Tests</button>
+				</a>
+
+				<a href="./showAllQuizzes.php">
+				<button class="btn">View All Quizzes</button>
 				</a>
 
 				<a href="">
 				<button class="btn">View All Assessments</button>
 				</a>
 				
+				<!-- Tasks -->
 				<a href="">
 				<button class="btn">View All Academic Tasks</button>
 				</a>
