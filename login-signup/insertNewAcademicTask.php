@@ -178,7 +178,7 @@
 
     ?>
     </div>
-    <a href="">
+    <a href="./showAllAcademicTasks.php">
       <button class="btn" id="viewAll">View All Academic Tasks</button>
     </a>
   </div>
