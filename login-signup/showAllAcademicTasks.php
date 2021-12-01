@@ -182,7 +182,7 @@
                 echo "No Academic Tasks yet!";
             }
             // Free result set
-            mysqli_free_result($row_current_assignments);
+            mysqli_free_result($row_current_taskA);
             }
                     
             else {

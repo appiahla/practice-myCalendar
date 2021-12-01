@@ -1,5 +1,5 @@
 <?php
-  session_start();  
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
               <a href="https://team2-508database.herokuapp.com/login-signup/checkLogin.php">Home</a>
             </li>
             <li class="list-item">
-              <a a href="">
+              <a href="https://team2-508database.herokuapp.com/login-signup/addItems.php">
                 <button class="btn">+ Add</button>
               </a>
             </li>
@@ -38,24 +38,26 @@
 
     <?php
 
-        $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
-        $db_user = 'admin';
-        $db_pass = 'databasegroup';
-        $db_name = 'groupMyCalendar';
-        $db_port = '3306';
+      $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
+      $db_user = 'admin';
+      $db_pass = 'databasegroup';
+      $db_name = 'groupMyCalendar';
+      $db_port = '3306';
 
-        $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
+      $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
 
-        // Check connection
-        if (!$link) {
-                
-            //kill the connection
-            die("Connection failed:" .mysqli_connect_error());
-        }
+      // Check connection
+      if (!$link) {
+              
+          //kill the connection
+          die("Connection failed:" .mysqli_connect_error());
+      }
 
-            
-            //Get the variables that will be inserted into the database
-            $title = $_POST['PersonalTaskName'];
+          
+          //Get the variables that will be inserted into the database
+          $id = $_POST['PersonalTaskID'];
+
+          $title = $_POST['PersonalTaskName'];
 
             $with =  $_POST['PersonalTaskWith'];
 
@@ -91,13 +93,30 @@
 
             //now insert them into the database
             //see if the v_num exists
-            $sql =  "INSERT INTO PersonalTask (`task_title`, `task_with`, `task_location`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
-            VALUES ('$title', '$with', '$location', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v')";
+            $sql =  $sql = "UPDATE PersonalTask
+                                SET
+                                    `task_title`='$title',
+                                    `task_with`='$with',
+                                    `task_location`='$location',
+                                    `task_description`='$description',
+                                    `date_of`='$date',
+                                    `task_status`='$status',
+                                    `task_recurring`='$recurring',
+                                    `recurringMon`='$monday',
+                                    `recurringTues`='$tuesday',
+                                    `recurringWed`='$wednesday',
+                                    `recurringThurs`='$thursday',
+                                    `recurringFri`='$friday',
+                                    `recurringSat`='$saturday',
+                                    `recurringSun`='$sunday',
+                                    `start_date`='$start',
+                                    `end_date`='$end'
+                                WHERE `task_id`='$id' AND `v_number`='$get_v'";
                 
                     
                 if (mysqli_query($link, $sql)) {    
                     //Success Message
-                    echo nl2br("<h2 class='title'>Your Personal Task was Submitted Successfully!</h2>\n\n");
+                    echo nl2br("<h2 class='title'>Your Personal Task was Updated Successfully!</h2>\n\n");
                      // show the title
                     echo nl2br("<h3> Task Title:</h3>  $title\n\n");
 
@@ -192,8 +211,8 @@
 
     ?>
     </div>
-    <a href="./showAllPersonalTasks.php">
-      <button class="btn" id="viewAll">View All Personal Tasks</button>
+    <a href="./showAllAcademicTasks.php">
+      <button class="btn" id="viewAll">View All Academic Tasks</button>
     </a>
   </div>
 </div>
