@@ -100,7 +100,7 @@
                     }
 
                     if ($taskP_location != '') {
-                        echo "Task Location".$row_current_taskP['task_location']."<br>";
+                        echo "Task Location: ".$row_current_taskP['task_location']."<br>";
                     }
 
                     //Check for null
