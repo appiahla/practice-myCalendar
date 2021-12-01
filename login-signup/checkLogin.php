@@ -272,28 +272,7 @@ if (!$link) {
 
 
                 //check if it is recurring or not
-                if($taskRecurring == NULL){
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Do Today: $title </h4>\n\n");
-                                
-                  //null check
-                  if ($type != '') {
-                    echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
-                  }
-              
-                  if ($task_status != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
-                  }
-              
-                  if ($location != '') {
-                    echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
-                  }
-                                
-                  if ($task_description != '') {
-                     echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
-                  }
-                }
-
-                if($task_recurring == 'Recurring'){
+                if($taskRecurring == 'Recurring'){
                   echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring:  $title </h4>\n\n");
                   
                     //null check
@@ -318,10 +297,37 @@ if (!$link) {
                                 <p style='margin-top: -63px;padding-left: 125px;'> $end </p> \n\n");
                     }
                   
+                    if ($location != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                    }
+                        
                     if ($task_description != '') {
                       echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
                     }
                }
+               else {
+                echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Do Today:</h4>  <h4>$title</h4>\n\n");
+                                
+                //null check
+                if ($course != '') {
+                  echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
+                }
+                if ($type != '') {
+                  echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                }
+            
+                if ($task_status != '') {
+                    echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                }
+            
+                if ($location != '') {
+                  echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                }
+                              
+                if ($task_description != '') {
+                   echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+                }
+              }
                }
           } else {
             echo "No Tasks Today, Enjoy!";
