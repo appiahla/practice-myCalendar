@@ -242,13 +242,16 @@ if (!$link) {
           // $end = $_POST['End'];
 
           $temp_tasks = $_SESSION['v_num'];
-          echo"temp_tasks vn number is: ";
+          echo"temp_tasks number is: ";
           echo($temp_tasks);
 
-          // $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
+          $sql_current_tasks_recurring = "CALL create_todays_tasks('$temp_tasks');";
+          echo"sql_current_tasks_recurring is: ";
+          echo($sql_current_tasks_recurring); 
 
-          // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
-
+          $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
+          echo"sql_current_tasks_not_recurring is: ";
+          echo($sql_current_tasks_not_recurring); 
 
           // if ($result_current_tasks = mysqli_query($link,$sql_current_tasks)) {
           //     // Return the number of rows in result set
