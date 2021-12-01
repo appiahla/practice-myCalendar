@@ -273,7 +273,7 @@ if (!$link) {
 
                 //check if it is recurring or not
                 if($task_recurring == NULL){
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Do Today:</h4>  <h4>$title</h4>\n\n");
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Do Today: <div id='littleTitle'>$title</div></h4> \n\n");
                                 
                   //null check
                   if ($course != '') {
@@ -295,8 +295,9 @@ if (!$link) {
                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
                   }
                 }
+
                 if($task_recurring == 'Recurring'){
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring:  $title </h4>\n\n");
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring:  <div id='littleTitle'>$title</div></h4>\n\n");
                   
                     //null check
                     if ($course != '') {
