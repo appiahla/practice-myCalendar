@@ -187,10 +187,11 @@ if (!$link) {
                 $assign_notes_login = $row_current_assignments['Notes'];
 
 
-                echo nl2br("<h4> $assign_title_login </h4>\n\n");
-                echo nl2br("<p> $assign_description_login </p> \n\n");
-                echo nl2br("<h4>Due Date:</h4><p> $assign_due_date_login </p> \n\n");
-                echo nl2br("<p>For $assign_course_login </p> \n\n");
+                echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 10px;'> $assign_title_login </h4>\n\n");
+                echo nl2br("<p style='margin-top: -25px;padding-left: 30px;'> $assign_description_login </p> \n\n");
+                echo nl2br("<h5 style='margin-top: -40px;padding-left: 30px;font-size: medium;'>Due Date:</h5>
+                            <p style='margin-top: -44px;padding-left: 107px;'> $assign_due_date_login </p> \n\n");
+                echo nl2br("<h5>Course:</h5> <p>$assign_course_login </p> \n\n");
                 echo nl2br("<p>Notes: $assign_notes_login </p> \n\n");
 
                 echo "<br>";
