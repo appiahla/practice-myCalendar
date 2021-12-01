@@ -134,10 +134,15 @@ if (!$link) {
                       // output data of each row
                       while($row_course = $result_course->fetch_assoc()) {
                       
-                        echo "Course Number: ".$row_course['course_num']."<br>";
-                        echo "Course Name: ".$row_course['course_name']."<br>";
-                        echo "Professor: ".$row_course['professor_name']."<br>";
-                        echo "Location: ".$row_course['location']."<br>";
+                        $course_num_login = $row_course['course_num'];
+                        $course_name_login = $row_course['course_name'];
+                        $course_proff_login = $row_course['professor_name'];
+                        $course_location_login = $row_course['location'];
+
+                        
+                        echo nl2br("<h4> $course_num_login $course_name_login </h4>\n\n");
+                        echo nl2br("<p> $course_proff_login <p> \n\n");
+                        echo nl2br("<p> $course_location_login <p> \n\n");
 
                         echo "<br>";
                       }
@@ -178,11 +183,18 @@ if (!$link) {
               // output data of each row
               while($row_current_assignments = $result_current_assignments->fetch_assoc()) {
               
-                echo "Title: ".$row_current_assignments['Title']."<br>";
-                echo "Due Date: ".$row_current_assignments['Due_Date']."<br>";
-                echo "Course: ".$row_current_assignments['Course']."<br>";
-                echo "Description: ".$row_current_assignments['Description']."<br>";
-                echo "Notes: ".$row_current_assignments['Notes']."<br>";
+                $assign_title_login = $row_current_assignments['Title'];
+                $assign_due_date_login = $row_current_assignments['Due_Date'];
+                $assign_course_login = $row_current_assignments['Course'];
+                $assign_description_login = $row_current_assignments['Description'];
+                $assign_notes_login = $row_current_assignments['Notes'];
+
+
+                echo nl2br("<h4> $assign_title_login </h4>\n\n");
+                echo nl2br("<p> $assign_description_login </p> \n\n");
+                echo nl2br("<h4>Due Date:</h4><p> $assign_due_date_login <p> \n\n");
+                echo nl2br("<p>For $assign_course_login <p> \n\n");
+                echo nl2br("<p>Notes: $assign_notes_login <p> \n\n");
 
                 echo "<br>";
               }
