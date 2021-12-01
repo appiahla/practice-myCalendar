@@ -280,15 +280,15 @@ if (!$link) {
                     echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
                   }
                   if ($type != '') {
-                    echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                    echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'> $type </p> \n\n");
                   }
               
                   if ($task_status != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;' Status:> $task_status </p> \n\n");
                   }
               
                   if ($location != '') {
-                    echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                    echo nl2br("<p style='margin-top: -35px;padding-left: 45px;' Location:> $location </p> \n\n");
                   }
                                 
                   if ($task_description != '') {
@@ -304,11 +304,11 @@ if (!$link) {
                       echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
                     }
                     if ($type != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'> $type </p> \n\n");
                     }
                     
                     if ($task_status != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;' Status:> $task_status </p> \n\n");
                     }
                   
                     if( $start != ''){
@@ -322,7 +322,7 @@ if (!$link) {
                     }
                   
                     if ($location != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;' Location:> $location </p> \n\n");
                     }
                         
                     if ($task_description != '') {
