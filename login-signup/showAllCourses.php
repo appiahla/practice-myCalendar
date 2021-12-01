@@ -91,7 +91,7 @@
 
 
                     
-                    echo nl2br("<h3> Course: $course_name</h3>\n\n");
+                    echo nl2br("<div class='course'><h3> Course: $course_name</h3>\n\n");
 
                     if($course_section==1){
                         echo nl2br("<div class='indent'><h4>$course_num-001 $course_crn</h4>\n\n");
@@ -125,7 +125,7 @@
                     }
 
                     echo nl2br("\n");
-                    echo nl2br("<h5>At $course_start-$course_end</h5>\n\n</div>");
+                    echo nl2br("<h5>At $course_start-$course_end</h5>\n\n</div></div>");
             
                     }
                 } else {
