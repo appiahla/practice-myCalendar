@@ -19,7 +19,7 @@ session_start();
 
     $get_v = $_SESSION['v_num'];
 
-    $sql = "SELECT course_name FROM Course WHERE v_number=$get_v";
+    $sql = "SELECT course_name FROM Course WHERE v_number='$get_v'";
 
     if ($result = mysqli_query($link,$sql)) {
       // Return the number of rows in result set
