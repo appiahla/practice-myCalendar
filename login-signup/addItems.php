@@ -78,12 +78,11 @@
               
             <label for="courseName">
                 Course Name:
-            </label>
-                <select name="CourseName" id="courseName">
-                    <?php while ($row = mysqli_fetch_array($sql)):;?>
-                      <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>
-                      <?php endwhile;?>
-                </select><br><br>
+                <!-- <select name="CourseName" id="courseName"> -->
+                    <?php while ($row = $result->fetch_assoc()) {
+                      echo $row['course_name'];
+                    }?>
+                <!-- </select><br><br> -->
             </label>
               
             <label for="assignmentDesc">
