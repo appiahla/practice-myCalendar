@@ -272,7 +272,10 @@ if (!$link) {
 
 
                 //check if it is recurring or not
-                if($taskRecurring == 'Recurring'){
+                if($task_recurring == NULL){
+                  echo"nullrecurring";
+                }
+                if($task_recurring == 'Recurring'){
                   echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring:  $title </h4>\n\n");
                   
                     //null check
