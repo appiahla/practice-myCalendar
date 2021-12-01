@@ -274,24 +274,24 @@ if (!$link) {
                 //check if it is recurring or not
                 if($taskRecurring == NULL){
                   echo"not recurring";
-                  // echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
                   
-                  //   //null check
-                  //   if ($type != '') {
-                  //     echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
-                  //   }
+                    //null check
+                    if ($type != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                    }
 
-                  //   if ($task_status != '') {
-                  //     echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
-                  //   }
+                    if ($task_status != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                    }
 
-                  //   if ($location != '') {
-                  //     echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
-                  //   }
+                    if ($location != '') {
+                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                    }
                   
-                  //   if ($task_description != '') {
-                  //     echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
-                  //   }
+                    if ($task_description != '') {
+                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+                    }
                 }
 
 
