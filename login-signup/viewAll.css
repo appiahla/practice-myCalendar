@@ -79,3 +79,12 @@ h5 {
 #profileInfo{
   text-align: center;
 }
+
+#grades {
+  margin-top: -24px;
+  padding-left: 370px;
+}
+
+#grades h3{
+  font-weight: 200;
+}
