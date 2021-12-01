@@ -204,7 +204,6 @@ if (!$link) {
                 if ($assign_notes_login != '') {
                   echo nl2br("<p style='margin-top: -35px;padding-left: 30px;'>Notes: $assign_notes_login </p> \n\n");
                 }
-                echo "<br>";
               }
           } else {
             echo "No assignments yet!";
