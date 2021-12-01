@@ -91,7 +91,9 @@
                         echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
                     } 
                 }
-                } else {
+                } 
+                
+                else {
                 echo "No Courses!";
             }
             // Free result set
@@ -103,7 +105,12 @@
             }
 
         mysqli_close($link);
-
+        echo "<form action='./calcGPA.php' method='POST'>
+                <input type='hidden' name='course_grade' value='$course_grade'>
+                            
+                <button type='submit' class='btn' id='viewAll'>Calculate GPA Semester</button>
+                </form>";
+            echo "<br>";
         ?>
     </div>
   </div>
