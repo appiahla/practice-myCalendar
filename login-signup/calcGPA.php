@@ -1,5 +1,6 @@
 <?php
   session_start();
+  
   $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
   $db_user = 'admin';
   $db_pass = 'databasegroup';
@@ -74,7 +75,7 @@
                         $course_total_credit = $row_current_course['total_credit'];
                         
                         $finalGPA = ($course_total_grade*$course_total_credit)/$course_total_credit;
-                        echo("final calulation is" + $finalGPA);
+                        echo($finalGPA);
 
 
                         if (93 <= $finalGPA){
@@ -110,7 +111,6 @@
                         else if ($finalGPA > 65){
                             echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Your Semester GPA is: 0.0!</h2>\n\n");
                         }
-
                     }
                 } 
                 
