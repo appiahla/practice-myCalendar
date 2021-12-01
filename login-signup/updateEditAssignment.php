@@ -119,7 +119,7 @@
 
     </div>
     <a href="./showAllAssignments.php">
-      <button class="btn" id="viewAll">View All Assignments</button>
+      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 44.5%; margin-bottom: 10px;">View All Assignments</button>
     </a>
   </div>
 </div>

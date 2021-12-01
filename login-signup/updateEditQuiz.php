@@ -119,7 +119,7 @@
 
     </div>
     <a href="./showAllQuizzes.php">
-      <button class="btn" id="viewAll">View All Quizzes</button>
+    <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 48.3%; margin-bottom: 10px;">View All Quizzes</button>
     </a>
   </div>
 </div>

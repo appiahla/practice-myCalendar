@@ -201,7 +201,7 @@
 
     </div>
     <a href="./showAllAcademicTasks.php">
-      <button class="btn" id="viewAll">View All Academic Tasks</button>
+      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 41%; margin-bottom: 10px;">View All Academic Tasks</button>
     </a>
   </div>
 </div>
