@@ -60,22 +60,21 @@
             //see if the v_num exists
             $sql =  "SELECT AVG(grade) as avg_grade, SUM(credit) as total_credit FROM Course WHERE v_number='$get_v'";
 
-            if ($course = mysqli_query($link,$sql)) {
+            if ($courseG = mysqli_query($link,$sql)) {
                 
                 // Return the number of rows in result set
-                $rowcount_course = mysqli_num_rows($course);
+                $rowcount_course = mysqli_num_rows($courseG);
                 
                 //if there is a row
-                if($rowcount_course> 0) {
+                if($rowcount_course > 0) {
 
                     // output data of each row
-                    while($row_current_course= $course->fetch_assoc()) {
+                    while($row_current_course= $courseG->fetch_assoc()) {
 
                         $course_total_grade = $row_current_course['avg_grade'];
                         $course_total_credit = $row_current_course['total_credit'];
                         
                         $finalGPA = ($course_total_grade*$course_total_credit)/$course_total_credit;
-                        echo($finalGPA);
 
 
                         if (93 <= $finalGPA){
@@ -120,16 +119,12 @@
             // Free result set
             mysqli_free_result($row_current_course);
             }
-                    
-            else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($link);
-            }
 
 
             //see if the v_num exists
-            $sql =  "SELECT * FROM Course WHERE v_number='$get_v'";
+            $sql2 =  "SELECT * FROM Course WHERE v_number='$get_v'";
 
-            if ($course = mysqli_query($link,$sql)) {
+            if ($course = mysqli_query($link,$sql2)) {
                 
                 // Return the number of rows in result set
                 $rowcount_course = mysqli_num_rows($course);
