@@ -56,18 +56,25 @@
           
           //Get the variables that will be inserted into the database
           $id = $_POST['AssignmentId'];
+          echo($id);
           
           $title = $_POST['AssignmentName'];
+          echo($title);
           
           $date = $_POST['DueDate'];
+          echo($date);
           
           $course_name = $_POST['CourseName'];
+          echo($course_name);
 
           $description = $_POST['AssignmentDesc'];
+          echo($description);
         
           $notes =  $_POST['AssignmentNotes'];
+          echo($notes);
 
           $get_v = $_SESSION['v_num'];
+          echo($get_v);
 
           //now insert them into the database
           //see if the v_num exists
