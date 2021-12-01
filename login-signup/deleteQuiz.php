@@ -88,8 +88,7 @@
             //kill the connection
             die("Connection failed:" .mysqli_connect_error());
         }
-
-
+        
             $get_v = $_SESSION['v_num'];
 
             //see if the v_num exists
