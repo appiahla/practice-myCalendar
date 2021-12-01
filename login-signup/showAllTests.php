@@ -74,7 +74,7 @@
                         while($row_current_assessmentsT = $assessmentsT->fetch_assoc()) {
 
                             //save variables in the case of wanting to edit
-                            $assessmentT_id = $row_current_assessmentsT['assignment_id'];
+                            $assessmentT_id = $row_current_assessmentsT['assessment_id'];
                             $assessmentT_title = $row_current_assessmentsT['assessment_title'];
                             $assessmentT_date = $row_current_assessmentsT['date_of'];
                             $assessmentT_course = $row_current_assessmentsT['course_name_assessment'];
@@ -101,7 +101,7 @@
                         echo "<br>";
                         }
                     } else {
-                    echo "No Assessments yet!";
+                    echo "No Tests yet!";
                 }
                 // Free result set
                 mysqli_free_result($row_current_assessmentsT);
