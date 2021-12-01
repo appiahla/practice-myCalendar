@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     include 'showAllTests.php';
     
     $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
