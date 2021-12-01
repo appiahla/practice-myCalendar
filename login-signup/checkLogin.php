@@ -279,8 +279,7 @@ if (!$link) {
           mysqli_free_result($result_current_tasks);
           }
           else {
-            echo("not working");
-            echo($result_current_recurring_tasks);
+            printf("error: %s\n", mysqli_error($link));
           }
         ?>
     </div>
