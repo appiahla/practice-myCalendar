@@ -57,4 +57,9 @@
   margin-bottom: 10px;
 }
 
+#deleteBtn {
+  position: relative;
+  top: -45px;
+  left: 80px;
+}
   
