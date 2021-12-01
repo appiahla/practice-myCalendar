@@ -257,7 +257,6 @@ if (!$link) {
               //if there is a row
               if($rowcount_current_tasks > 0) { 
 
-                echo "On Going Recurrent Tasks Today";
               // output data of each row
               while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
                 
@@ -274,66 +273,68 @@ if (!$link) {
 
                 //check if it is recurring or not
                 if($taskRecurring == NULL){
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
+                  echo"not recurring";
+                  // echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'> $title </h4>\n\n");
                   
-                    //null check
-                    if ($type != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
-                    }
+                  //   //null check
+                  //   if ($type != '') {
+                  //     echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+                  //   }
 
-                    if ($task_status != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
-                    }
+                  //   if ($task_status != '') {
+                  //     echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+                  //   }
 
-                    if ($location != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
-                    }
+                  //   if ($location != '') {
+                  //     echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Location:> $location </p> \n\n");
+                  //   }
                   
-                    if ($task_description != '') {
-                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
-                    }
+                  //   if ($task_description != '') {
+                  //     echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+                  //   }
                 }
 
 
                 if($taskRecurring == 'Recurring'){
-                  echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurring Event: $title </h4>\n\n");
+                  echo"recurring";
+              //     echo nl2br("<h4 style='margin-bottom: 0px;margin-top: 0px;padding-left: 20px;'>Recurrint  $title </h4>\n\n");
                   
-                    //null check
-                    if ($course != '') {
-                      echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
-                    }
-                    if ($type != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
-                    }
+              //       //null check
+              //       if ($course != '') {
+              //         echo nl2br("<h5 style='font-size: medium;margin-top: -35px;padding-left: 45px;'>Course:</h5> <p style='margin-top: -45px;padding-left: 125px;'>$course </p> \n\n");
+              //       }
+              //       if ($type != '') {
+              //         echo nl2br("<p style='margin-top: -25px;padding-left: 45px;'> $type </p> \n\n");
+              //       }
                     
-                    if ($task_status != '') {
-                      echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
-                    }
+              //       if ($task_status != '') {
+              //         echo nl2br("<p style='margin-top: -25px;padding-left: 45px;' Status:> $task_status </p> \n\n");
+              //       }
                   
-                    if( $start != ''){
-                      echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>Start Date:</h5>
-                                <p style='margin-top: -63px;padding-left: 125px;'> $start </p> \n\n");
-                    }
+              //       if( $start != ''){
+              //         echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>Start Date:</h5>
+              //                   <p style='margin-top: -63px;padding-left: 125px;'> $start </p> \n\n");
+              //       }
 
-                    if( $end != ''){
-                      echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>End Date:</h5>
-                                <p style='margin-top: -63px;padding-left: 125px;'> $end </p> \n\n");
-                    }
+              //       if( $end != ''){
+              //         echo nl2br("<h5 style='margin-top: -40px;padding-left: 45px;font-size: medium;'>End Date:</h5>
+              //                   <p style='margin-top: -63px;padding-left: 125px;'> $end </p> \n\n");
+              //       }
                   
-                    if ($task_description != '') {
-                      echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
-                    }
-                }
-              }
+              //       if ($task_description != '') {
+              //         echo nl2br("<p style='margin-top: -35px;padding-left: 45px;'>$task_description </p> \n\n");
+              //       }
+               }
+               }
           } else {
             echo "No Tasks Today, Enjoy!";
           }
           // Free result set
           mysqli_free_result($result_current_recurring_tasks);
           }
-          else {
-            printf("error: %s\n", mysqli_error($link));
-          }
+          // else {
+          //   printf("error: %s\n", mysqli_error($link));
+          // }
         ?>
     </div>
     </div>
