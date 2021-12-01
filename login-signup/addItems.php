@@ -1,5 +1,26 @@
 <?php
   session_start();  
+
+  $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
+  $db_user = 'admin';
+  $db_pass = 'databasegroup';
+  $db_name = 'groupMyCalendar';
+  $db_port = '3306';
+
+  $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
+
+  // Check connection
+  if (!$link) {
+          
+      //kill the connection
+      die("Connection failed:" .mysqli_connect_error());
+  }
+
+  $get_v = $_SESSION['v_num'];
+
+  $query = "SELECT course_name FROM Course WHERE v_number=$get_v";
+
+  $sql = mysqli_query($link, $query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,36 +78,12 @@
               
             <label for="courseName">
                 Course Name:
-                <select name="CourseName" id="courseName" >
-                          <?php 
-                           $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
-                           $db_user = 'admin';
-                           $db_pass = 'databasegroup';
-                           $db_name = 'groupMyCalendar';
-                           $db_port = '3306';
-                   
-                           $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
-                   
-                           // Check connection
-                           if (!$link) {
-                                   
-                               //kill the connection
-                               die("Connection failed:" .mysqli_connect_error());
-                           }
-                   
-                          $get_v = $_SESSION['v_num'];
-
-                          $sql = mysqli_query($link, "SELECT course_name FROM Course WHERE v_number=$get_v");
-                              while ($row = $sql->fetch_assoc()){
-                                $row_course_name =  $row['course_name'];
-                                
-                                  echo "<option value=$row_course_name >" . $row['course_name'] . "</option>";
-                              }
-                          
-                            mysqli_close($link);
-                          ?>
-                          </select><br><br>
-                <br><br>
+            </label>
+                <select name="CourseName" id="courseName">
+                    <?php while ($row = mysqli_fetch_array($sql)):;?>
+                      <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>
+                      <?php endwhile;?>
+                </select><br><br>
             </label>
               
             <label for="assignmentDesc">
