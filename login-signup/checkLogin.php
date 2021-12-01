@@ -152,9 +152,9 @@ if (!$link) {
                         $course_location_login = $row_course['location'];
 
                         
-                        echo nl2br("<h4 style='margin-top: 0px;margin-bottom: 0px;padding-left: 5px;'> $course_num_login $course_name_login </h4>\n\n");
-                        echo nl2br("<p style='margin-top: -20px; padding-left: 30px;'> $course_proff_login </p> \n\n");
-                        echo nl2br("<p style='margin-top: -40px;padding-left: 30px;'> $course_location_login </p> \n\n");
+                        echo nl2br("<h4 style='margin-top: 0px;margin-bottom: 0px;padding-left: 15px;'> $course_num_login $course_name_login </h4>\n\n");
+                        echo nl2br("<p style='margin-top: -20px; padding-left: 45px;'> $course_proff_login </p> \n\n");
+                        echo nl2br("<p style='margin-top: -40px;padding-left: 45px;'> $course_location_login </p> \n\n");
                       }
                   } else {
                     echo "No classes yet!";
