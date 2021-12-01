@@ -35,9 +35,7 @@
   <body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Courses</h2>
-    <div class="mytabs">
-        
+    <h2 class="title">Your Courses</h2>        
     <?php
  
         $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
@@ -142,7 +140,6 @@
         mysqli_close($link);
 
         ?>
-    </div>
   </div>
 </div>
 </body>
