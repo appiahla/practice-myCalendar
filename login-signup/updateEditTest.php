@@ -118,8 +118,8 @@
       ?>
 
     </div>
-    <a href="./showAllAssignments.php">
-      <button class="btn" id="viewAll">View All Assignments</button>
+    <a href="./showAllTests.php">
+      <button class="btn" id="viewAll">View All Tests</button>
     </a>
   </div>
 </div>
