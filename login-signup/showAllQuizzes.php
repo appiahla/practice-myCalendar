@@ -117,10 +117,10 @@
                         </form>";
                         echo "<br>";
 
-                        echo "<form action='./deleteQuiz.php' method='POST'>
+                        echo "<form action='./deleteQuiz.php' method='POST' id='deleteBtn'>
                                 <input type='hidden' name='assessmentQ_id' value='$assessmentQ_id'>
                       
-                                <button type='submit' class='btn' id='deleteBtn'>Delete</button>
+                                <button type='submit' class='btn'>Delete</button>
                           </form>";
                           echo "<br>";
 

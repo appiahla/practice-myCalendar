@@ -115,10 +115,10 @@
                             </form>";
                           echo "<br>";
 
-                          echo "<form action='./deleteTest.php' method='POST'>
+                          echo "<form action='./deleteTest.php' method='POST' id='deleteBtn'>
                                 <input type='hidden' name='assessmentT_id' value='$assessmentT_id'>
                               
-                                <button type='submit' class='btn' id='deleteBtn'>Delete</button>
+                                <button type='submit' class='btn'>Delete</button>
                             </form>";
                           echo "<br>";
 
