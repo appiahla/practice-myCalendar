@@ -94,38 +94,38 @@
                     echo nl2br("<div class='course'><h3> Course: $course_name</h3>\n\n");
 
                     if($course_section==1){
-                        echo nl2br("<div class='indent'><h4>$course_num-001 $course_crn</h4>\n\n");
+                        echo nl2br("<h4 style='margin-left: 20px;'>$course_num-001 $course_crn</h4>\n\n");
                     }else{
-                        echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
+                        echo nl2br("<h4 style='margin-left: 20px;>$course_num-$course_section $course_crn</h4>\n\n");
                     }
                     
-                    echo nl2br("<h4>Professor: $course_professor</h4>\n\n");
+                    echo nl2br("<h4 style='margin-left: 20px;>Professor: $course_professor</h4>\n\n");
 
-                    echo nl2br("<h4>Location: $course_location</h4>\n");
-                    echo nl2br("<h4 style='font-weight: 400;'>$course_address</h4>\n\n");
+                    echo nl2br("<h4 style='margin-left: 20px;>Location: $course_location</h4>\n");
+                    echo nl2br("<h4 style='font-weight: 400; margin-left: 20px;'>$course_address</h4>\n\n");
 
-                    echo nl2br("<h4>Meeting Times:</h4>\n\n");
+                    echo nl2br("<h4 style='margin-left: 20px;'>Meeting Times:</h4>\n\n");
                     
                     if($course_monday != ''){
-                        echo nl2br("<li>$course_monday</li>");      
+                        echo nl2br("<li style='margin-left: 20px;'>$course_monday</li>");      
                     }
 
                     if($course_tuesday != ''){
-                        echo nl2br("<li>$course_tuesday</li>");  
+                        echo nl2br("<li style='margin-left: 20px;'>$course_tuesday</li>");  
                     }
                     if($course_wednesday != ''){
-                        echo nl2br("<li>$course_wednesday</li>");  
+                        echo nl2br("<li style='margin-left: 20px;'>$course_wednesday</li>");  
                     }
                     if($course_thursday != ''){
-                        echo nl2br("<li>$course_thursday</li>");  
+                        echo nl2br("<li style='margin-left: 20px;'>$course_thursday</li>");  
                     }
                         
                     if($course_friday != ''){
-                        echo nl2br("<li>$course_friday</li>");  
+                        echo nl2br("<li> style='margin-left: 20px;'$course_friday</li>");  
                     }
 
                     echo nl2br("\n");
-                    echo nl2br("<h5>At $course_start-$course_end</h5>\n\n</div></div>");
+                    echo nl2br("<h5 style='margin-left: 20px;'>At $course_start-$course_end</h5>\n\n</div>");
             
                     }
                 } else {
