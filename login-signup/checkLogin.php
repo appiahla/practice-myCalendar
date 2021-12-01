@@ -51,7 +51,7 @@ if (!$link) {
     if($rowcount == 1) { 
 
 
-        echo "<div class='alert alert-success'
+        echo "<div class='alert alert-success role='alert'>
                 <strong>Success!</strong> You are in the database!</div>\n"; 
 
             // output data of each row
@@ -59,13 +59,13 @@ if (!$link) {
             
                 //check if the email is correct
                 if ($row["username"] != $email){ 
-                  echo "<div class='alert alert-danger'
+                  echo "<div class='alert alert-danger' role='alert'>
                         <strong>Failure!</strong> You entered the wrong email!</div>\n"; 
                 }
 
                 //check if the password is correct
                 if ($row["password"] != $password) {
-                  echo "<div class='alert alert-danger'
+                  echo "<div class='alert alert-danger' role='alert'>
                       <strong>Failure!</strong> You entered the wrong password!</div>\n"; 
                  }
 
@@ -86,6 +86,11 @@ if (!$link) {
     <title>Homepage</title>
     <link rel = "stylesheet" href = "../navigation.css">
     <link rel = "stylesheet" type = "text/css" href = "../home-style.css">
+    <script> window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove(); 
+    });
+}, 2000);</script>
     <nav class="nav-bar" >
       <div style="display: flex; justify-content: space-between;">
         <a id="home-pic" href="">myCalendar</a>
