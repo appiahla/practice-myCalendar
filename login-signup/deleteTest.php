@@ -153,8 +153,6 @@
                               
                                 <button type='submit' class='btn'>Delete</button>
                             </form>";
-                          echo "<br>";
-
                           
                         }
                     } else {
