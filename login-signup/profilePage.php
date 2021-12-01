@@ -86,13 +86,13 @@
 										$gpa = $row_current_profile['GPA'];
 									
 										echo nl2br("<div id='profileInfo'>");
-										echo nl2br("<h3> V-number:</h3>  $vnum\n\n");
-										echo nl2br("<h3>Username:</h3>  $email\n\n");
-										echo nl2br("<h3>Name:</h3>  $firstN $lastN\n\n");
-										echo nl2br("<h3>Date of Birth:</h3>  $date_of_birth\n\n");
-										echo nl2br("<h3>Age:</h3>  $age\n\n");
-										echo nl2br("<h3>School Year:</h3>  $school_year\n\n");
-										echo nl2br("<h3>GPA:</h3>  $gpa\n\n");
+										echo nl2br("<h4> V-number:</h4>  $vnum\n\n");
+										echo nl2br("<h4>Username:</h4>  $email\n\n");
+										echo nl2br("<h4>Name:</h4>  $firstN $lastN\n\n");
+										echo nl2br("<h4>Date of Birth:</h4>  $date_of_birth\n\n");
+										echo nl2br("<h4>Age:</h4>  $age\n\n");
+										echo nl2br("<h4>School Year:</h4>  $school_year\n\n");
+										echo nl2br("<h4>GPA:</h4>  $gpa\n\n");
 										echo nl2br("</div>");
 
 										echo "<br>";
