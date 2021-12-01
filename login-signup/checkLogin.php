@@ -230,10 +230,10 @@ if (!$link) {
 
     <div class="home-group">
         <h3 class="home-title">Today's Tasks</h3>
-          <p class="edit"> Why isn't anything showing up? </p>
+          <!-- <p class="edit"> Why isn't anything showing up? </p> -->
 
-        <?php
-          echo "I'm here in the todays task";
+          <?php
+            echo "I'm here in the todays task";
 
           // // task variables
           // $title = $_POST['Title'];
