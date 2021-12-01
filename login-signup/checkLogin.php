@@ -181,7 +181,10 @@ if (!$link) {
           
           $temp_assignment = $_SESSION['v_num'];
 
-          $sql_current_assignments = "CALL assignments_due_soon('$temp_assignment');";
+          $sql_current_assignments = "	SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes
+                                            FROM Assignment
+                                            WHERE assignment_v_number = '$temp_assignment'
+                                            ORDER BY due_date ASC LIMIT 5;";
 
           if ($result_current_assignments = mysqli_query($link,$sql_current_assignments)) {
               // Return the number of rows in result set
