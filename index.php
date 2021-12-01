@@ -60,7 +60,7 @@
                 <input id='loginPassword' type='password' name='password' /><br><br>
             </label>
 
-            <input type='submit' name='loginFormPost' value='Log In'/>
+            <input type='submit' name='loginFormPost' class='btn' value='Log In'/>
 
             </form>
 
@@ -115,7 +115,7 @@
                   <input id="signUpPassword" type="password" name="SignUpPassword"><br><br>
                 </label>
               
-                <input type="submit" value="Sign Up">
+                <input type="submit" class='btn'  value="Sign Up">
           </form>
         </div>
     </div>
