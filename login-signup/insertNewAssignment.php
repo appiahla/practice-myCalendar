@@ -38,8 +38,6 @@
 
     <?php
 
-      session_start();
-
       $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
       $db_user = 'admin';
       $db_pass = 'databasegroup';
@@ -115,7 +113,7 @@
 
     </div>
     <a href="./showAllAssignments.php">
-      <button class="btn" id="viewAll">View All Assignments</button>
+    <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 44.5%; margin-bottom: 10px;">View All Assignments</button>
     </a>
   </div>
 </div>

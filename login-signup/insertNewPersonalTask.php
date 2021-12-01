@@ -193,7 +193,7 @@
     ?>
     </div>
     <a href="./showAllPersonalTasks.php">
-      <button class="btn" id="viewAll">View All Personal Tasks</button>
+      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 42%; margin-bottom: 10px;">View All Personal Tasks</button>
     </a>
   </div>
 </div>

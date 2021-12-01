@@ -1,3 +1,6 @@
+<?php
+  session_start();  
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,8 +37,6 @@
     <div class="mytabs">
 
     <?php
-
-      session_start();  
 
         $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
         $db_user = 'admin';
@@ -112,7 +113,7 @@
 
     </div>
     <a href="./showAllTests.php">
-      <button class="btn" id="viewAll">View All Tests</button>
+      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 48.3%; margin-bottom: 10px;">View All Tests</button>
     </a>
   </div>
 </div>
