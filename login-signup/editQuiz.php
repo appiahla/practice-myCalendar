@@ -35,28 +35,22 @@
 <div id="day-view-container">
   <div id="input-field">
     <div class="mytabs">
-        <h2 class='title'>Edit Test</h2>
+        <h2 class='title'>Edit Quiz</h2>
         
         <?php
 
             // get the values 
             $edit_assessmentQ_id = $_POST['assessmentQ_id'];
-            echo($edit_assessmentT_id);
 
             $edit_assessmentQ_title = $_POST['assessmentQ_title'];
-            echo($edit_assessmentQ_title);
 
             $edit_assessmentQ_date = $_POST['assessmentQ_date'];
-            echo($edit_assessmentQ_date);
 
             $edit_assessmentQ_course = $_POST['assessmentQ_course'];
-            echo($edit_assessmentQ_course);
 
             $edit_assessmentQ_material= $_POST['assessmentQ_material'];
-            echo($edit_assessmentQ_material);
 
             $edit_assessmentQ_notes = $_POST['assessmentQ_notes'];
-            echo($edit_assessmentQ_notes);
 
             //edit form
             echo "
@@ -66,7 +60,7 @@
 
                 <label for='quizName'>
                     Quiz Title:
-                    <input type='text' id='quizName' name='QuizName' value='$edit_assessmentQ_id'><br><br>
+                    <input type='text' id='quizName' name='QuizName' value='$edit_assessmentQ_title'><br><br>
                 </label>
                 
                 <label for='quizDate'>
