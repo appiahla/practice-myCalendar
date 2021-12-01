@@ -105,13 +105,16 @@
             }
 
         mysqli_close($link);
-        echo "<form action='./calcGPA.php' method='POST'>
-                <input type='hidden' name='course_grade' value='$course_grade'>
-                            
-                <button type='submit' class='btn' id='viewAll'>Calculate GPA Semester</button>
-                </form>";
-            echo "<br>";
         ?>
+
+        <?php
+             echo "<form action='./calcGPA.php' method='POST'>
+             <input type='hidden' name='course_grade' value='$course_grade'>
+                         
+             <button type='submit' class='btn' id='viewAll'>Calculate GPA Semester</button>
+             </form>";
+            echo "<br>";
+         ?>
     </div>
   </div>
 </div>
