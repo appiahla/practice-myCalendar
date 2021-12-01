@@ -123,7 +123,7 @@
 				<button class="btn">View All Academic Tasks</button>
 				</a>
 
-				<a href="">
+				<a href="./showAllPersonalTasks.php">
 				<button class="btn">View All Personal Tasks</button>
 				</a>
 
