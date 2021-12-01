@@ -252,20 +252,22 @@ if (!$link) {
           if ($result_current_recurring_tasks = mysqli_query($link, $sql_current_tasks_recurring)) {
               // Return the number of rows in result set
               $rowcount_current_recurring_tasks = mysqli_num_rows($result_current_recurring_tasks);
+              echo("Row count is: ");
+              echo($rowcount_current_recurring_tasks);
           
               //if there is a row
               if($rowcount_current_recurring_tasks > 0) { 
 
                 echo "On Going Recurrent Tasks Today";
               // output data of each row
-              while($row_current_tasks = $result_current_tasks->fetch_assoc()) {
+              while($row_current_recurring_tasks = $result_current_recurring_tasks->fetch_assoc()) {
               
-                echo "Title: ".$row_current_tasks['Title']."<br>";
-                echo "Type: ".$row_current_tasks['Type']."<br>";
-                echo "Due Date: ".$row_current_tasks['Status']."<br>";
-                echo "Description: ".$row_current_tasks['Description']."<br>";
-                echo "Start: ".$row_current_tasks['Start']."<br>";
-                echo "End: ".$row_current_tasks['End']."<br>";
+                echo "Title: ".$row_current_recurring_tasks['Title']."<br>";
+                echo "Type: ".$row_current_recurring_tasks['Type']."<br>";
+                echo "Due Date: ".$row_current_recurring_tasks['Status']."<br>";
+                echo "Description: ".$row_current_recurring_tasks['Description']."<br>";
+                echo "Start: ".$row_current_recurring_tasks['Start']."<br>";
+                echo "End: ".$row_current_recurring_tasks['End']."<br>";
 
                 echo "<br>";
               }
