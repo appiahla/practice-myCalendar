@@ -62,7 +62,7 @@ CREATE TABLE Assessment
     -- test or quiz
     assessment_type VARCHAR(20) NOT NULL,
     assignment_title VARCHAR(20) NOT NULL,
-course_name_assessment VARCHAR(20) NOT NULL,
+	course_name_assessment VARCHAR(20) NOT NULL,
     due_of DATE,
 	material TEXT,
 	notes TEXT,
@@ -120,3 +120,12 @@ CREATE TABLE AcademicTask
     PRIMARY KEY (task_id),
 	FOREIGN KEY (v_number) REFERENCES Student(v_num)
 );
+
+
+ALTER TABLE Assignment ADD COLUMN assignment_v_number VARCHAR(9);
+UPDATE Assignment SET assignment_v_number = 'V00875392';
+
+ALTER TABLE Assessment ADD COLUMN assessment_v_number VARCHAR(9);
+UPDATE Assessment SET assessment_v_number = 'V00875392';
+
+ALTER TABLE Assessment ADD FOREIGN KEY (course_name_assessment) REFERENCES Course(course_name) ON UPDATE CASCADE;
