@@ -152,7 +152,7 @@
                         echo "<form action='./deleteQuiz.php' method='POST'>
                                 <input type='hidden' name='assessmentQ_id' value='$assessmentQ_id'>
                       
-                                <button type='submit' class='btn' id='deleteBtnQ'>Delete</button>
+                                <button type='submit' class='btn' id='deleteBtnD'>Delete</button>
                           </form>";
                           echo "<br>";
 
