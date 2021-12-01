@@ -142,8 +142,6 @@ if (!$link) {
                         echo nl2br("<h4 style='margin-top: 0px;margin-bottom: 0px;padding-left: 5px;'> $course_num_login $course_name_login </h4>\n\n");
                         echo nl2br("<p style='margin-top: -20px; padding-left: 30px;'> $course_proff_login </p> \n\n");
                         echo nl2br("<p style='margin-top: -40px;padding-left: 30px;'> $course_location_login </p> \n\n");
-
-                        echo "<br>";
                       }
                   } else {
                     echo "No classes yet!";
@@ -191,9 +189,9 @@ if (!$link) {
 
                 echo nl2br("<h4> $assign_title_login </h4>\n\n");
                 echo nl2br("<p> $assign_description_login </p> \n\n");
-                echo nl2br("<h4>Due Date:</h4><p> $assign_due_date_login <p> \n\n");
-                echo nl2br("<p>For $assign_course_login <p> \n\n");
-                echo nl2br("<p>Notes: $assign_notes_login <p> \n\n");
+                echo nl2br("<h4>Due Date:</h4><p> $assign_due_date_login </p> \n\n");
+                echo nl2br("<p>For $assign_course_login </p> \n\n");
+                echo nl2br("<p>Notes: $assign_notes_login </p> \n\n");
 
                 echo "<br>";
               }
