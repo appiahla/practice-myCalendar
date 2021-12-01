@@ -91,8 +91,8 @@
 
             //now insert them into the database
             //see if the v_num exists
-            $sql =  "INSERT INTO PersonalTask (`task_title`, `task_with`, `task_location`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
-            VALUES ('$title', '$with', '$location', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v')";
+            $sql =  "INSERT INTO PersonalTask (`task_title`, `task_with`, `task_location`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`, `task_type`) 
+            VALUES ('$title', '$with', '$location', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v', 'Personal')";
                 
                     
                 if (mysqli_query($link, $sql)) {    
