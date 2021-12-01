@@ -55,7 +55,7 @@ session_start();
   <div id="day-view-container">
   <div class="alert alert-success">
     <?php 
-    echo "<h3>Classes You Are Enrolled In:</h3>";
+    echo "<h3>Courses You Are Enrolled In:</h3>";
     if ($result = mysqli_query($link,$sql)) {
       // Return the number of rows in result set
       $rowcount_result = mysqli_num_rows($result);
