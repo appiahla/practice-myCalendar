@@ -81,33 +81,27 @@
                             $assessmentT_material = $row_current_assessmentsT['material'];
                             $assessmentT_notes= $row_current_assessmentsT['notes'];
 
-                        echo nl2br("<h4> Test Title:</h4>  $assessmentT_title\n\n");
+                        echo nl2br("<h3> Test Title:</h3>  $assessmentT_title\n\n");
                         
-                        echo nl2br("<h4> Test Course:</h4>  $assessmentT_course\n\n");
+                        echo nl2br("<h3> Test Course:</h3>  $assessmentT_course\n\n");
                                     
                         if ($assessmentT_date != ''){
                                     
-                            echo nl2br("<h4> Test Date:</h4>  $assessmentT_date\n\n");
+                            echo nl2br("<h3> Test Date:</h3>  $assessmentT_date\n\n");
                                     
                         }
                 
                         if ($assessmentT_material != '') {
                 
-                            echo nl2br("<h4> Test Material:</h4>  $assessmentT_material\n\n");
+                            echo nl2br("<h3> Test Material:</h3>  $assessmentT_material\n\n");
 
                         }
                                 
                         if ($assessmentT_notes != ''){
                 
-                            echo nl2br("<h4> Test Notes:</h4>  $assessmentT_notes\n\n\n");
+                            echo nl2br("<h3> Test Notes:</h3>  $assessmentT_notes\n\n");
                 
                         }
-
-                        // echo "Test Title: ".$row_current_assessmentsT['assessment_title']."<br>";
-                        // echo "Test Date: ".$row_current_assessmentsT['date_of']."<br>";
-                        // echo "Test Course: ".$row_current_assessmentsT['course_name_assessment']."<br>";
-                        // echo "Test Material: ".$row_current_assessmentsT['material']."<br>";
-                        // echo "Test Notes: ".$row_current_assessmentsT['notes']."<br>";
 
                         echo "<form action='./editTest.php' method='POST'>
                                 <input type='hidden' name='assessmentT_id' value='$assessmentT_id'>
