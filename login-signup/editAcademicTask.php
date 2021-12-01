@@ -99,7 +99,7 @@
                   <br><br><br>
                 </label>
 
-                <input type='checkbox' id='recurringTask' name='recurring' value='Recurring'"
+                <input type='checkbox' id='recurringTask' name='recurring' value='Recurring' style='position: relative;right: -23px;'"
                     .($edit_taskA_recurring ? "checked" : "")."
                 >
                     <label for='recurring' style='font-weight:400;''> Recurring Task:</label><br><br>
