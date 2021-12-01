@@ -252,13 +252,10 @@ if (!$link) {
 
           // $sql_current_tasks_not_recurring = "CALL create_todays_not_recurring_tasks('$temp_tasks');";
           if ($result_current_recurring_tasks = mysqli_query($link,$sql_current_tasks_recurring)) {
-            echo"result_current_recurring_tasks is: ";
-            echo($result_current_recurring_tasks);
+
               // Return the number of rows in result set
               $rowcount_current_recurring_tasks = mysqli_num_rows($result_current_recurring_tasks);
-              echo("Row count is: ");
-              echo($rowcount_current_recurring_tasks);
-          
+              
               //if there is a row
               if($rowcount_current_recurring_tasks > 0) { 
 
