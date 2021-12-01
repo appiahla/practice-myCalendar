@@ -107,21 +107,21 @@
                     echo nl2br("<h4>Meeting Times:</h4>\n\n");
                     
                     if($course_monday != ''){
-                        echo nl2br("$course_monday/  ");      
+                        echo nl2br("$course_monday  ");      
                     }
 
                     if($course_tuesday != ''){
-                        echo nl2br("$course_tuesday/  ");  
+                        echo nl2br("$course_tuesday  ");  
                     }
                     if($course_wednesday != ''){
-                        echo nl2br("$course_wednesday/  ");  
+                        echo nl2br("$course_wednesday  ");  
                     }
                     if($course_thursday != ''){
-                        echo nl2br("$course_thursday/  ");  
+                        echo nl2br("$course_thursday  ");  
                     }
                         
                     if($course_friday != ''){
-                        echo nl2br("$course_friday/  ");  
+                        echo nl2br("$course_friday  ");  
                     }
 
                     echo nl2br("\n");
