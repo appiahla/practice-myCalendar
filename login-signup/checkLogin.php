@@ -159,25 +159,25 @@ if (!$link) {
                         
                         echo nl2br("<h4 style='margin-top: 0px;margin-bottom: 0px;padding-left: 15px;'> $course_num_login $course_name_login </h4>\n\n");
                         echo nl2br("<p style='margin-top: -20px; padding-left: 45px;'> $course_proff_login </p> \n\n");
-                        echo nl2br("<p style='margin-top: -40px; padding-left: 45px;'> $course_meet_start - $course_meet_end </p> \n\n");
+                        echo nl2br("<p style='margin-top: -45px; padding-left: 45px;'> $course_meet_start - $course_meet_end </p> \n\n");
                         //show meeting times -> check for null
                         if($course_meet_mon != NULL){
-                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_mon  </p> \n\n");
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_mon  </p>");
                         }
                         if($course_meet_tues != NULL){
-                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_tues  </p> \n\n");
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_tues  </p>");
                         }
                         if($course_meet_wed != NULL){
-                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_wed  </p> \n\n");
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_wed  </p>");
                         }
                         if($course_meet_thur != NULL){
-                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_thur  </p> \n\n");
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_thur  </p>");
                         }
                         if($course_meet_fir != NULL){
-                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_fir  </p> \n\n");
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_fir  </p>");
                         }
                         
-                        echo nl2br("<p style='margin-top: -80px;padding-left: 45px;'> $course_location_login </p> \n\n");
+                        echo nl2br("\n\n<p style='margin-top: -80px;padding-left: 45px;'> $course_location_login </p> \n\n");
                       }
                   } else {
                     echo "No classes yet!";
