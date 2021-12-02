@@ -134,8 +134,7 @@ if (!$link) {
                   $course_name = $_POST['course_name'];
                   $professor_name = $_POST['professor_name'];
                   $location = $_POST['location'];
-
-                  $sql_course = "SELECT course_num, course_name, professor_name, location FROM Course WHERE v_number = '$v_num'";
+                  $sql_course = "SELECT course_num, course_name, professor_name, location, meetMon, meetTues, meetWednes, meetThurs, meetFri, TIME_FORMAT(start_time, '%h:%i:%s %p') AS Start, TIME_FORMAT(end_time, '%h:%i %p') AS End FROM Course WHERE v_number='$v_num'";
                   if ($result_course = mysqli_query($link,$sql_course)) {
                       // Return the number of rows in result set
                   $rowcount_course = mysqli_num_rows($result_course);
@@ -149,12 +148,34 @@ if (!$link) {
                         $course_num_login = $row_course['course_num'];
                         $course_name_login = $row_course['course_name'];
                         $course_proff_login = $row_course['professor_name'];
-                        $course_location_login = $row_course['location'];
-
+                        $course_meet_mon = $row_course['meetMon'];
+                        $course_meet_tues = $row_course['meetTues'];
+                        $course_meet_wed = $row_course['meetWednes'];
+                        $course_meet_thur = $row_course['meetThurs'];
+                        $course_meet_fir = $row_course['meetFri'];
+                        $course_meet_start = $row_course['Start'];
+                        $course_meet_end = $row_course['End'];
                         
                         echo nl2br("<h4 style='margin-top: 0px;margin-bottom: 0px;padding-left: 15px;'> $course_num_login $course_name_login </h4>\n\n");
                         echo nl2br("<p style='margin-top: -20px; padding-left: 45px;'> $course_proff_login </p> \n\n");
-                        echo nl2br("<p style='margin-top: -40px;padding-left: 45px;'> $course_location_login </p> \n\n");
+                        echo nl2br("<p style='margin-top: -40px; padding-left: 45px;'> $course_meet_start - $course_meet_end </p> \n\n");
+                        //show meeting times -> check for null
+                        if($course_meet_mon != NULL){
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_mon  </p> \n\n");
+                        }
+                        if($course_meet_tues != NULL){
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_tues  </p> \n\n");
+                        }
+                        if($course_meet_wed != NULL){
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_wed  </p> \n\n");
+                        }
+                        if($course_meet_thur != NULL){
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_thur  </p> \n\n");
+                        }
+                        if($course_meet_fir != NULL){
+                          echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_fir  </p> \n\n");
+                        }
+                        echo nl2br("<p style='margin-top: -80px;padding-left: 45px;'> $course_location_login </p> \n\n");
                       }
                   } else {
                     echo "No classes yet!";
