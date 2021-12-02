@@ -91,7 +91,7 @@
                   echo "Error: " . $sql . "<br>" . mysqli_error($link);
               }
 
-      mysqli_close($link);
+      mysqli_close($link); 
 
       ?>
 
