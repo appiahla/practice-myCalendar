@@ -1,12 +1,11 @@
 <?php
-  session_start();
-
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title> 508 Group Project </title>
-    <link rel = "stylesheet" type = "text/css" href = "viewAll.css">
+    <link rel = "stylesheet" type = "text/css" href = "successSubmit.css">
     <link rel = "stylesheet" href = "../navigation.css">
 
     <nav class="nav-bar" >
@@ -32,92 +31,72 @@
     </nav>
 
   </head>
-  <body>
-  <body>
+<body>
 <div id="day-view-container">
   <div id="input-field">
-    <h2 class="title">Your Grades</h2>
     <div class="mytabs">
-        
+
     <?php
- 
-        $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
-        $db_user = 'admin';
-        $db_pass = 'databasegroup';
-        $db_name = 'groupMyCalendar';
-        $db_port = '3306';
 
-        $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
+      $db_host = 'team2-database.cstfewbdata2.us-east-1.rds.amazonaws.com';
+      $db_user = 'admin';
+      $db_pass = 'databasegroup';
+      $db_name = 'groupMyCalendar';
+      $db_port = '3306';
 
+      $link = mysqli_connect("$db_host","$db_user","$db_pass","$db_name", "$db_port");
 
-        // Check connection
-        if (!$link) {
-                
-            //kill the connection
-            die("Connection failed:" .mysqli_connect_error());
-        }
+      // Check connection
+      if (!$link) {
+              
+          //kill the connection
+          die("Connection failed:" .mysqli_connect_error());
+      }
 
+          
+          //Get the variables that will be inserted into the database
+          $crn = $_POST['courseCrn'];
 
-            $get_v = $_SESSION['v_num'];
+          $grade = $_POST['CourseGrade'];
+          
+          $course_num = $_POST['edit_course_num'];
+          
+          $course_name = $_POST['edit_course_name'];
 
-            //see if the v_num exists
-            $sql =  "SELECT * FROM Course WHERE v_number='$get_v'";
+          $course_section = $_POST['edit_course_section'];
 
-            if ($course = mysqli_query($link,$sql)) {
-                
-                // Return the number of rows in result set
-                $rowcount_course = mysqli_num_rows($course);
-                
-                //if there is a row
-                if($rowcount_course> 0) {
+          $get_v = $_SESSION['v_num'];
 
-                    // output data of each row
-                    while($row_current_course= $course->fetch_assoc()) {
+          //now insert them into the database
+          //see if the v_num exists
+          $sql = "UPDATE Course
+                    SET `grade`='$grade'
+                WHERE `crn`='$crn' AND `v_number`='$get_v';";
+                  
+                if (mysqli_query($link, $sql)) {    
 
-                        //save variables in the case of wanting to edit
-                        $course_crn = $row_current_course['crn'];
-                        $course_num = $row_current_course['course_num'];
-                        $course_name = $row_current_course['course_name'];
-                        $course_section = $row_current_course['section_num'];
-                        $course_grade = $row_current_course['grade'];
-                
+                    //Success Message
+                    echo nl2br("<h2 class='title'>Your Grade Was Successfully!</h2>\n\n");
 
-                    
-                    echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $course_name: </h2> <div id='grades'><h3>$course_grade</h3></div>\n\n");
+                    echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $course_name: </h2> <div id='grades'><h3>$grade</h3></div>\n\n");
 
                     if($course_section==1){
                         echo nl2br("<h4>$course_num-001 $course_crn</h4>\n\n");
                     }else{
                         echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
-                    }
+              } 
+            }else {
+                  echo "Error: " . $sql . "<br>" . mysqli_error($link);
+              }
 
-                    echo "<form action='./updateGrades.php' method='POST'>
-                      <button type='submit' class='btn' id='viewAll' style='position: relative;left: 30%; margin-top: 15px;'>Calculate Semester GPA</button>
-                      </form>";
-                    echo "<br>";
-                }
-           
-                    echo "<form action='./calcGPA.php' method='POST'>
-                         <button type='submit' class='btn' id='viewAll' style='position: relative;left: 30%; margin-top: 15px;'>Calculate Semester GPA</button>
-                        </form>";
-                     echo "<br>";
-   
-                } 
-                
-                else {
-                echo "No Courses!";
-            }
-            // Free result set
-            mysqli_free_result($row_current_course);
-            }
-                    
-            else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($link);
-            }
+      mysqli_close($link);
 
-        mysqli_close($link);
-        ?>
+      ?>
+
     </div>
+    <a href="./viewGrades.php">
+      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: 44.5%; margin-bottom: 10px;">View Grades</button>
+    </a>
   </div>
 </div>
 </body>

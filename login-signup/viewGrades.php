@@ -80,8 +80,6 @@
                         $course_section = $row_current_course['section_num'];
                         $course_grade = $row_current_course['grade'];
                 
-
-
                     
                     echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $course_name: </h2> <div id='grades'><h3>$course_grade</h3></div>\n\n");
 
@@ -90,13 +88,17 @@
                     }else{
                         echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
                     }
+                    echo "<form action='./editGrades.php' method='POST'>
+                            <input type='hidden' name='course_crn' value='$course_crn'>
+                            <input type='hidden' name='course_num' value='$course_num'>
+                            <input type='hidden' name='course_name' value='$course_name'>
+                            <input type='hidden' name='course_section' value='$course_section'>
+                            <input type='hidden' name='course_grade' value='$course_grade'>
+                            <button type='submit' class='btn' id='viewAll'>Edit Grade</button>
+                            </form>";
+                    echo "<br>";
+              
                 }
-
-                echo "<form action='./updateGrades.php' method='POST'>
-                 <button type='submit' class='btn' id='viewAll'>Edit Grades</button>
-                 </form>";
-                 echo "<br>";
-           
                     echo "<form action='./calcGPA.php' method='POST'>
                          <button type='submit' class='btn' id='viewAll' style='position: relative;left: 30%; margin-top: 15px;'>Calculate Semester GPA</button>
                         </form>";
