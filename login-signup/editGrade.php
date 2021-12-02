@@ -48,11 +48,11 @@
 
             $edit_course_grade = $_POST['course_grade'];
 
-            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $course_name: </h2>\n\n");
-            if($course_section==1){
-                echo nl2br("<h4>$course_num-001 $course_crn</h4>\n\n");
+            echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $edit_course_name: </h2>\n\n");
+            if($edit_course_section==1){
+                echo nl2br("<h4>$edit_course_num-001 $edit_course_crn</h4>\n\n");
             }else{
-                echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
+                echo nl2br("<h4>$edit_course_num-$edit_course_section $edit_course_crn</h4>\n\n");
             }
             echo "<div id='grades'>    
                 <form method='POST' action='updateGrades.php'>
