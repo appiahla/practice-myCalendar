@@ -50,7 +50,7 @@ ORDER BY start_time;
 -- Query 6: find my gpa; student view (with age) for a v_number
 SELECT * FROM student_view WHERE V_Number = '$temp_profile';
 
--- Query 7: what would my gpa look like with my current course grades
+-- Query 7: what would my average look like with my current course grades
 SELECT AVG(grade) as avg_grade, SUM(credit) as total_credit FROM Course WHERE v_number='$get_v';
 
 -- Query 8, 9: see if a user has an account; select a specific student; (logged in is checked in frontend code)
