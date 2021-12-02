@@ -5,7 +5,7 @@
 <html>
 <head>
     <title> 508 Group Project </title>
-    <link rel = "stylesheet" type = "text/css" href = "successSubmit.css">
+    <link rel = "stylesheet" type = "text/css" href = "editForm.css">
     <link rel = "stylesheet" href = "../navigation.css">
 
     <nav class="nav-bar" >
@@ -97,7 +97,7 @@
 
     </div>
     <a href="./viewGrades.php" style="position: relative;margin-top: 160px;">
-      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: -700%; margin-bottom: 10px;">View Grades</button>
+      <button class="btn" id="viewAll" style="margin: -20px -50px; position:relative; top:50%; left: -540%; margin-bottom: 10px;">View Grades</button>
     </a>
   </div>
 </div>

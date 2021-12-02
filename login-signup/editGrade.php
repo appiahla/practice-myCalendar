@@ -54,7 +54,7 @@
             }else{
                 echo nl2br("<h4 style='margin-top: 0px;'>$edit_course_num-$edit_course_section $edit_course_crn</h4>\n\n");
             }
-            echo "<div id='grades' style='margin-top: -145px;padding-left: 300px;'>    
+            echo "<div id='grades' style='margin-top: -127px;padding-left: 350px;'>    
                 <form method='POST' action='updateGrades.php'>
             
                 <label for='assignmentName'>
