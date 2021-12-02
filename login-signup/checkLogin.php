@@ -160,7 +160,7 @@ if (!$link) {
                         echo nl2br("<h4 style='margin-top: 0px;margin-bottom: 0px;padding-left: 15px;'> $course_num_login $course_name_login </h4>\n\n");
                         echo nl2br("<p style='margin-top: -20px; padding-left: 45px;'> $course_proff_login </p> \n\n");
                         echo nl2br("<p style='margin-top: -45px; padding-left: 45px;'> $course_meet_start - $course_meet_end </p> \n\n");
-                        echo nl2br("<p style='margin-top: -45px; padding-left: 45px;'> Meets On: </p> \n\n");
+                        echo nl2br("<p style='margin-top: -40px; padding-left: 45px;margin-bottom: 10px;font-weight: 600;'> Meets On: </p> \n\n");
                         echo nl2br("<div class='meetingdays' style='margin-top: -40px;padding-left: 50px;'>");
                         //show meeting times -> check for null
                         if($course_meet_mon != NULL){
@@ -179,7 +179,7 @@ if (!$link) {
                           echo("<li>$course_meet_fir  </li>");
                         }
                         echo nl2br("</div>");
-                        echo nl2br("\n\n<p style='margin-top: -30px;padding-left: 45px;'> $course_location_login </p> \n\n");
+                        echo nl2br("\n\n<p style='margin-top: -23px;padding-left: 45px;'> $course_location_login </p> \n\n");
                       }
                   } else {
                     echo "No classes yet!";
