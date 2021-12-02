@@ -92,14 +92,17 @@ FROM Assessment;
 -- Query 20: when is the soonest due date for a task/assignment
 SELECT assignment_title AS Title, due_date AS Due_Date, course_name_assignment AS Course, description_section AS Description, notes AS Notes
 FROM Assignment
-ORDER BY due_date ASC LIMIT 10;
+WHERE assignment_v_number = '$temp_assignment'
+ORDER BY due_date ASC LIMIT 5;
 
 SELECT task_title AS Title, date_of AS Date, task_with AS Accompany, task_description AS Description, task_status as Status
 FROM PersonalTask
+WHERE assignment_v_number = '$temp_assignment'
 ORDER BY date_of ASC LIMIT 1;
 
 SELECT task_title AS Title, date_of AS Date, task_course AS Course, task_description AS Description, task_status as Status
 FROM AcademicTask
+WHERE assignment_v_number = '$temp_assignment'
 ORDER BY date_of ASC LIMIT 1;
 
 
@@ -147,16 +150,16 @@ DELETE FROM Assessment WHERE assessment_id='$delete_assessmentT_id' AND assessme
 SELECT * FROM Assessment WHERE assessment_type='Test' AND assessment_v_number='$get_v';
 
 -- insert a new academic task
-INSERT INTO AcademicTask (`task_title`, `task_course`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
-VALUES ('$title', '$course', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v');
+INSERT INTO AcademicTask (`task_title`, `task_course`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`, `task_type`) 
+VALUES ('$title', '$course', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v', 'Academic');
 
 -- insert a new assignment
 INSERT INTO Assignment (`assignment_title`, `due_date`, `course_name_assignment`,`description_section`, `notes`, `assignment_v_number`) 
 VALUES ('$title', '$date', '$course_name', '$description', '$notes', '$get_v');
 
 -- insert a new personal task
-INSERT INTO PersonalTask (`task_title`, `task_with`, `task_location`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`) 
-VALUES ('$title', '$with', '$location', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v');
+INSERT INTO PersonalTask (`task_title`, `task_with`, `task_location`, `task_description`, `date_of`, `task_status`, `task_recurring`,`recurringMon`, `recurringTues`, `recurringWed`, `recurringThurs`, `recurringFri`, `recurringSat`, `recurringSun`, `start_date`, `end_date`, `v_number`, `task_type`) 
+VALUES ('$title', '$with', '$location', '$description', '$date', '$status', '$recurring', '$monday', '$tuesday', '$wednesday', '$thursday', '$friday', '$saturday', '$sunday', '$start', '$end', '$get_v', 'Personal');
 
 -- insert a new quiz assessment
 INSERT INTO Assessment (`assessment_type`, `assessment_title`, `course_name_assessment`, `date_of`, `material`, `notes`, `assessment_v_number`) 
@@ -244,7 +247,6 @@ SET `assessment_title`='$title',
 	`notes`='$notes'
 WHERE `assessment_type`='Test' AND `assessment_id`='$id' AND `assessment_v_number`='$get_v';
 
-<<<<<<< HEAD:scripts/all_queries.sql
 -- show academic and personal tasks
 SELECT task_id, v_number, task_title, task_type, task_course, NULL as task_with, NULL as task_location, task_description, date_of, task_status, task_recurring, recurringMon, recurringTues, recurringWed, recurringThurs, recurringFri, recurringSat, recurringSun, start_date, end_date
   FROM AcademicTask
@@ -254,7 +256,8 @@ SELECT task_id, v_number, task_title, task_type, NULL as task_course, task_with,
   
   WHERE v_number='V00875392';
   
-=======
->>>>>>> 99ba0f3 (home page and querirs check):scripts/queries.sql
---alter update foreign key constraint
-ALTER TABLE Assessment ADD FOREIGN KEY (course_name_assessment) REFERENCES Course(course_name) ON UPDATE CASCADE;
+-- find the average grade
+SELECT AVG(grade) as avg_grade, SUM(credit) as total_credit FROM Course WHERE v_number='$get_v';
+
+-- calls today's tasks
+CALL get_todays_tasks('$temp_tasks');
