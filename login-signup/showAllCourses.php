@@ -60,7 +60,7 @@
             $get_v = $_SESSION['v_num'];
 
             //see if the v_num exists
-            $sql =  "SELECT * FROM Course WHERE v_number='$get_v'";
+            $sql =  "SELECT *, TIME_FORMAT(start_time, '%h:%i:%s %p') AS Start, TIME_FORMAT(end_time, '%h:%i %p') AS End FROM Course WHERE v_number='$get_v'";
 
             if ($course = mysqli_query($link,$sql)) {
                 
@@ -81,8 +81,8 @@
                         $course_professor = $row_current_course['professor_name'];
                         $course_location = $row_current_course['location'];
                         $course_address = $row_current_course['address'];
-                        $course_start = $row_current_course['start_time'];
-                        $course_end = $row_current_course['end_time'];
+                        $course_start = $row_current_course['Start'];
+                        $course_end = $row_current_course['End'];
                         $course_monday = $row_current_course['meetMon'];
                         $course_tuesday = $row_current_course['meetTues'];
                         $course_wednesday = $row_current_course['meetWednes'];
