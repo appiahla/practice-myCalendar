@@ -83,7 +83,7 @@ FROM PersonalTask
 WHERE task_with IS NOT NULL AND v_number = 'V00875392';
 
 -- Query 17, 18: delete a specific assignment, task; update a specific meeting/task/etc
--- done with the update/delete queries
+-- Done with the update/delete queries
 
 -- Query 19: select notes on my assessment
 SELECT assessment_title AS Title, course_name_assessment AS Course, date_of AS Date, notes AS Notes
