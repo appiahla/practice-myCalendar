@@ -148,6 +148,7 @@ if (!$link) {
                         $course_num_login = $row_course['course_num'];
                         $course_name_login = $row_course['course_name'];
                         $course_proff_login = $row_course['professor_name'];
+                        $course_location_login = $row_course['location'];
                         $course_meet_mon = $row_course['meetMon'];
                         $course_meet_tues = $row_course['meetTues'];
                         $course_meet_wed = $row_course['meetWednes'];
@@ -175,6 +176,7 @@ if (!$link) {
                         if($course_meet_fir != NULL){
                           echo nl2br("<p style='margin-top: -60px; padding-left: 45px;'>$course_meet_fir  </p> \n\n");
                         }
+                        
                         echo nl2br("<p style='margin-top: -80px;padding-left: 45px;'> $course_location_login </p> \n\n");
                       }
                   } else {
