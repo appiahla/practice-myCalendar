@@ -50,11 +50,11 @@
 
             echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $edit_course_name: </h2>\n\n");
             if($edit_course_section==1){
-                echo nl2br("<h4>$edit_course_num-001 $edit_course_crn</h4>\n\n");
+                echo nl2br("<h4 style='margin-top: 0px;'>$edit_course_num-001 $edit_course_crn</h4>\n\n");
             }else{
-                echo nl2br("<h4>$edit_course_num-$edit_course_section $edit_course_crn</h4>\n\n");
+                echo nl2br("<h4 style='margin-top: 0px;'>$edit_course_num-$edit_course_section $edit_course_crn</h4>\n\n");
             }
-            echo "<div id='grades' style='margin-top: -127px;padding-left: 300px;'>    
+            echo "<div id='grades' style='margin-top: -145px;padding-left: 300px;'>    
                 <form method='POST' action='updateGrades.php'>
             
                 <label for='assignmentName'>
