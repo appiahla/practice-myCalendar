@@ -88,7 +88,7 @@
                     }else{
                         echo nl2br("<h4>$course_num-$course_section $course_crn</h4>\n\n");
                     }
-                    echo "<form action='./editGrades.php' method='POST'>
+                    echo "<form action='./editGrade.php' method='POST'>
                             <input type='hidden' name='course_crn' value='$course_crn'>
                             <input type='hidden' name='course_num' value='$course_num'>
                             <input type='hidden' name='course_name' value='$course_name'>
