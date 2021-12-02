@@ -76,9 +76,9 @@
                 if (mysqli_query($link, $sql)) {    
 
                     //Success Message
-                    echo nl2br("<h2 class='title'>Your Grade Was Successfully!</h2>\n\n");
+                    echo nl2br("<h2 class='title'>Your Grade Was Updated Successfully!</h2>\n\n");
 
-                    echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> CourseL $course_name </h2> <div id='grades'><h3>$grade</h3></div>\n\n");
+                    echo nl2br("<div class='course'><h2 style='margin-bottom: -10px;'> Course $course_name: </h2> <div id='grades' style='margin-top: -41px;padding-left: 350px;'><h3>$grade</h3></div>\n\n");
 
                     if($course_section==1){
                         echo nl2br("<h4 style='margin-top: 0px;'>$course_num-001 $course_crn</h4>\n\n");
