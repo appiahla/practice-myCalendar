@@ -17,7 +17,6 @@ WHERE grade <= 79.0;
 CALL find_assignments_for_course('Software as a Service');
 
 -- Query 5: list my class schedule for the week
--- could create individual views with these
 -- monday
 SELECT course_num AS Course, location as Location, address as Address, TIME_FORMAT(start_time, "%r") as Start, TIME_FORMAT(end_time, "%r") as End
 FROM Course
@@ -52,6 +51,7 @@ ORDER BY start_time;
 SELECT * FROM student_view WHERE V_Number = '$temp_profile';
 
 -- Query 7: what would my gpa look like with my current course grades
+SELECT AVG(grade) as avg_grade, SUM(credit) as total_credit FROM Course WHERE v_number='$get_v';
 
 -- Query 8, 9: see if a user has an account; select a specific student; (logged in is checked in frontend code)
 SELECT * FROM Student WHERE v_num = '$v_num'; 
@@ -255,9 +255,6 @@ SELECT task_id, v_number, task_title, task_type, NULL as task_course, task_with,
   FROM PersonalTask
   
   WHERE v_number='V00875392';
-  
--- find the average grade
-SELECT AVG(grade) as avg_grade, SUM(credit) as total_credit FROM Course WHERE v_number='$get_v';
 
 -- calls today's tasks
 CALL get_todays_tasks('$temp_tasks');
